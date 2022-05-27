@@ -7,93 +7,147 @@
     font-family: 'Teko', sans-serif;
 }
 
-.destaques h1{
-    text-align: center;
-    margin-top: 4rem;
-    font-family:  'Teko', sans-serif;
-    font-weight: 500;
-    font-size: 4em;
-}
-.destaques img{
-   width: 50%;
-   object-fit: contain;
-   margin-left: 25%;
-   margin-top: -9rem ;
-   
+body{
+    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
 }
 
-.em-oferta h2{
-    text-align: center;
-    margin-top: 1rem;
-    font-family:  'Teko', sans-serif;
-    font-weight: 500;
-    font-size: 4em;
-}
-
-.em-oferta ul{
+.banner{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
+    margin-inline: 7rem;
+    gap: 10rem;
+    margin-block: 4rem;
+}
+.banner img{
+    width: 550px;
     margin-top: 5rem;
 }
-.em-oferta li img{
-    width: 230px;
+    
+
+.container{
+    width: 95vw;
+    margin-inline: auto;
+    margin-block: 2rem;
+    
+}
+.destaques{
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    padding-top: 5rem;
+    padding-left: 5rem ;
+}
+    
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 390px;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    transition:0.5s ;
+    
+}
+.card:hover{
+    height: 350px;
+    
+}
+.card img{
+    padding-top: 2.5rem;
+}
+
+.card p {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color: rgb(66, 70, 77);
+    margin-top: 1rem
+}
+
+.card span{
+  font-size: 1.5rem;
+  color: rgb(66, 70, 77);
 
 }
-.categorias h2{
-    text-align: center;
-    margin-top: 5rem;
-    font-family:  'Teko', sans-serif;
-    font-weight: 500;
-    font-size: 4em;
+.card button{
+    width: 100%;
+    padding: .7rem;
+    border: none;
+    background-color:  rgb(89, 188, 225);
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 2.8rem;
+    transition: .5s;
 }
-.categorias ul{
-    display: flex;
-    justify-content:  space-around ;
-    align-items: center;
-    list-style: none;
-    margin-top: 5rem;
-   
+.card button:hover{
+    background-color: rgb(3, 132, 179);
 }
-.categorias li{
+.todosProdutos{
+    font-size: 2.5rem;
+    text-decoration: none;
+    margin: 5.5rem;
+    color: #fff;
+}
+/* ======================== Destaques =============================== */
+.muambas{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    background-color: rgb(194, 194, 194);
-    height: 40vh;
-    width: 270px;
+    margin-left: 5rem;
+    margin-top: 10rem;
 }
-.categorias li img{
-    width: 250px;
-    
+.muambas h2{
+ font-size: 5rem;
+ color: rgb(240, 240, 240); 
 }
-.recomendados h2{
+/* ======================== Departamentos =========================== */
+.departamentos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.h2-departamentos{
+    font-size: 5rem;
     text-align: center;
+    margin-top: 10rem;
+    color: rgb(240, 240, 240);
+    
+
+}
+.departamentos p{
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(66, 70, 77);
+    padding-top: 2rem;
+}
+.cardDepartamento{
+    padding-left: 1rem;
+    margin-top: 10rem;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    margin-left: 5rem;
+    border-radius: .5rem; 
+    transition: 2s; 
+    cursor: pointer;
+}
+.img{
     margin-top: 5rem;
-    font-family:  'Teko', sans-serif;
-    font-weight: 500;
-    font-size: 4em;
+    margin-left: 5rem;
 }
-.recomendados ul{
+
+/* ========================= Mais Procurados ========================== */
+.mais-procurados{
+    width: 100%;
     display: flex;
-    justify-content:  space-around ;
-    align-items: center;
-    list-style: none;
-    margin-top: 5rem;
+    gap: 5rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    margin-bottom: 10rem;
 }
-.recomendados li {
-    display: flex;
-    align-items: center;
-    border-radius: 5rem;
-    background-color: rgb(193, 193, 193);
-    height: 40vh;
-    width: 250px;
-}
-.recomendados li img{
-    width: 240px;
-}
+
+
 footer {
     width: 100%;
     height: 20vh;
@@ -101,3 +155,6 @@ footer {
     box-shadow: 0px 8px 10px grey;
     margin-top: 15rem;
 }
+
+
+    
