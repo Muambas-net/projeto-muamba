@@ -2,6 +2,7 @@
 
 :root {
     font-size: 62.5%; /* sempre 10px */
+    letter-spacing: 0.9px;
 }
 
 * {
@@ -18,18 +19,32 @@ body {
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 10% auto;
 }
 
 main h1 {
     text-align: center;
     font-size: 3.0rem;
+
+    text-transform: uppercase;
+}
+
+.container {
+    background: #FFFFFF;
+    padding: 2rem;
+    width: 40rem;
+    height: 50rem;
+}
+
+form {
+    margin: 3rem;
 }
 
 .wrapper {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     gap: 3rem;
 
     margin-top: 2rem;
@@ -39,9 +54,74 @@ main h1 {
     display: flex;
     justify-content: start;
     font-size: 2.3rem;
+
+    width: 10%;
 }
 
 .wrapper input {
-    width: 24rem;
+    width: 90%;
     height: 2.4rem;
+    padding: 1rem;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    margin: 2rem auto 0;
+}
+
+.button-wrapper input {
+    border-radius: 8px;
+}
+
+.button-wrapper a {
+    color: #000000;
+
+    font-size: 2.0rem;
+}
+
+.button-wrapper a:hover {
+    color: #00AFEF;
+
+    font-size: 2.0rem;
+}
+
+.submit-button {
+    font-size: 2.3rem;
+
+    width: 10rem;
+    padding: 1rem;
+
+    cursor: pointer;
+
+    background-color: #00AFEF;
+    color: #FFFFFF;
+
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: #00AC33;
+}
+
+.createAcount {
+    background-color: #0078a3;
+    color: #FFFFFF;
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    margin: 7rem auto 0;
+    padding: 1rem;
+    border: none;
+
+    font-size: 2.5rem;
+
+    cursor: pointer;
+
 }

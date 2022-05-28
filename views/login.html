@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,56 +11,15 @@
     <script src="https://kit.fontawesome.com/86e4e92605.js" crossorigin="anonymous"></script>
     <title>Login</title>
 </head>
+
 <body>
-    <header>
-        <div id="topo" class="icon">
-            <a href="#" title="logo"><img src="../public/images/logo.svg" alt=""></a>
-        </div>
-
-        <div class="search">
-            <form action="">
-                <input type="search" name="search" id="search" placeholder="Pesquisar">
-                <button name="btn-1" id="btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-        </div>
-        </form>
-
-        <div class="cart-user">
-
-            <div class="cart">
-                <!-- VAI TER QUE ENTRAR UM BTN -->
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Meu Carrinho de Muambas</span>
-            </div>
-
-            <div class="user">
-                <!-- VAI TER QUE ENTRAR UM BTN -->
-                <i class="fa-solid fa-circle-user"></i>
-                <span>Login</span>
-            </div>
-        </div>
-
-    </header>
-    <nav>
-        <ul>
-            <li><a href="">Todos</a></li>
-            <li><a href="">Promoções</a></li>
-            <li><a href="">Para você</a></li>
-            <li><a href="">Computadores</a></li>
-            <li><a href="">Celulares/Tablets</a></li>
-            <li><a href="">Televisores</a></li>
-            <li><a href="">Acessórios</a></li>
-        </ul>
-    </nav>
-
     <main>
         <div class="container">
             <h1>Login</h1>
             <form action="#" method="post">
                 <div class="wrapper">
-                    <label for="user">Login</label>
-                    <input type="text" name="user" id="">
+                    <label for="user" placeholder="email">Email</i></label>
+                    <input type="email" name="user" id="">
                 </div>
 
                 <div class="wrapper">
@@ -67,12 +27,16 @@
                     <input type="password" name="senha" id="">
                 </div>
 
-                <input type="submit" value="Login">
-            </form>
-            <span><a href="#" target="_blank" rel="noopener noreferrer">Esqueceu sua senha ?</a></span>
+                <div class="button-wrapper">
+                    <input class="submit-button" type="submit" value="Entrar">
+                    <span><a href="#" target="_blank" rel="noopener noreferrer">Esqueceu sua senha ?</a></span>
+                </div>
 
-            <button><a class="createAcount" href="#"> Criar sua conta </a></button>
+            </form>
+            <button class="createAcount" id="createAcount">Criar sua conta <i class="fa-solid fa-plus"></i></button>
         </div>
+
     </main>
 </body>
+
 </html>
