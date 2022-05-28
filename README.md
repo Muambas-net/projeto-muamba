@@ -65,6 +65,8 @@
 ## ✅ Features Em construção...  🚧
 
 - [x] CRIAÇÃO DO GIT
+- [X] CRIAÇÃO DA HOME
+- [X]  ESTRUTURA NODEJS
 
 
 
@@ -82,10 +84,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/psixp/ProjetoIntegradorMuambas.git>
+$ git clone <https://github.com/Muambas-net/projeto-muamba.git>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd ProjetoIntegradorMuambas
+$ cd projeto-muamba
 
 # Mudar Branch
 $ git checkout <nome da branch>
@@ -94,7 +96,8 @@ $ git checkout <nome da branch>
 
 
 # Instale as dependências
-#
+
+# Localizadas no arquivo package.json
 
 ```
 ### ✅ Usando o git no projeto (TIME)
@@ -129,16 +132,15 @@ $git push origin beta
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [javaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-
+- [ejs](https://developer.mozilla.org/)
 ### ✅ Contribuição
 
 <table>
   <tr>
     <td align="center"><a href="https://github.com/psixp"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/42665906?v=4" width="100px;" alt=""/><br /><sub><b>Pablo Cardias</b></sub></a><br /><a href="https://github.com/psixp" title="psixp">🦖</a></td>
     <td align="center"><a href="https://github.com/vianagabriel"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/91292520?v=4" width="100px;" alt=""/><br /><sub><b>Gabriel Viana</b></sub></a><br /><a href="https://github.com/vianagabriel" title="vianagabriel">🐊</a></td>
-<!--     <td align="center"><a href="https://github.com/khellermann"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/26842987?v=4" width="100px;" alt=""/><br /><sub><b>Khellermann</b></sub></a><br /><a href="https://github.com/khellermann" title="khellermann">🦡</a></td> -->
      <td align="center"><a href="https://github.com/felipetexa"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/83251984?v=4" width="100px;" alt=""/><br /><sub><b>Felipe Teixeira</b></sub></a><br /><a href="https://github.com/felipetexa" title="felipetexa">👨‍🚀</a></td>
-     <td align="center"><a href="https://github.com/Roberta-AHassib"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/84181808?v=4" width="100px;" alt=""/><br /><sub><b>Roberta AHassib</b></sub></a><br /><a href="https://github.com/Roberta-AHassib" title="Roberta-AHassib">💁‍♀️</a></td>
+     <td align="center"><a href="https://github.com/antonioalexandre1984"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/53489752?v=4" width="100px;" alt=""/><br /><sub><b>Antonio Alexandre Cordeiro dos Santos</b></sub></a><br /><a href="https://github.com/antonioalexandre1984" title="antonioalexandre1984">🏌️‍♂️</a></td>
   </tr>
 </table>
 

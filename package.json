@@ -1,0 +1,27 @@
+{
+  "name": "muambas-empresa",
+  "version": "1.0.0",
+  "description": "- Estrutura do README\r     - Logo ou Banner\r     - Título e Descrição\r     - Badges\r     - Status do Projeto\r     - Tabela de Conteúdos\r     - Features\r     - Demonstração da Aplicação\r     - Pré-requisitos e como rodar a aplicação/testes\r     - Tecnologias utilizadas\r     - Contribuição\r     - Autor\r     - Licença",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muambas-net/projeto-muamba.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muambas-net/projeto-muamba/issues"
+  },
+  "homepage": "https://github.com/Muambas-net/projeto-muamba#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "nodemon": "^2.0.16"
+  }
+}

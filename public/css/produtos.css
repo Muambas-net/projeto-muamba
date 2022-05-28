@@ -11,6 +11,10 @@
     font-family: 'Teko', sans-serif;
 }
 
+body {
+    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
+}
+
 main {
     display: flex;
     flex-direction: column;
