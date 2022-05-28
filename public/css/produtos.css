@@ -23,6 +23,7 @@ main {
 }
 
 .produto h1 {
+    color: #FFFFFF;
     font-size: 40px;
     margin-top: 45px;
     margin-left: 120px;
@@ -37,10 +38,12 @@ main {
 }
 
 .galeria-prod {
+    position: relative;
     display: flex;
     flex-direction: row;
     gap: 60px;
 
+    background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
     margin-right: 10px;
     margin-left: 50px;
@@ -53,7 +56,7 @@ main {
 }
 
 .galeria-prod img {
-    width: 180px;
+    width: 140px;
     height: auto;
 }
 
@@ -66,6 +69,7 @@ main {
    font-size: 2.2rem;
    width: 550px;
    font-weight: 300;
+   background-color: #FFFFFF;
    color: #3f3f3f;
    border: 1px solid #DDDDDD;
    padding: 10px;
@@ -90,6 +94,7 @@ main {
 .inf-compra {
     padding: 10px;
     width: 250px;
+    background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
     margin-right: 80px;
 }
@@ -109,14 +114,14 @@ main {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 100px;
+    justify-content: space-between;
+    gap: 160px;
 }
 
 .produtos-relacionados div img {
     width: 200px;
     height: 200px;
-    background-color: rgbA(221, 221, 221, 0.6);
+    background-color: #FFFFFF;
     border-radius: 50%;
     padding: 40px;
 }
@@ -129,6 +134,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
 
     font-size: 2.2rem;
@@ -157,6 +163,7 @@ main {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
 
     font-size: 2.2rem;
