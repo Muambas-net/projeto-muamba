@@ -13,12 +13,12 @@ body{
 
 .banner{
     display: flex;
+    justify-content: space-evenly;
     margin-inline: 7rem;
     gap: 10rem;
     margin-block: 4rem;
 }
 .banner img{
-    width: 550px;
     margin-top: 5rem;
 }
     
@@ -32,6 +32,7 @@ body{
 .destaques{
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
     gap: 5rem;
     padding-top: 5rem;
     padding-left: 5rem ;
@@ -141,6 +142,7 @@ body{
 .mais-procurados{
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
     gap: 5rem;
     padding-top: 5rem;
     padding-left: 5rem;
