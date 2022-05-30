@@ -119,7 +119,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 0.5s;
+    transition: 0.3s;
     border-radius: .5rem;
 
     height: 25rem;
