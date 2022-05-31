@@ -102,19 +102,21 @@ body{
 .muambas h2{
  font-size: 5rem;
  color: rgb(240, 240, 240); 
+ text-shadow: black 0.5rem 0.5rem 1rem;
 }
 /* ======================== Departamentos =========================== */
 .departamentos{
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: space-evenly;
 }
+
 .h2-departamentos{
     font-size: 5rem;
     text-align: center;
     margin-top: 10rem;
     color: rgb(240, 240, 240);
-    
+    text-shadow: black 0.5rem 0.5rem 1rem;
 
 }
 .departamentos p{
@@ -137,7 +139,7 @@ body{
 }
 .img{
     margin-top: 5rem;
-    margin-left: 5rem;
+    margin-left: 10rem;
 }
 
 /* ========================= Mais Procurados ========================== */

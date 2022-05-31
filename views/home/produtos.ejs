@@ -1,71 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/header.css">
-    <link rel="stylesheet" href="../public/css/produtos.css">
-    <link rel="shortcut icon" href="../public/images/logo-header.svg" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/86e4e92605.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/produtos.css">
     <title>Produtos</title>
-</head>
-
-<body>
-    <header>
-        <div id="topo" class="icon">
-            <a href="#" title="logo"><img src="../public/images/logo.svg" alt=""></a>
-        </div>
-
-        <div class="search">
-            <form action="">
-                <input type="search" name="search" id="search" placeholder="Pesquisar">
-                <button name="btn-1" id="btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-        </div>
-        </form>
-
-        <div class="cart-user">
-
-            <div class="cart">
-                <!-- VAI TER QUE ENTRAR UM BTN -->
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Meu Carrinho de Muambas</span>
-            </div>
-
-            <div class="user">
-                <!-- VAI TER QUE ENTRAR UM BTN -->
-                <i class="fa-solid fa-circle-user"></i>
-                <span>Login</span>
-            </div>
-        </div>
-
-    </header>
-    <nav>
-        <ul>
-            <li><a href="">Todos</a></li>
-            <li><a href="">Promoções</a></li>
-            <li><a href="">Para você</a></li>
-            <li><a href="">Computadores</a></li>
-            <li><a href="">Celulares/Tablets</a></li>
-            <li><a href="">Televisores</a></li>
-            <li><a href="">Acessórios</a></li>
-        </ul>
-    </nav>
-
+    <%- include('../partials/header') %>
     <main>
         <section id="produto" class="produto">
             <h1>Notebook Asus</h1>
             <div class="div-topo">
                 <div class="galeria-prod">
                     <div class="galeria-agrupada">
-                        <img src="../public/images/notebook.jpg" alt="Notebook" alt="">
-                        <img src="../public/images/notebook.jpg" alt="Notebook" alt="">
-                        <img src="../public/images/notebook.jpg" alt="Notebook" alt="">
+                        <img src="images/notebook.jpg" alt="Notebook" alt="">
+                        <img src="images/notebook.jpg" alt="Notebook" alt="">
+                        <img src="images/notebook.jpg" alt="Notebook" alt="">
                     </div>
-                    <img class="img-destaque" src="../public/images/notebook.jpg" alt="Notebook" alt="">
+                    <img class="img-destaque" src="images/notebook.jpg" alt="Notebook" alt="">
                 </div>
 
                 <div class="produto-main">
@@ -104,17 +50,17 @@
             </div>
             <div class="relacionados-img">
                 <div class="card">
-                    <img src="../public/images/notebook.jpg" alt="Notebook">
+                    <img src="images/notebook.jpg" alt="Notebook">
                     <button id="#">Ver Mais</button>
                 </div>
     
                 <div class="card">
-                    <img src="../public/images/GAMER.png" alt="">
+                    <img src="images/GAMER.png" alt="">
                     <button id="#">Ver Mais</button>
                 </div>
     
                 <div class="card">
-                    <img src="../public/images/CELULAR-SMARTPHONE_1645045581.png" alt="">
+                    <img src="images/CELULAR-SMARTPHONE_1645045581.png" alt="">
                     <button id="#">Ver Mais</button>
                 </div>
             </div>
