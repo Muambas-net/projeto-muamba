@@ -32,10 +32,10 @@ body{
 .destaques{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 5rem;
     padding-top: 5rem;
-    padding-left: 5rem ;
+    
 }
     
 .card{
@@ -107,6 +107,7 @@ body{
 .departamentos{
     display: flex;
     flex-wrap: wrap;
+    
 }
 .h2-departamentos{
     font-size: 5rem;
@@ -121,6 +122,7 @@ body{
     font-size: 2.5rem;
     color: rgb(66, 70, 77);
     padding-top: 2rem;
+
 }
 .cardDepartamento{
     padding-left: 1rem;
@@ -142,10 +144,9 @@ body{
 .mais-procurados{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 5rem;
     padding-top: 5rem;
-    padding-left: 5rem;
     margin-bottom: 10rem;
 }
 
