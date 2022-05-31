@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../public/css/carrinho.css">
     <link rel="shortcut icon" href="../public/images/logo-header.svg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/86e4e92605.js" crossorigin="anonymous"></script>
-  <title>Carrinho de compras</title>
+  <title>Carrinho de Muambas</title>
 </head>
 <body>
   <header>
@@ -54,7 +54,7 @@
   </ul>
 </nav>
 <main>
-  <h1>Carrinho de Compras</h1>
+  <h1>Carrinho de Muambas</h1>
   <section class='container'>
     <div class="wrapper">
       <div class="produto-selecionado">
@@ -95,13 +95,78 @@
     <div class="subtotal">
       <p>Subtotal (2 itens): <b> R$ 2.254,00</b> </p>
     </div>
+    <div class="calcule-frete">
+      <p>Calcule o frete</p>
+      <form action="">
+        <input type="text" name="cep" id="cep" placeholder="Digite seu CEP">
+        <button type="submit">Calcular</button>
+      </form>
+    </div>
   </section>
   <section class="pagamento">
     <h2>Forma de Pagamento</h2>
     <div class="container">
-      
+      <h3>Escolha sua forma de pagamento</h3>
+      <form action="">
+        <div class="formas-pgto">
+          <i class="fa-brands fa-pix"></i>
+          <input type="radio" name="pagamento" id="">
+          <label for="pix">PIX</label>
+        </div>
+        <div class="formas-pgto">
+          <i class="fa-solid fa-wallet"></i>
+          <input type="radio" name="pagamento" id="">
+          <label for="boleto">Boleto</label>
+        </div>
+        <div class="formas-pgto">
+          <i class="fa-solid fa-credit-card"></i>
+          <input type="radio" name="pagamento" id="">
+          <label for="cartao">Cartão</label>
+        </div>
+        <div class="formas-pgto">
+          <i class="fa-solid fa-money-bill-transfer"></i>
+          <input type="radio" name="pagamento" id="">
+          <label for="picpay">PicPay</label>
+        </div>
+      </form>
     </div>
   </section>
+  <section class="entrega">
+    <h2>Entrega</h2>
+    <div class="container">
+        <div class="forma-entrega">
+         <i class="fa-solid fa-truck"></i>
+         <input type="radio" name="entrega" id="">
+         <label for="correios">Normal</label>
+        </div>
+        <div class="forma-entrega">
+          <i class="fa-solid fa-truck-fast"></i>
+          <input type="radio" name="entrega" id="">
+          <label for="correios">Expressa</label>
+        </div>
+    </div>
+  </section>
+  <section class="produtos-relacionados">
+    <div>
+        <h2>Produtos Relacionados</h2>
+    </div>
+    <div class="relacionados-img">
+        <div class="card">
+            <img src="../public/images/notebook.jpg" alt="Notebook">
+            <button id="#">Ver Mais</button>
+        </div>
+
+        <div class="card">
+            <img src="../public/images/GAMER.png" alt="">
+            <button id="#">Ver Mais</button>
+        </div>
+
+        <div class="card">
+            <img src="../public/images/CELULAR-SMARTPHONE_1645045581.png" alt="">
+            <button id="#">Ver Mais</button>
+        </div>
+    </div>
+</section>
 
 </main>
   
