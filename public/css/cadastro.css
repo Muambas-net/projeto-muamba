@@ -1,36 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&display=swap');
 
+:root {
+    font-size: 62.5%; /* sempre 10px */
+    letter-spacing: 0.9px;
+}
+
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Teko', sans-serif;
 }
 
-body{
+body {
     background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
-  }
-  
-  .container{
-    width: 800px;
-    height: 500px;
-    background-color: #ffff;
-    margin-inline: auto;
-    margin-block: 5rem;
-    border-radius: .8rem;
+}
+
+.container{
+ background-color: #fff;
+ width: 45rem;
+ height: 60rem;
+ margin-inline: auto;
+ margin-block: 10rem;
+ border-radius: .8rem;
+ margin-top: 3rem;
+}
+.container h1{
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 2rem;
 
 }
-/* .container h1{
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 2.5rem;
+}
+form input{
+ width: 70%;
+ height: 4rem;
+ margin-inline: auto;
+ border-radius: .8rem;
+ padding: 2rem;
  
-} */
-
-footer {
-    width: 100%;
-    height: 20vh;
-    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
-    box-shadow: 0px 8px 10px grey;
-    margin-top: 15rem;
 }
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+button{
+ width: 32rem;
+ margin-top: 3rem;
+ border: none;
+ border-radius: .5rem;
+ padding: 1rem;
+ background-color: rgb(5, 145, 196) ;
+ font-size: 2.5rem;
+ cursor: pointer;
+ color: #fff;
+ transition: .5s;
+}
+button:hover{
+    background-color: rgb(5, 104, 141) ;
+
+}
+ 
+.submit-button {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    width: 32rem;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #00AFEF;
+    color: #FFFFFF;
+    transition: .3s;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    
+}
+.submit-button:hover {
+    background-color: #00AC33;
+}
+   
 
 
     
