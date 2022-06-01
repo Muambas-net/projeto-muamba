@@ -21,6 +21,8 @@ main h1 {
     margin: 20px;
     height: auto;
     font-size: 40px;
+    color: white;
+    text-shadow: black 0.5rem 0.5rem 1rem;
 }
 
 .card{

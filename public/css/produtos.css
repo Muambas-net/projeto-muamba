@@ -26,8 +26,9 @@ main {
     color: #FFFFFF;
     font-size: 4.0rem;
     margin-top: 4.4rem;
-    margin-left: 20rem;
+    margin-left: 12rem;
     text-align: justify;
+    text-shadow: black 0.5rem 0.5rem 1rem;
 }
 
 .div-topo {
@@ -156,6 +157,7 @@ main {
 
 .produtos-relacionados h2 {
     color: #FFFFFF;
+    text-shadow: black 0.5rem 0.5rem 1rem;
 }
 
 .relacionados-img {

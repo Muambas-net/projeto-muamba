@@ -15,6 +15,9 @@ const homeController = {
     },
     produtos: (req, res) => {
         res.render('home/produtos')
+    },
+    cadastro: (req, res) => {
+        res.render('home/cadastro')
     }
 
 }
