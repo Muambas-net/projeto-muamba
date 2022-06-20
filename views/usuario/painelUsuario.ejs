@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="css/painelUsuario.css">
+<title>Bem vindo, Usuário</title>
+<%- include('../partials/headerLogado') %> 
+
+<main>
+
+  <h1>Acompanhe seu pedido</h1>
+  <section class="codigo">
+    <h2>Código do pedido</h2>
+    <form action="" class="form_search">
+      <input type="search" name="search" id="search" placeholder="Pesquisar">
+      <button name="btn-1" id="btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+  </section>
+  <section class="forma-pgto">
+    <h4>Produtos do pedido n. XXXXX</h4>
+  <div class='container'>
+    <div class="wrapper">
+      <div class="produto-selecionado">
+        <img src="images/notebook.jpg" alt="Notebook Asus">
+      <div class="descricao-produto">
+        <h2>Notebook Asus</h2>
+        <p>Quantidade - YYYY</p>
+      </div>
+      </div>
+      <div class="preco">
+        <h2>R$754,00</h2>
+      </div>
+      <div class="status">
+        <h2>Status:</h2>
+        <p>Aguardando Estoque</p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="produto-selecionado">
+        <img src="images/monitor.jpg" alt="Monitor muitas polegadas">
+      <div class="descricao-produto">
+        <h2>Monitor muitas polegadas</h2>
+        <p>Quantidade - YYYY</p>
+      </div>
+      </div>
+      <div class="preco">
+        <h2>R$1.500,00</h2>
+      </div>
+      <div class="status">
+        <h2>Status:</h2>
+        <p>Enviado</p>
+      </div>
+    </div>
+    <div class="subtotal">
+      <p>Subtotal (2 itens): <b> R$ 2.254,00</b> </p>
+    </div>
+    </div>
+  </div>
+</section>
+  <section class="historico">
+    <h2>Histórico de Pedidos</h2>
+    <div class="container">
+      
+      
+    </div>
+  </section>
+  <section class="favoritos">
+    <h2>Favoritos</h2>
+    <div class="container">
+        
+    </div>
+  </section>
+  <section class="produtos-relacionados">
+    <div>
+        <h2>Produtos Relacionados</h2>
+    </div>
+    <div class="relacionados-img">
+        <div class="card">
+            <img src="images/notebook.jpg" alt="Notebook">
+            <button id="#">Ver Mais</button>
+        </div>
+
+        <div class="card">
+            <img src="images/GAMER.png" alt="">
+            <button id="#">Ver Mais</button>
+        </div>
+
+        <div class="card">
+            <img src="images/CELULAR-SMARTPHONE_1645045581.png" alt="">
+            <button id="#">Ver Mais</button>
+        </div>
+    </div>
+</section>
+</main>

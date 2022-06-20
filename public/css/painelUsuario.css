@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&display=swap');
+
+:root {
+    font-size: 62.5%; /* sempre 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
+}
+
+
+h1 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  margin-top: 4.5rem;
+  margin-left: 12rem;
+  text-align: justify;
+  text-shadow: black 0.5rem 0.5rem 1rem;
+}
+
+.codigo {
+  background-color: white;
+  margin-inline: 7rem;
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  padding-block: 3rem;
+}
+
+.codigo h2 {
+  margin-left: 8rem;
+  font-size: 2.4rem;
+}
+
+.codigo input {
+  font-size: 1.8rem;
+  width: 30rem;
+  height: 35px;
+  border-radius: 15px;
+  border: solid 0.7px black;
+  padding: 0 15px;
+}
+
+.codigo button {
+  background-color: #ffffff;
+  border: none;
+  position: relative;
+  left: -30px;
+  top: 1px;
+}
+
+.forma-pgto h4 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  margin-top: 4.5rem;
+  margin-left: 12rem;
+  text-align: justify;
+  text-shadow: black 0.5rem 0.5rem 1rem;
+}
+
+.container {
+  background-color: #FFFFFF;
+  margin-inline: 7rem;
+  margin-bottom: 5rem;
+  padding-bottom: 4rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.produto-selecionado {
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+
+/* .container img {
+  height: auto;
+} */
+
+.descricao-produto {
+  width: 30rem;
+  font-size: 1.8rem;
+}
+
+.descricao-produto p {
+  font-size: 2.2rem;
+}
+
+.descricao-produto h2 {
+  font-size: 2.8rem;
+}
+
+.descricao-produto label {
+  font-size: 2.7rem;
+}
+
+.descricao-produto input {
+  height: 2.7rem;
+  border-radius: 10px;
+  padding-left: 1.5rem;
+}
+
+.descricao-produto button {
+  background-color: #59BCE1;
+  padding: 0.3rem;
+  border: none;
+  border-radius: .5rem .5rem;
+  cursor: pointer;
+  text-shadow: black 0.5rem 0.5rem 1rem;
+  color: #FFFFFF;
+
+  font-size: 1.4rem;
+}
+
+.preco {
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.preco h2 {
+  font-size: 2.8rem;
+  font-weight: 300;
+}
+
+.status {
+  padding-right: 5rem;
+  text-align: center;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status h2 {
+  font-size: 2.8rem;
+}
+
+.status p {
+  font-size: 2.3rem;
+  font-weight: 300;
+}
+
+.subtotal {
+  font-size: 2.8rem;
+  font-weight: 300;
+  justify-content: end;
+  margin-right: 5rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.historico h2 {
+    color: #FFFFFF;
+    font-size: 4rem;
+    margin-top: 4.5rem;
+    margin-left: 12rem;
+    text-align: justify;
+    text-shadow: black 0.5rem 0.5rem 1rem;
+}
+
+.container h3 {
+  font-size: 3.5rem;
+  color: black;
+  text-shadow: none;
+  padding-top: 4rem;
+}
+
+.historico .container {
+  padding-left: 5rem;
+
+}
+
+.favoritos h2 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  margin-top: 4.5rem;
+  margin-left: 12rem;
+  text-align: justify;
+  text-shadow: black 0.5rem 0.5rem 1rem;
+}
+
+.produtos-relacionados {
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 4rem;
+
+  font-size: 2.2rem;
+
+}
+
+.produtos-relacionados h2 {
+  color: #FFFFFF;
+  text-shadow: black 0.5rem 0.5rem 1rem;
+}
+
+.relacionados-img {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16rem;
+}
+
+.produtos-relacionados div img {
+  width: 20rem;
+  height: 20rem;
+  background-color: #FFFFFF;
+  border-radius: .5rem;
+  padding: 4rem;
+}
+
+
+.card {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s;
+  border-radius: .5rem;
+
+  height: 25rem;
+}
+
+.card:hover {
+  height:24rem;
+}
+
+.card img {
+  max-width: 20rem;
+  max-height: 20rem;
+  min-width: 20rem;
+  min-height: 20rem;
+}
+
+.card button {
+  background-color: #59BCE1;
+  width: 100%;
+  padding: 1.3rem;
+  border: none;
+  border-radius: 0  0 .5rem .5rem;
+  cursor: pointer;
+  text-shadow: black 0.5rem 0.5rem 1rem;
+  color: #FFFFFF;
+
+  font-size: 2rem;
+}
+
+.card button:hover {
+  background-color: #0384B3;
+
+}
+
+
