@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/painelUsuario.css">
+
 <title>Bem vindo, Usuário</title>
 <%- include('../partials/headerLogado') %> 
 
@@ -57,15 +58,57 @@
   <section class="historico">
     <h2>Histórico de Pedidos</h2>
     <div class="container">
-      
-      
+      <div class="tabela">
+      <table width="96%" cellspacing="10">
+        <thead>
+          <tr>
+            <th class="col">Número</th>
+            <th class="col">Data</th>
+            <th class="col">Pagamento</th>
+            <th class="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>748596</th>
+            <td>10/11/2021</td>
+            <td>Cartão de Crédito</td>
+            <td>Entregue</td>
+          </tr>
+          <tr>
+            <th>742968</th>
+            <td>25/02/2022</td>
+            <td>Boleto</td>
+            <td>Cancelado</td>
+          </tr>
+          <tr>
+            <th>743002</th>
+            <td>04/05/2022</td>
+            <td>Cartão de Crédito</td>
+            <td>Entregue</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     </div>
   </section>
   <section class="favoritos">
     <h2>Favoritos</h2>
-    <div class="container">
-        
-    </div>
+    <div class='container'>
+      <div class="wrapper">
+        <div class="favs">
+          <img src="images/notebook.jpg" alt="Notebook Asus">
+        <div class="produto-favorito">
+          <h3>Notebook Asus</h3>
+        </div>
+        </div>
+        <div class="data">
+          <h3>04/05/2022</h3>
+        </div>
+        <div class="delete-fav">
+          <h3>Excluir</h3><button><i class="fa-solid fa-trash-can"></i></button>
+        </div>
+      </div>
   </section>
   <section class="produtos-relacionados">
     <div>

@@ -89,10 +89,6 @@ h1 {
   gap: 7rem;
 }
 
-/* .container img {
-  height: auto;
-} */
-
 .descricao-produto {
   width: 30rem;
   font-size: 1.8rem;
@@ -177,25 +173,80 @@ h1 {
     text-shadow: black 0.5rem 0.5rem 1rem;
 }
 
+.historico .tabela {
+  padding-top: 4rem;
+  width: 97%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .container h3 {
   font-size: 3.5rem;
   color: black;
   text-shadow: none;
-  padding-top: 4rem;
 }
 
 .historico .container {
   padding-left: 5rem;
-
 }
+
+table {
+  text-align: center;
+  font-size: 2rem;
+}
+
 
 .favoritos h2 {
   color: #FFFFFF;
   font-size: 4rem;
-  margin-top: 4.5rem;
   margin-left: 12rem;
   text-align: justify;
   text-shadow: black 0.5rem 0.5rem 1rem;
+}
+
+.favoritos .container {
+  padding-bottom: 0;
+}
+
+.favoritos .wrapper {
+  border-bottom: none;
+}
+
+.favs {
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+
+.data h3,
+.delete-fav h3 {
+  font-weight: 300;
+}
+
+.delete-fav {
+  padding-right: 5rem;
+  text-align: center;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.delete-fav button {
+  background-color: #59BCE1;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.5rem;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  text-shadow: black 0.5rem 0.5rem 1rem;
+  color: #FFFFFF;
+
+  font-size: 1.5rem;
 }
 
 .produtos-relacionados {
