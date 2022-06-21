@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&display=swap');
+
+:root {
+    font-size: 62.5%; /* sempre 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: 'Teko', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
+}
+
+.col {
+    border: solid #FFFFFF 2px;
+    padding: 4.0rem;
+}
+
+.botoes-adm {
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes-adm button {
+    width: 20rem;
+
+    color: #000000;
+    font-size: 2.0rem;
+
+    border: none;
+}
+
+.container h1 {
+    margin-top: 3.0rem;
+}
+
+h1 {
+    width: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.0rem;
+}
+
+.div-table {
+    margin-top: 10rem;
+}
