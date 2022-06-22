@@ -58,3 +58,32 @@ main h1 {
     display: flex;
     flex-flow: row wrap;
 }
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    transition:0.5s ;
+    
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card img{
+    width: 100%;
+}
+
+.card p{
+    font-size: 2.5rem;
+}
+
+
+
+
