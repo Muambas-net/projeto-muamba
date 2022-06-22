@@ -17,13 +17,14 @@ body {
 }
 
 .col {
-    border: solid #FFFFFF 2px;
+    /* border: solid #FFFFFF 2px; */
     padding: 4.0rem;
 }
 
 .botoes-adm {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .botoes-adm button {
@@ -32,7 +33,7 @@ body {
     color: #000000;
     font-size: 2.0rem;
 
-    border: none;
+    border: none;    
 }
 
 .container h1 {

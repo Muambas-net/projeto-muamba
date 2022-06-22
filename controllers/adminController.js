@@ -1,7 +1,7 @@
 
 const adminController = {
     getPainelAdmin: (req, res) => {
-        res.render('admin/painelAdmin');
+        res.render('adm/painelAdmin');
     }
 }
 

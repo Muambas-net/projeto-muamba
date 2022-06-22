@@ -100,7 +100,8 @@ main {
     width: 250px;
     background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
-    margin-right: 80px;
+    margin-right: 8.0rem;
+    margin-left: 1.0rem;
     border-radius: .5rem;
 }
 
@@ -122,12 +123,12 @@ main {
     justify-content: center;
     transition: 0.3s;
     border-radius: .5rem;
-
+    border-width: 0px;
     height: 25rem;
 }
 
 .card:hover {
-    height:24rem;
+    height:23rem;
 }
 
 .card img {

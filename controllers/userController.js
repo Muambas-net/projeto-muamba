@@ -1,6 +1,10 @@
 const userController = {
   logado: (req, res) => {
-      res.render('usuario/painelUsuario');
+      res.render('usuario/painelUsuario')
+    
+  },
+  esqueciMinhaSenha: (req, res) => {
+    res.render('usuario/esqueciMinhaSenha')
   }
 }
 
