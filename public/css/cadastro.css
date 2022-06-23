@@ -82,7 +82,7 @@ button:hover{
     text-align: center;
     
 }
-.submit-button:hover {
+a:nth-child(odd)::hover {
     background-color: #00AC33;
 }
    

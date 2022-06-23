@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/addEditProduto.css">
+
+<title>Editar produto</title>
+<%- include('../partials/headerLogado') %> 
+
+<body>
+  <section>
+    <div class="container">
+      <h1>Editar produto</h1>
+      <div class="cadastro">
+      <form action="">
+        <input type="text" name="nome" id="" placeholder="Nome do Produto">
+        <input type="number" name="preco" min="1" step="any" placeholder="Preço">
+        <label for="foto-produto">Adicionar foto</label>
+        <input type="file" name="foto-produto" id="foto-produto">
+        <div class="ativo">
+        <input type="checkbox" name="ativo" id="ativo" placeholder="Produto ativo">
+        <label for="">Ativo</label>
+      </div>
+        <textarea name="descrição" cols="30" rows="10" placeholder="Descrição do Produto"></textarea>
+      </form>
+      <div class="buttons">
+        <button type="submit">Cadastrar</button>
+
+      </div>
+
+    </div>
+        
+    </div>
+
+
+  </section>
+
+</body>
+
+</html>
+

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&display=swap');
+
+:root {
+    font-size: 62.5%; /* sempre 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
+}
+
+
+.container{
+  background-color: #fff;
+  width: 45rem;
+  height: 70rem;
+  margin-inline: auto;
+  margin-block: 10rem;
+  border-radius: .8rem;
+  margin-top: 3rem;
+ }
+
+ .container h1{
+     text-align: center;
+     font-size: 3rem;
+     padding-top: 2rem;
+ }
+
+ .cadastro form {
+     display: flex;
+     flex-direction: column;
+     margin-top: 3rem;
+     gap: 2.5rem;
+     font-size: 2rem;
+ }
+
+ .cadastro form input {
+  width: 70%;
+  height: 4rem;
+  margin-inline: auto;
+  border-radius: .8rem;
+  padding: 2rem;
+  font-size: 1.8rem;
+ }
+
+input[type="file"] {
+  display: none;
+}
+
+label[for="foto-produto"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  width: 70%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: rgb(5, 145, 196);
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: .5s;
+}
+
+label[for="foto-produto"]:hover{
+  background-color: rgb(5, 104, 141) ;
+
+}
+
+.ativo {
+  display: flex;
+  align-items: center;
+  width: 15%;
+  margin-inline: auto;
+}
+
+.ativo input[type="checkbox"] {
+  height: 1.8rem;
+}
+
+.cadastro textarea {
+  width: 70%;
+  height: 25rem;
+  margin-inline: auto;
+  border-radius: .8rem;
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+
+ .buttons {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 2rem;
+ }
+
+ .buttons button {
+  width: 15rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: rgb(5, 145, 196);
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: .5s;
+ }
+
+ .buttons button:hover{
+     background-color: rgb(5, 104, 141) ;
+ 
+ }
