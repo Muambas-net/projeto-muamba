@@ -36,7 +36,9 @@ header {
 .search {
     margin-left: 75px;
     display: flex;
-    align-items: center;    
+    align-items: center;
+
+    font-size: 1.6rem;
 }
 
 .cart {

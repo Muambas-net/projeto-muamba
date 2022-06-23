@@ -20,7 +20,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10% auto;
+    margin: 2.0rem auto;
 }
 
 main h1 {
@@ -64,7 +64,15 @@ form {
     padding: 1rem;
 
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.5rem;
+}
+
+.wrapper-esqueci-senha label{
+    width: 50%;
+}
+
+.wrapper-esqueci-senha input {
+    width: 60%;
 }
 
 .button-wrapper {
@@ -127,4 +135,9 @@ form {
 
     cursor: pointer;
 
+}
+
+.salvar {
+    text-align: center;
+    border-radius: 8px;
 }
