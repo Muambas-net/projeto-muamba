@@ -25,33 +25,6 @@ main h1 {
     text-shadow: black 0.5rem 0.5rem 1rem;
 }
 
-.card{
-    margin: 20px;
-    border: 1px solid #ddd;
-    padding: 18px;
-}
-.card-title p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-.card-price {
-    color: #0F1111;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 21px;
-
-}
-.card-price s {
-    color: #565959;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-}
-.card-conditions p{
-    font-family: Arial, Helvetica, sans-serif;
-
-    color: #565959;
-
-}
 
 .categorias{
     margin-top: 20px;
@@ -71,6 +44,9 @@ main h1 {
     background-color: #fff;
     border-radius: .5rem;
     transition:0.5s ;
+    margin: 20px;
+    border: 1px solid #ddd;
+    padding: 18px;
     
 }
 .card:hover{
