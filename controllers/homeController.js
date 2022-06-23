@@ -18,6 +18,9 @@ const homeController = {
     },
     cadastro: (req, res) => {
         res.render('home/cadastro')
+    },
+    lista: (req,res) =>{
+        res.render('home/lista')
     }
 
 }

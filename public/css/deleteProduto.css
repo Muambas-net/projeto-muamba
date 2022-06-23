@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&display=swap');
+
+:root {
+    font-size: 62.5%; /* sempre 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
+}
+
+
+.container{
+  background-color: #fff;
+  width: 45rem;
+  height: 20rem;
+  margin-inline: auto;
+  margin-block: 10rem;
+  border-radius: .8rem;
+  margin-top: 3rem;
+ }
+
+ .container h1{
+     text-align: center;
+     font-size: 3rem;
+     padding-top: 2rem;
+ }
+
+ .buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+ .submit-button {
+  font-size: 2.5rem;
+  border-radius: .5rem;
+  width: 16rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: #00AFEF;
+  color: #FFFFFF;
+  transition: .3s;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 2rem;
+  
+}
+.button1:hover {
+  background-color: #00AC33;
+}
+
+.button2:hover {
+  background-color: red;
+}

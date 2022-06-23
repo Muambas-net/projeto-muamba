@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Teko', sans-serif;
+}
+
+:root {
+  font-size: 62.5%; /* sempre 10px */
+  letter-spacing: 0.9px;
+}
+
+body{
+  background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
+}
+main{
+  display: flex;
+  gap: 4rem;
+  
+}
+  
+
+
+.menu-lateral h2{
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+
+.menu-lateral aside{
+  width: 350px;
+  height: 300px;
+  background-color: #fff;
+  margin-left: 2rem;
+  border-radius: .6rem;
+}
+
+.menu-lateral aside p{
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.form-check{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.menu-lateral .form-check-input{
+  height: 25px;
+}
+
+.produtos{
+  display: flex;
+  padding: 5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  transition:0.5s ;
+}
+.card:hover{
+  transform: scale(0.9);
+}
+
+.card p{
+  font-size: 2.5rem;
+}
+
+  
