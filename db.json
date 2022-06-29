@@ -1,0 +1,28 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Notebook",
+      "preco": 1299,
+      "descricao": "Notebook Asus",
+      "categoria": "Computadores",
+      "imagem": "https://i.zst.com.br/thumbs/12/6/36/-428600293.jpg",
+      "estoque": 10,
+      "promocao": false,
+      "desconto": 0
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Computadores"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "João",
+      "email": "joão@mail.com"
+    }
+  ]
+}
