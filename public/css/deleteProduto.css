@@ -40,6 +40,11 @@ body {
   gap: 2rem;
 }
 
+form a {
+  text-decoration: none;
+  color: #fff;
+}
+
  .submit-button {
   font-size: 2.5rem;
   border-radius: .5rem;

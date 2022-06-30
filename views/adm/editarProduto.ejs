@@ -7,11 +7,11 @@
     <div class="container">
       <h1>Editar produto</h1>
       <div class="cadastro">
-      <form action="">
+      <form method="POST" action="/adm/paineladmin/:id/editar?_method=PUT" enctype="multipart/form-data">
         <input type="text" name="nome" id="" placeholder="Nome do Produto">
         <input type="number" name="preco" min="1" step="any" placeholder="Preço">
-        <label for="foto-produto">Adicionar foto</label>
-        <input type="file" name="foto-produto" id="foto-produto">
+        <label for="imagem">Adicionar foto</label>
+        <input type="file" name="imagem" id="imagem">
         <div class="ativo">
         <input type="checkbox" name="ativo" id="ativo" placeholder="Produto ativo">
         <label for="">Ativo</label>

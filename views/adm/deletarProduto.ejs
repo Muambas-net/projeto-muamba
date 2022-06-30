@@ -7,7 +7,9 @@
     <div class="container">
       <h1>Tem certeza que deseja deletar o produto selecionado?</h1>
       <div class="buttons">
-        <a href="#" class="submit-button button1"  type="submit">Sim</a>
+        <form class="submit-button button1" action="/adm/paineladmin/:id?_method=DELETE" method="POST">
+        <a href="/adm/paineladmin" type="submit">Sim</a>
+        </form>
         <a href="/adm/paineladmin" class="submit-button button2" type="submit">Não</a>
         
       </div>

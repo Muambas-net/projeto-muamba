@@ -10,6 +10,10 @@
       "estoque": 10,
       "promocao": false,
       "desconto": 0
+    },
+    {
+      "ativo": false,
+      "id": "48c13fd8-5aea-4966-9cc4-03684535a87e"
     }
   ],
   "categorias": [
