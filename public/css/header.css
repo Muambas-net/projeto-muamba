@@ -136,3 +136,21 @@ nav li {
 nav a {
     text-decoration: none;
 }
+
+
+.btn-carrinho {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-login {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-login a {
+    text-decoration: none;
+}
