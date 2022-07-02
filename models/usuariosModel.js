@@ -27,19 +27,19 @@ const Usuario = {
         const usuario = db.usuarios.find(usuario => usuario.email == email);
         return usuario;
     },
-    create: (usuario) => {
+    create: (usuario) => { //createUser
         const db = open();
         usuario.id = geradorDeId();
         db.usuarios.push(usuario);
         store(db);
     },
-    update: (id, usuarioAtualizado) => {
+    update: (id, usuarioAtualizado) => { // updateUser
         const db = open();
         const index = db.usuarios.findIndex(usuario => usuario.id == id);
         db.usuarios[index] = usuarioAtualizado;
         store(db);
     },
-    delete: (id) => {
+    delete: (id) => { // deleteUser
         const db = open();
         const index = db.usuarios.findIndex(usuario => usuario.id == id);
         db.usuarios.splice(index, 1);

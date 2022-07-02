@@ -3,11 +3,11 @@ const bcrypt = require('bcrypt');
 
 
   const UserController = {
-    showLogin: (req, res) => {
+    mostraLogin: (req, res) => {
       res.render('home/login');
     },
 
-    showCadastrar: (req, res) => {
+    mostraCadastrar: (req, res) => {
       res.render('home/cadastro');
     },
 
