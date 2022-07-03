@@ -12,7 +12,7 @@ const bcrypt = require('bcrypt');
     },
 
     store: (req, res) => {
-      const { nome, email, senha } = req.body;
+      const { nome, email, senha, confirmaSenha, cpf, cep } = req.body;
       const hash = bcrypt.hashSync(senha, 10);
       const verificaSeCadastrado = Usuario.findOne(email)
 
@@ -20,10 +20,16 @@ const bcrypt = require('bcrypt');
         return res.render('home/cadastro', { error: 'Usuário já cadastrado' });
       }
 
+      if (senha != confirmaSenha) {
+        return res.render('home/cadastro', { error: 'Senhas não conferem.' });
+      }
+
       const usuario = {
         nome,
         email,
-        senha: hash
+        senha: hash,
+        cpf,
+        cep
       }
 
       Usuario.create(usuario);
