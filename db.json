@@ -12,8 +12,12 @@
       "desconto": 0
     },
     {
-      "ativo": false,
-      "id": "48c13fd8-5aea-4966-9cc4-03684535a87e"
+      "nome": "Monitor Gamer Asus 23.8' IPS, Wide, 144 Hz, Full HD, 1ms, Adaptive Sync, HDMI/DisplayPort, Vesa, Som Integrado - VP249QGR",
+      "preco": "1099.90",
+      "imagem": "monitor-gamer-asus-led-23-8-widescreen-full-hd-ips-hdmi-displayport-freesync-144hz-1ms-vp249qgr_1580752917_gg.jpeg",
+      "ativo": true,
+      "descricao": "O Monitor Gamer Asus VP249QGR foi desenvolvido para a vitória na arena de jogos profissionais\r\n \r\n\r\nCom seu Full HD Painel IPS, taxa de atualização de 144Hz com Adaptive-Sync (FreeSync) e 1ms MPRT para jogos super suaves visual, mistura o virtual e o real para atrair você para jogos realmente imersivos. Inclui ainda recursos centrados nos jogadores, como as tecnologias ASUS GamePlus, para levar seus jogos experiência para um nível totalmente novo.\r\n\r\n \r\n\r\nTecnologia que um Monitor para PC pede, com a tecnologia ASUS Ultra-Low Blue Light que ajuda a reduzir a quantidade de luz azul prejudicial\r\nVocê pode acessar e selecionar quatro configurações de filtro diferentes na tela facilmente através do menu OSD para encontrar o melhor que se adapte à tarefa em questão. O Monitor Gamer passou por rigorosos testes de desempenho e é certificado pelos laboratórios TÜV Rheinland, um fornecedor global de serviços técnicos, de segurança e certificação, para ser livre de cintilação e emitir baixos níveis de luz azul.\r\n\r\n \r\n\r\nTaxa de atualização de até 144Hz com a tecnologia Adaptive-Sync (FreeSync) e MPRT de 1ms dizima o lag e motion blur\r\nPara lhe dar a vantagem em atiradores em primeira pessoa, pilotos, em tempo real estratégia e títulos esportivos. Essa taxa de atualização ultrarrápida permite que você jogue com as configurações mais altas e permite que você reaja instantaneamente ao que está na tela! A tecnologia ASUS Shadow Boost esclarece áreas escuras do mundo dos jogos sem superexposição de áreas mais brilhantes - melhorando a visualização geral e facilitando a localização de inimigos escondido em áreas escuras do mapa.\r\n\r\n \r\n\r\nO Monitor Gamer Asus possui o GamePlus exclusivo da ASUS para fornecer aprimoramentos no jogo que ajudam você a tirar mais proveito do seu jogo\r\nEssas ferramentas permitem aos jogadores praticar e melhorar suas habilidades habilidades de jogo. Esta função é co-desenvolvida com a contribuição de jogadores profissionais. A tecnologia Flicker-Free reduz o flicker para oferecer a você um jogo confortável experiência. Isso minimiza casos de fadiga ocular e outras doenças oculares potencialmente prejudiciais quando você se envolve em longas e prolongadas sessões de jogos. ",
+      "id": "9cb879ee-280d-47d2-a49b-b411b4f69f04"
     }
   ],
   "categorias": [
