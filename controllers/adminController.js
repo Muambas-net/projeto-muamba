@@ -1,4 +1,5 @@
 const ProdutoModel = require('../models/produtosModel');
+const multer = require('multer');
 
 const adminController = {
     getPainelAdmin: (req, res) => {
@@ -8,12 +9,11 @@ const adminController = {
         res.render('adm/adicionarProduto');
     },
     storeProduct: (req, res) => {
-        uploadAvatar(req, res, (err) => {
         const { nome, preco, imagem, ativo, descricao } = req.body;
         const produto = {
             nome,
             preco,
-            imagem: '/images/produtos/' + req.file.filename,
+            imagem,
             ativo: (ativo ? true : false),
             descricao
         };
@@ -21,7 +21,6 @@ const adminController = {
         ProdutoModel.save(produto);
 
         return res.redirect('/adm/paineladmin');
-    });
     },
     editProduct: (req, res) => {
         const {id} = req.params;
