@@ -25,11 +25,29 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "João",
-      "email": "joão@mail.com",
-      "senha": "",
+      "nome": "admin",
+      "email": "admin@mail.com",
+      "senha": "123456",
+      "cpf": "11111111111",
+      "cep": "900000000",
       "logado": false,
       "nivelId": "admin"
+    },
+    {
+      "nome": "Pablo Cardias Flores",
+      "email": "pablo_six@live.com",
+      "senha": "$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS",
+      "cpf": "01622222222",
+      "cep": "90240001",
+      "id": "a0485d00-35b1-46ec-9284-464eaa60512f"
+    },
+    {
+      "nome": "Pablo Cardias Flores",
+      "email": "cardias@gmail.com",
+      "senha": "$2b$10$hnxO6T/XVbEJWt.t7r/Q/ulfAGQcm1hF6tFun8MfyMmR3aPqICd/m",
+      "cpf": "11122233345",
+      "cep": "90240001",
+      "id": "c6e2cc9d-c378-4b49-a60e-19399f707c85"
     }
   ]
 }
