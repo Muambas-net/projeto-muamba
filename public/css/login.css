@@ -137,6 +137,10 @@ form {
 
 }
 
+.linkCreate {
+    text-decoration: none;
+}
+
 .salvar {
     text-align: center;
     border-radius: 8px;
