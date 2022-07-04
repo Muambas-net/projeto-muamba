@@ -15,11 +15,14 @@ body {
     background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
 }
 
+section {
+  height: 95rem;
+}
 
 .container{
   background-color: #fff;
   width: 45rem;
-  height: 70rem;
+  /* height: 90rem; */
   margin-inline: auto;
   margin-block: 10rem;
   border-radius: .8rem;
@@ -40,7 +43,8 @@ body {
      font-size: 2rem;
  }
 
- .cadastro form input {
+ .cadastro form input,
+ .cadastro form select {
   width: 70%;
   height: 4rem;
   margin-inline: auto;
@@ -94,12 +98,10 @@ label[for="imagem"]:hover{
   font-size: 1.8rem;
 }
 
-
- .buttons {
+.buttons {
      display: flex;
      flex-direction: column;
      align-items: center;
-     margin-top: 2rem;
  }
 
  .buttons button {
@@ -111,6 +113,7 @@ label[for="imagem"]:hover{
   cursor: pointer;
   color: #fff;
   transition: .5s;
+  margin-bottom: 4rem;
  }
 
  .buttons button:hover{

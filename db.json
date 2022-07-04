@@ -8,7 +8,6 @@
       "categoria": "Computadores",
       "imagem": "https://i.zst.com.br/thumbs/12/6/36/-428600293.jpg",
       "estoque": 10,
-      "promocao": false,
       "desconto": 0
     },
     {
@@ -34,7 +33,6 @@
       "senha": "123456",
       "cpf": "11111111111",
       "cep": "900000000",
-      "logado": false,
       "nivelId": "admin"
     },
     {
@@ -52,6 +50,14 @@
       "cpf": "11122233345",
       "cep": "90240001",
       "id": "c6e2cc9d-c378-4b49-a60e-19399f707c85"
+    },
+    {
+      "nome": "Felipe Teixeira Andrade",
+      "email": "felipe@mail.com",
+      "senha": "$2b$10$J/nD9zjYRniUH7qXjv2UfeCIrxpeP8p.O0WmZDjDJtvrXGK69NyzO",
+      "cpf": "12312312323",
+      "cep": "80230030",
+      "id": "03a43d5b-6050-4d26-b477-628cb0949b07"
     }
   ]
 }

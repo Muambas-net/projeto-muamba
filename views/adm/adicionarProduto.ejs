@@ -9,7 +9,17 @@
       <div class="cadastro">
       <form action="/adm/adicionar-produto" method="POST">
         <input type="text" name="nome" id="" placeholder="Nome do Produto">
-        <input type="number" name="preco" min="1" step="any" placeholder="Preço">
+          <input type="number" name="preco" min="1" step="any" placeholder="Preço">
+          <input type="number" name="desconto" min="1" step="any" placeholder="Preço com desconto">
+          <input type="number" name="estoque" min="1" step="any" placeholder="Estoque">
+          <select name="categorias" id="categorias" placeholder="Categorias">
+            <option value="" disabled>Selecione uma categoria</option>
+            <option value="computadores">Computadores</option>
+            <option value="notebooks">Notebooks</option>
+            <option value="celulares">Celulares</option>
+            <option value="televisores">Televisores</option>
+            <option value="acessorios">Acessórios</option>
+          </select>
         <label for="imagem">Adicionar foto</label>
         <input type="file" name="imagem" id="imagem">
         <div class="ativo">
@@ -21,13 +31,13 @@
           <button type="submit">Cadastrar</button>
           
         </div>
-      </form>
-
-    </div>
         
+      </div>
+      </form>
+        
+    
+    
     </div>
-
-
   </section>
 
 </body>

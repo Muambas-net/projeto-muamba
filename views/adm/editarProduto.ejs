@@ -10,6 +10,16 @@
       <form method="POST" action="/adm/paineladmin/:id/editar?_method=PUT" enctype="multipart/form-data">
         <input type="text" name="nome" id="" placeholder="Nome do Produto">
         <input type="number" name="preco" min="1" step="any" placeholder="Preço">
+        <input type="number" name="desconto" min="1" step="any" placeholder="Preço com desconto">
+        <input type="number" name="estoque" min="1" step="any" placeholder="Estoque">
+        <select name="categorias" id="categorias" placeholder="Categorias">
+          <option value="" disabled>Selecione uma categoria</option>
+          <option value="computadores">Computadores</option>
+          <option value="notebooks">Notebooks</option>
+          <option value="celulares">Celulares</option>
+          <option value="televisores">Televisores</option>
+          <option value="acessorios">Acessórios</option>
+        </select>
         <label for="imagem">Adicionar foto</label>
         <input type="file" name="imagem" id="imagem">
         <div class="ativo">
@@ -17,13 +27,13 @@
         <label for="">Ativo</label>
       </div>
         <textarea name="descrição" cols="30" rows="10" placeholder="Descrição do Produto"></textarea>
-      </form>
-      <div class="buttons">
-        <button type="submit">Cadastrar</button>
-
+        <div class="buttons">
+          <button type="submit">Cadastrar</button>
+          
+        </div>
+        
       </div>
-
-    </div>
+    </form>
         
     </div>
 
