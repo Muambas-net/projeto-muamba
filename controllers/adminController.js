@@ -9,10 +9,13 @@ const adminController = {
         res.render('adm/adicionarProduto');
     },
     storeProduct: (req, res) => {
-        const { nome, preco, imagem, ativo, descricao } = req.body;
+        const { nome, preco, desconto, estoque, categoria, imagem, ativo, descricao } = req.body;
         const produto = {
             nome,
             preco,
+            desconto,
+            estoque,
+            categoria,
             imagem,
             ativo: (ativo ? true : false),
             descricao
@@ -29,12 +32,15 @@ const adminController = {
     },
     updateProduct: (req, res) => {
         const {id} = req.params;
-        const {nome, imagem, preco, ativo, descricao} = req.body;
+        const {nome, imagem, preco, desconto, estoque, categoria, ativo, descricao} = req.body;
         const produto = {
             id,
             nome,
             imagem,
             preco,
+            desconto,
+            estoque,
+            categoria,
             ativo: (ativo ? true : false),
             descricao
         }
