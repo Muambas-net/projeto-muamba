@@ -2,7 +2,13 @@ const Usuario = require('../models/usuariosModel');
 const bcrypt = require('bcrypt');
 
 
-  const UserController = {
+const UserController = {
+    
+    index: (req, res) => {
+        const usuarioLogado = ProdutoModel.findAll();
+    return res.render('home/index');
+  },
+  
     mostraLogin: (req, res) => {
       res.render('home/login');
     },
@@ -59,7 +65,7 @@ const bcrypt = require('bcrypt');
     },
 
     logado: (req, res) => {
-      res.render('usuario/painelUsuario')
+      res.render('usuario',  { usuario: req.session.usuario });
 
     },
     esqueciMinhaSenha: (req, res) => {

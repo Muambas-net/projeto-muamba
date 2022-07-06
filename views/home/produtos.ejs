@@ -3,37 +3,44 @@
 <%- include('../partials/header') %>
     <main>
         <section id="produto" class="produto">
-            <h1>Notebook Asus</h1>
+                  
+            <h1><%=produto.nome%></h1>
             <div class="div-topo">
                 <div class="galeria-prod">
                     <div class="galeria-agrupada">
-                        <img src="images/notebook.jpg" alt="Notebook" alt="">
-                        <img src="images/notebook.jpg" alt="Notebook" alt="">
-                        <img src="images/notebook.jpg" alt="Notebook" alt="">
+                        <img src="<%=produto.imagem%>" alt="<%=produto.descricao%>" >
+                        <img src="<%=produto.imagem%>" alt="<%=produto.descricao%>" >
+                        <img src="<%=produto.imagem%>" alt="<%=produto.descricao%>" >
                     </div>
-                    <img class="img-destaque" src="images/notebook.jpg" alt="Notebook" alt="">
+                    <img class="img-destaque" src="<%=produto.imagem%>" alt="<%produto.nome%>" >
                 </div>
 
                 <div class="produto-main">
-                    <h2>Notebook Asus</h2>
+                    <h2><%=produto.descricao%></h2>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    <div><span>R$ 1200,00</span></div>
-                    <h3>Sobre este produto</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam similique aperiam, delectus libero temporibus est ratione, earum mollitia vel minima consequatur, praesentium voluptates nemo esse iste exercitationem hic dolore debitis!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto doloremque dolores modi enim est? Atque quisquam ullam enim non, vel velit officia laboriosam voluptas, nihil perspiciatis corrupti eveniet accusantium maxime?
-                    </p>
+                    <div>
+                        <span>DE R$3.000,00</span>
+                        <h4>Por <%=produto.preco%></h4>
+                    </div>
+                    <h3><%=produto.categoria%></h3>
+                    <p><%=produto.descricao%></p>
                     <!-- produto em si entra aqui -->
-                </div>
-
-                <div class="inf-compra">
                     <h3>Informacoes para compra</h3>
-                    <form action="" method="post">
+                <!--     <form action="" method="post">
                         <input type="search" placeholder="Digite seu CEP">
+                    </form> -->
+                    <form action="/carrinho/adicionar" method="POST">
+                    <input type="hidden" name="id" value="<%= produto.id %>" />
+                    <input type="hidden" name="nome" value="<%= produto.nome %>" />
+                    <input type="hidden" name="preco" value="<%= produto.preco %>" />
+                    <input type="hidden" name="imagem" value="<%= produto.imagem %>" />
+                    <button type="submit" name="btn2">Compre agora</button>
                     </form>
-                    <button name="btn1">Adicionar ao carrinho</button>
-                    <button name="btn2">Compre agora</button>
+                    <form>
+                    <button type="submit" name="btn1">Calcule o frete</button>
+                    </form>
                 </div>
         </section>
 
@@ -119,7 +126,7 @@
         </section>
 
     </main>
-    <%- include('../partials/footer') %>
+            <%- include('../partials/footer') %>
         </body>
 
         </html>

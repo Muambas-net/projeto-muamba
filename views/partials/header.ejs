@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +10,7 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="shortcut icon" href="/images/logo-header.svg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/86e4e92605.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -26,18 +29,24 @@
         </form>
 
         <div class="cart-user">
-
             <div class="cart">
-                <!-- INCLUIR LOGICA DE QUANTIDADE DE ITENS COMO SPAN QUANDO TIVER ITENS NO CARRINHO -->
+                <!-- INCLUIR LOGICA DE QUANTIDADE DE ITENS COMO SPAN QUANDO TIVER ITENS NO CARRINHO -->                                      
                 <button class="btn-carrinho"><a href="/carrinho"><i class="fa-solid fa-cart-shopping"></i></a></button>
                 <span>Meu Carrinho de Muambas</span>
+         
             </div>
 
             <div class="user">
+                  <% if(locals.usuario && usuario) { %>
+                     <span>Olá! <%=locals.usuario.nome %></span>
+                     <a href="/logout" class="btn-login"><i class="fa-solid fa-arrow-right-from-bracket"></a></i>
+                           <% } else { %>
                 <!-- INCLUIR LOGICA DE TROCA PARA NOME DE USER QUANDO LOGADO -->
                 <button class="btn-login"><a href="/login"><i class="fa-solid fa-circle-user"></i></a></button>
                 <span>Login</span>
+              
             </div>
+            <% } %>
         </div>
 
     </header>

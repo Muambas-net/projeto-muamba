@@ -1,63 +1,127 @@
 {
-  "produtos": [
-    {
-      "id": 1,
-      "nome": "Notebook",
-      "preco": 1299,
-      "descricao": "Notebook Asus",
-      "categoria": "Computadores",
-      "imagem": "https://i.zst.com.br/thumbs/12/6/36/-428600293.jpg",
-      "estoque": 10,
-      "desconto": 0
-    },
-    {
-      "nome": "Monitor Gamer Asus 23.8' IPS, Wide, 144 Hz, Full HD, 1ms, Adaptive Sync, HDMI/DisplayPort, Vesa, Som Integrado - VP249QGR",
-      "preco": "1099.90",
-      "imagem": "monitor-gamer-asus-led-23-8-widescreen-full-hd-ips-hdmi-displayport-freesync-144hz-1ms-vp249qgr_1580752917_gg.jpeg",
-      "ativo": true,
-      "descricao": "O Monitor Gamer Asus VP249QGR foi desenvolvido para a vitória na arena de jogos profissionais\r\n \r\n\r\nCom seu Full HD Painel IPS, taxa de atualização de 144Hz com Adaptive-Sync (FreeSync) e 1ms MPRT para jogos super suaves visual, mistura o virtual e o real para atrair você para jogos realmente imersivos. Inclui ainda recursos centrados nos jogadores, como as tecnologias ASUS GamePlus, para levar seus jogos experiência para um nível totalmente novo.\r\n\r\n \r\n\r\nTecnologia que um Monitor para PC pede, com a tecnologia ASUS Ultra-Low Blue Light que ajuda a reduzir a quantidade de luz azul prejudicial\r\nVocê pode acessar e selecionar quatro configurações de filtro diferentes na tela facilmente através do menu OSD para encontrar o melhor que se adapte à tarefa em questão. O Monitor Gamer passou por rigorosos testes de desempenho e é certificado pelos laboratórios TÜV Rheinland, um fornecedor global de serviços técnicos, de segurança e certificação, para ser livre de cintilação e emitir baixos níveis de luz azul.\r\n\r\n \r\n\r\nTaxa de atualização de até 144Hz com a tecnologia Adaptive-Sync (FreeSync) e MPRT de 1ms dizima o lag e motion blur\r\nPara lhe dar a vantagem em atiradores em primeira pessoa, pilotos, em tempo real estratégia e títulos esportivos. Essa taxa de atualização ultrarrápida permite que você jogue com as configurações mais altas e permite que você reaja instantaneamente ao que está na tela! A tecnologia ASUS Shadow Boost esclarece áreas escuras do mundo dos jogos sem superexposição de áreas mais brilhantes - melhorando a visualização geral e facilitando a localização de inimigos escondido em áreas escuras do mapa.\r\n\r\n \r\n\r\nO Monitor Gamer Asus possui o GamePlus exclusivo da ASUS para fornecer aprimoramentos no jogo que ajudam você a tirar mais proveito do seu jogo\r\nEssas ferramentas permitem aos jogadores praticar e melhorar suas habilidades habilidades de jogo. Esta função é co-desenvolvida com a contribuição de jogadores profissionais. A tecnologia Flicker-Free reduz o flicker para oferecer a você um jogo confortável experiência. Isso minimiza casos de fadiga ocular e outras doenças oculares potencialmente prejudiciais quando você se envolve em longas e prolongadas sessões de jogos. ",
-      "id": "9cb879ee-280d-47d2-a49b-b411b4f69f04"
-    }
-  ],
-  "categorias": [
-    {
-      "id": 1,
-      "nome": "Computadores"
-    }
-  ],
-  "usuarios": [
-    {
-      "id": 1,
-      "nome": "admin",
-      "email": "admin@mail.com",
-      "senha": "123456",
-      "cpf": "11111111111",
-      "cep": "900000000",
-      "nivelId": "admin"
-    },
-    {
-      "nome": "Pablo Cardias Flores",
-      "email": "pablo_six@live.com",
-      "senha": "$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS",
-      "cpf": "01622222222",
-      "cep": "90240001",
-      "id": "a0485d00-35b1-46ec-9284-464eaa60512f"
-    },
-    {
-      "nome": "Pablo Cardias Flores",
-      "email": "cardias@gmail.com",
-      "senha": "$2b$10$hnxO6T/XVbEJWt.t7r/Q/ulfAGQcm1hF6tFun8MfyMmR3aPqICd/m",
-      "cpf": "11122233345",
-      "cep": "90240001",
-      "id": "c6e2cc9d-c378-4b49-a60e-19399f707c85"
-    },
-    {
-      "nome": "Felipe Teixeira Andrade",
-      "email": "felipe@mail.com",
-      "senha": "$2b$10$J/nD9zjYRniUH7qXjv2UfeCIrxpeP8p.O0WmZDjDJtvrXGK69NyzO",
-      "cpf": "12312312323",
-      "cep": "80230030",
-      "id": "03a43d5b-6050-4d26-b477-628cb0949b07"
-    }
-  ]
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Processador AMD Ryzen 5 3600",
+            "preco": "1199,99",
+            "descricao": "Processador AMD Ryzen.Cache 32MB 3.6GHz(4.2GHz Max Turbo) AM4, Sem Vídeo - 100-100000031BOX",
+            "categoria": "hardware",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/102438/processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_1562606710_p.jpg",
+            "estoque": 10,
+            "desconto": 0
+        },
+        {
+            "id": 2,
+            "nome": "Placa-Mãe Asus Prime B450M Gaming/BR.",
+            "preco": "707,90",
+            "descricao": "Placa-mãe Asus Prime B450M. AMD AM4, mATX, DDR4.Placa-mãe ASUS já atualizada para o Windows 11.",
+            "categoria": "hardware",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/99504/placa-mae-asus-para-amd-am4-matx-prime-b450m-gaming-br-ddr4__1545143134_p.jpg",
+            "estoque": 20,
+            "desconto": 0
+        },
+        {
+            "id": 3,
+            "nome": "Cadeira Gamer Alpha Gamer Polaris Office, Black.Queremos proporcionar soluções adequadas ao teu estilo",
+            "preco": "1399,99",
+            "descricao": "Cadeira Gamer Alpha Gamer",
+            "categoria": "espaco gamer",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/93905/93905_1512471482_index_p.jpg",
+            "estoque": 50,
+            "desconto": 0
+        },
+        {
+            "id": 4,
+            "nome": "Notebook Samsung Intel Core i5-1135G7, 8GB RAM, SSD 256GB, 15.6 Full HD, Windows 11 Home, Cinza - NP550XDA-KH2BR",
+            "preco": "3429,99",
+            "descricao": "Notebook Samsung",
+            "categoria": "notebook",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749555_p.jpg",
+            "estoque": 30,
+            "desconto": 0
+        },
+        {
+            "id": 5,
+            "nome": "Smartphone Samsung Galaxy S20 FE 128GB. 6GB RAM.",
+            "preco": "2199,99",
+            "descricao": "Smartphone Samsung, Snapdragon 865, Câmera Tripla,Cloud Navy - SM-G780GZBRZTO",
+            "categoria": "smartphone",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/155473/smartphone-samsung-galaxy-s20-fe-128gb-6gb-ram-octa-core-camera-tripla-carregamento-super-rapido-cloud-navy-sm-g780gzbrzto_1620393794_p.jpg",
+            "estoque": 100,
+            "desconto": 0
+        }
+    ],
+    "categorias": [
+        {
+            "id": 1,
+            "nome": "Computadores"
+        }
+    ],
+    "usuarios": [
+        {
+            "id": 1,
+            "nome": "admin",
+            "email": "admin@mail.com",
+            "senha": "123456",
+            "cpf": "11111111111",
+            "cep": "900000000",
+            "nivelId": "admin"
+        },
+        {
+            "nome": "Pablo Cardias Flores",
+            "email": "pablo_six@live.com",
+            "senha": "$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS",
+            "cpf": "01622222222",
+            "cep": "90240001",
+            "id": "a0485d00-35b1-46ec-9284-464eaa60512f"
+        },
+        {
+            "nome": "Pablo Cardias Flores",
+            "email": "cardias@gmail.com",
+            "senha": "$2b$10$hnxO6T/XVbEJWt.t7r/Q/ulfAGQcm1hF6tFun8MfyMmR3aPqICd/m",
+            "cpf": "11122233345",
+            "cep": "90240001",
+            "id": "c6e2cc9d-c378-4b49-a60e-19399f707c85"
+        },
+        {
+            "nome": "Felipe Teixeira Andrade",
+            "email": "felipe@mail.com",
+            "senha": "$2b$10$J/nD9zjYRniUH7qXjv2UfeCIrxpeP8p.O0WmZDjDJtvrXGK69NyzO",
+            "cpf": "12312312323",
+            "cep": "80230030",
+            "id": "03a43d5b-6050-4d26-b477-628cb0949b07"
+        },
+        {
+            "nome": "ANTONIO ALEXANDRE CORDEIRO",
+            "email": "alexandre@gmail.com",
+            "senha": "$2b$10$pAKhPuRew4nrCYuLIOEB0ONoTb.haPQSCPQARVt.C/NupdzdeXoty",
+            "cpf": "12345678996",
+            "cep": "58433222",
+            "id": "78ab7129-d1d6-4f7f-8c4d-3d54f8edab80"
+        },
+        {
+            "nome": "antonio",
+            "email": "antonio@gmail.com",
+            "senha": "$2b$10$AxTbjuTTzy5SWNk0NMy41evpBChTCIFr05DXekm4gZted9XM4Z3/S",
+            "cpf": "12345678900",
+            "cep": "58000000",
+            "id": "ed79a8ba-6e83-427f-a311-a5efa0ad77c7"
+        },
+        {
+            "nome": "jose",
+            "email": "jose@GMAIL.COM",
+            "senha": "$2b$10$IXvGW5Xk1n8oBJFuCljP7eiWBtI5ue8niUmx78PXDCs1y4E543AbS",
+            "cpf": "12345678989",
+            "cep": "58433222",
+            "id": "56d00846-c281-4943-88fc-df883d93e79b"
+        },
+        {
+            "nome": "pedro",
+            "email": "pedro@gmail.com",
+            "senha": "$2b$10$V9N/.uYyda/4di44YVaOzedEj/zW5P5xZv8QQ3oZddOKDU4ARJnx6",
+            "cpf": "12345678900",
+            "cep": "58433222",
+            "id": "63eceecc-394f-417a-bd51-39eb4575349b"
+        }
+    ]
 }

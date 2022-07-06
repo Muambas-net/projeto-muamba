@@ -72,9 +72,9 @@ header {
 
 .user span {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Teko', sans-serif;
-    font-weight: 700;
+    font-weight: 50px;
 }
 
 .search input {
@@ -149,6 +149,8 @@ nav a {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+        padding: 2px;
 }
 
 .btn-login a {
