@@ -47,15 +47,13 @@ const bcrypt = require('bcrypt');
 
       req.session.usuario = usuario;
       return res.redirect("/");
-
     },
 
     logout: (req, res) => {
       req.session.destroy(function (err) {
-        // cannot access session here
       });
 
-      return res.redirect('/login');
+      return res.redirect('/');
     },
 
     logado: (req, res) => {

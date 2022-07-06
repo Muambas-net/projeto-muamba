@@ -2,25 +2,34 @@
 
 const homeController = {
     index: (req, res) => {
-        res.render('home/index');
+        const {usuario} = req.session;
+        res.render('home/index', {usuario});
     },
     carrinho: (req, res) => {
-        res.render('home/carrinho');
+        const {usuario} = req.session;
+
+        res.render('home/carrinho', {usuario});
     },
     categorias: (req, res) => {
-        res.render('home/categorias');
+        const {usuario} = req.session;
+
+        res.render('home/categorias', {usuario});
     },
     login: (req, res) => {
         res.render('home/login')
     },
     produtos: (req, res) => {
-        res.render('home/produtos')
+        const {usuario} = req.session;
+
+        res.render('home/produtos', {usuario});
     },
     cadastro: (req, res) => {
         res.render('home/cadastro')
     },
     lista: (req,res) =>{
-        res.render('home/lista')
+        const {usuario} = req.session;
+
+        res.render('home/lista', {usuario});
     }
 
 }
