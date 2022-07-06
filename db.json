@@ -41,7 +41,7 @@
       "id": 1,
       "nome": "admin",
       "email": "admin@mail.com",
-      "senha": "123456",
+      "senha": "$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS",
       "cpf": "11111111111",
       "cep": "900000000",
       "nivelId": "admin"
