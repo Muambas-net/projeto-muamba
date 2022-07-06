@@ -122,6 +122,14 @@
             "cpf": "12345678900",
             "cep": "58433222",
             "id": "63eceecc-394f-417a-bd51-39eb4575349b"
+        },
+        {
+            "nome": "maria",
+            "email": "maria@gmail.com",
+            "senha": "$2b$10$I7N08YLcvsiuVobP7zgr8.Dv7Mt3ors7.7M/GkS/kUDq.jY/cGnEG",
+            "cpf": "12345678999",
+            "cep": "5800000",
+            "id": "9063cb0c-22c7-4eb9-b3f5-1220d5be2e16"
         }
     ]
 }

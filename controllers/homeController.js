@@ -1,13 +1,14 @@
 const produtosModel = require('../models/produtosModel');
 
 const homeController = {
+
     showIndex: (req, res) => {
         const produtos = produtosModel.findAll();
 
         if (req.session.usuario) {
             return res.render('home/index', { produtos, usuario: req.session.usuario });
         }
-        return res.render('home/index',{ produtos});
+        return res.render('home/index', { produtos });
     },
 
     showOneProduct: (req, res) => {
@@ -21,29 +22,37 @@ const homeController = {
         return res.render("home/produtos", { produto, usuario });
 
     },
-        carrinho: (req, res) => {
+    carrinho: (req, res) => {
         if (req.session.usuario) {
             return res.render('home/index', { produto, usuario: req.session.usuario });
         }
-        res.render('/carrinho');
-    },
+        return res.render('/carrinho', { produto });
+        },
 
     categorias: (req, res) => {
-        res.render('home/categorias');
+        const { usuario } = req.session;
+        res.render('home/categorias', { usuario });
     },
+    
     login: (req, res) => {
         res.render('home/login')
     },
-/*     produtos: (req, res) => {
-        res.render('home/produtos')
-    }, */
+
+    produtos: (req, res) => {
+        const {usuario} = req.session;
+
+        res.render('home/produtos', {usuario});
+    },
+
     cadastro: (req, res) => {
         res.render('home/cadastro')
     },
-    lista: (req,res) =>{
-        res.render('home/lista')
+
+    lista: (req, res) => {
+        const { usuario } = req.session;
+    res.render('home/lista', { usuario });
+                                }
+
     }
 
-}
-
-module.exports = homeController
+module.exports = homeController;

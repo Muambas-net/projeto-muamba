@@ -1,14 +1,18 @@
 const ProdutoModel = require('../models/produtosModel');
-const multer = require('multer');
+const storage = require('../middlewares/storage');
+const fs = require('fs');
+
+const uploadImagem = storage('imagem', '/produtos')
 
 const adminController = {
     getPainelAdmin: (req, res) => {
-        res.render('adm/painelAdmin');
+        return res.render('adm/painelAdmin');
     },
     addProduct: (req, res) => {
-        res.render('adm/adicionarProduto');
+        return res.render('adm/adicionarProduto');
     },
     storeProduct: (req, res) => {
+        uploadImagem(req, res, (err) => {
         const { nome, preco, desconto, estoque, categoria, imagem, ativo, descricao } = req.body;
         const produto = {
             nome,
@@ -16,7 +20,7 @@ const adminController = {
             desconto,
             estoque,
             categoria,
-            imagem,
+            imagem: '/images/produtos/' + req.file.filename,
             ativo: (ativo ? true : false),
             descricao
         };
@@ -24,11 +28,12 @@ const adminController = {
         ProdutoModel.save(produto);
 
         return res.redirect('/adm/paineladmin');
+    })
     },
     editProduct: (req, res) => {
         const {id} = req.params;
         const produto = ProdutoModel.findById(id);
-        res.render('adm/editarProduto', {produto});
+        return res.render('adm/editarProduto', {produto});
     },
     updateProduct: (req, res) => {
         const {id} = req.params;
@@ -50,11 +55,16 @@ const adminController = {
         return res.redirect('/adm/paineladmin');
     },
     deleteProduct: (req, res) => {
-        res.render('adm/deletarProduto');
+        return res.render('adm/deletarProduto');
     },
     destroyProduct: (req, res) => {
         const {id} = req.params;
         ProdutoModel.delete(id);
+        try {
+            fs.unlinkSync('./public' + produto.imagem)
+          } catch(err) {
+            console.error(err)
+          }
         return res.redirect('/adm/paineladmin');
     }
 }

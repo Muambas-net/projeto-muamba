@@ -4,16 +4,15 @@ const bcrypt = require('bcrypt');
 
 const UserController = {
     
-    index: (req, res) => {
-        const usuarioLogado = ProdutoModel.findAll();
-    return res.render('home/index');
+  showLogin: (req, res) => {
+    return res.render('home/login');
   },
   
-    mostraLogin: (req, res) => {
+  /*   mostraLogin: (req, res) => {
       res.render('home/login');
-    },
+    }, */
 
-    mostraCadastrar: (req, res) => {
+    showCadastrar: (req, res) => {
       res.render('home/cadastro');
     },
 
@@ -53,22 +52,25 @@ const UserController = {
 
       req.session.usuario = usuario;
       return res.redirect("/");
-
     },
 
     logout: (req, res) => {
       req.session.destroy(function (err) {
-        // cannot access session here
       });
 
       return res.redirect('/login');
     },
 
     logado: (req, res) => {
-      res.render('usuario',  { usuario: req.session.usuario });
+      return res.render('/usuario',  { usuario: req.session.usuario });
 
-    },
-    esqueciMinhaSenha: (req, res) => {
+  },
+    
+    panelUser: (req, res) => { 
+      return res.render('usuario/painelUsuario', { usuario: req.session.usuario });
+  },
+  
+  esqueciMinhaSenha: (req, res) => {
       res.render('usuario/esqueciMinhaSenha')
     }
 

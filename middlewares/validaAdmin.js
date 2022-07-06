@@ -1,6 +1,6 @@
 const validaAdmin = (req, res, next) => {
     const { usuario } = req.session;
-    if (usuario.nivelId == 'admin') {
+    if (usuario.nivelId == "admin") {
        return next();
     }
 

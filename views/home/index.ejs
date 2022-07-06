@@ -24,8 +24,15 @@
                         <a href="/produtos/<%=produto.id%>">
                         <button type="button" class="btn btn-primary">Detalhes</button>
                         </a>
-                        <button class="btn btn-primary">Comprar</button>
-                        
+                    <form action="/carrinho/adicionar" method="POST">
+                    <input type="hidden" name="id" value="<%= produto.id %>" />
+                    <input type="hidden" name="nome" value="<%= produto.nome %>" />
+                    <input type="hidden" name="preco" value="<%= produto.preco %>" />
+                    <input type="hidden" name="imagem" value="<%= produto.imagem %>" />
+                    <button type="submit" name="btn2">Compre agora</button>
+                     
+                          </form>
+                        </a>
                     </div>
                 </div>
                               

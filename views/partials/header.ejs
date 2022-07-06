@@ -7,10 +7,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/headerLogado.css">
     <link rel="shortcut icon" href="/images/logo-header.svg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/86e4e92605.js" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -30,24 +31,30 @@
 
         <div class="cart-user">
             <div class="cart">
+
                 <!-- INCLUIR LOGICA DE QUANTIDADE DE ITENS COMO SPAN QUANDO TIVER ITENS NO CARRINHO -->                                      
                 <button class="btn-carrinho"><a href="/carrinho"><i class="fa-solid fa-cart-shopping"></i></a></button>
                 <span>Meu Carrinho de Muambas</span>
-         
             </div>
-
-            <div class="user">
-                  <% if(locals.usuario && usuario) { %>
-                     <span>Olá! <%=locals.usuario.nome %></span>
-                     <a href="/logout" class="btn-login"><i class="fa-solid fa-arrow-right-from-bracket"></a></i>
-                           <% } else { %>
-                <!-- INCLUIR LOGICA DE TROCA PARA NOME DE USER QUANDO LOGADO -->
-                <button class="btn-login"><a href="/login"><i class="fa-solid fa-circle-user"></i></a></button>
-                <span>Login</span>
-              
-            </div>
-            <% } %>
-        </div>
+           
+            <% if (locals.usuario && usuario) { %>
+                <div class="user">
+                    <a href="/carrinho"><i style="color: #2D2D2D;" class="bi bi-person-circle"></i></a>
+                    <span style="color: #2D2D2D;">Olá, <%= locals.usuario.nome %></span>
+                    <div class="user-options">
+                        <ul>
+                            <li><a style="color: #2D2D2D;" href="/usuario">Minha Conta</a></li>
+                            <li>|</li>
+                            <li><a style="color: #2D2D2D;" href="/logout">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            <% } else { %>
+                    <div class="user">
+                        <a href="/login" title="login"><i style="color: #2D2D2D;" class="bi bi-person-circle"></i></a>
+                        <span style="color: #2D2D2D;">Faça seu<br> login</span>
+                    </div>
+             <% } %>
 
     </header>
     <nav>
@@ -61,3 +68,6 @@
             <li><a href="">Acessórios</a></li>
         </ul>
     </nav>
+</body>
+
+</html>
