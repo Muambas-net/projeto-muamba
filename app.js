@@ -1,9 +1,9 @@
 const express = require('express');
+const session = require('express-session');
 const methodOverride = require('method-override');
 const homeRouter = require('./routes/homeRouter');
 const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
-const session = require('express-session');
 
 const app = express();
 
@@ -18,8 +18,7 @@ app.use(express.json());
 app.use(session({
     secret: 'ecomerce muambas',
     resave: false,
-    saveUninitialized: true,
-   
+    saveUninitialized: true 
   }))
 
 
