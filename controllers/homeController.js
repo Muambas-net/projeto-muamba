@@ -4,11 +4,9 @@ const homeController = {
 
     showIndex: (req, res) => {
         const produtos = produtosModel.findAll();
+        const {usuario} = req.session;
 
-        if (req.session.usuario) {
-            return res.render('home/index', { produtos, usuario: req.session.usuario });
-        }
-        return res.render('home/index', { produtos });
+        return res.render('home/index', { produtos, usuario });
     },
 
     showOneProduct: (req, res) => {
@@ -23,11 +21,9 @@ const homeController = {
 
     },
     carrinho: (req, res) => {
-        if (req.session.usuario) {
-            return res.render('home/index', { produto, usuario: req.session.usuario });
-        }
-        return res.render('/carrinho', { produto });
-        },
+       const { usuario } = req.session;
+        return res.render('home/carrinho', { produto, usuario });
+    },
 
     categorias: (req, res) => {
         const { usuario } = req.session;

@@ -6,10 +6,12 @@ const uploadImagem = storage('imagem', '/produtos')
 
 const adminController = {
     getPainelAdmin: (req, res) => {
-        return res.render('adm/painelAdmin');
+        let {usuario} = req.session;
+        return res.render('adm/painelAdmin', {usuario});
     },
     addProduct: (req, res) => {
-        return res.render('adm/adicionarProduto');
+        let {usuario} = req.session;
+        return res.render('adm/adicionarProduto', {usuario});
     },
     storeProduct: (req, res) => {
         uploadImagem(req, res, (err) => {
