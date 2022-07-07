@@ -2,7 +2,6 @@ const CarrinhoController = {
 
      showCart: (req, res) => {
         let {carrinho} = req.session;
-        let {usuario} = req.session;
         let total = 0;
 
         if(!carrinho) {
@@ -12,8 +11,7 @@ const CarrinhoController = {
         carrinho.forEach(produto => {
             total += parseFloat(produto.preco);
         });
-            /* console.log(carrinho) */
-        return res.render('home/carrinho', {carrinho, total, usuario});
+        return res.render('home/carrinho', {carrinho, total});
     },
     
     addCart: (req, res) => {
@@ -25,7 +23,6 @@ const CarrinhoController = {
         } else {
         req.session.carrinho = [produto];
         }
-/*         console.log(req.session.carrinho); */
         return res.redirect('/carrinho');
     },
     removeCart: (req, res) => { 
