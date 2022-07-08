@@ -23,10 +23,10 @@
                         <%=produto.preco%>
                     </p>
                     <span>À vista no pix</span>
-                    <div class="d-flex justify-content-between align-items-center cursor-pointer">
-                        <div class="btn-group">
+                    <div >
+                        <div>
                             <a href="/produtos/<%=produto.id%>">
-                                <button type="button" class="btn btn-primary">Detalhes</button>
+                                <button type="button" class="">Detalhes</button>
                             </a>
                             <form action="/carrinho/adicionar" method="POST">
                                 <input type="hidden" name="id" value="<%= produto.id %>" />
