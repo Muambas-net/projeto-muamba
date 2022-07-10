@@ -68,11 +68,12 @@ body{
     
 }
 .card img{
-    padding-top: 1.5rem;
+    padding-top: 2.5rem;
     max-width: 90px;
 }
 
 .card p {
+    padding-top: 4.5rem;
     max-width: 25ch;
     font-size: 2.2rem;
     line-height: 3rem;
