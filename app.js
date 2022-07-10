@@ -23,8 +23,8 @@ app.use(session({
 
 app.use(homeRouter);
 app.use(userRouter);
-app.use(adminRouter);
 app.use(carrinhoRouter);
+app.use(adminRouter);
 
 
 app.listen(3000, () => {

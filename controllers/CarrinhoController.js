@@ -18,12 +18,14 @@ const CarrinhoController = {
         const { id, nome, preco, imagem } = req.body;
         const produto = { id, nome, preco, imagem };
 
+
         if( req.session.carrinho ){
         req.session.carrinho.push(produto);
         } else {
         req.session.carrinho = [produto];
         }
         return res.redirect('/carrinho');
+        
     },
     removeCart: (req, res) => { 
         const { id } = req.params;

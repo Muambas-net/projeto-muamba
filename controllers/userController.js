@@ -62,12 +62,14 @@ const UserController = {
     },
 
     logado: (req, res) => {
-      return res.render('/usuario',  { usuario: req.session.usuario });
+      const { usuario } = req.session;
+      return res.render('/usuario',  { usuario});
 
   },
     
     panelUser: (req, res) => { 
-      return res.render('usuario/painelUsuario', { usuario: req.session.usuario });
+      const { usuario } = req.session;
+      return res.render('usuario/painelUsuario', { usuario});
   },
   
   esqueciMinhaSenha: (req, res) => {

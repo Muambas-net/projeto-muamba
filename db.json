@@ -4,7 +4,7 @@
             "id": "4e8f9f57-3302-493c-b0df-8398e08d95ac",
             "nome": "Processador AMD Ryzen 5 3600",
             "preco": "1199,99",
-            "descricao": "Processador AMD Ryzen.Cache 32MB 3.6GHz(4.2GHz Max Turbo) AM4, Sem Vídeo - 100-100000031BOX",
+            "descricao": "Processador AMD Ryzen.Cache 32MB 3.6GHz",
             "categoria": "hardware",
             "imagem": "https://images.kabum.com.br/produtos/fotos/102438/processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_1562606710_p.jpg",
             "estoque": 10,
@@ -14,7 +14,7 @@
             "id": "2",
             "nome": "Placa-Mãe Asus Prime B450M Gaming/BR.",
             "preco": "707,90",
-            "descricao": "Placa-mãe Asus Prime B450M. AMD AM4, mATX, DDR4.Placa-mãe ASUS já atualizada para o Windows 11.",
+            "descricao": "Placa-mãe Asus Prime B450M. AMD AM4",
             "categoria": "hardware",
             "imagem": "https://images.kabum.com.br/produtos/fotos/99504/placa-mae-asus-para-amd-am4-matx-prime-b450m-gaming-br-ddr4__1545143134_p.jpg",
             "estoque": 20,
@@ -22,7 +22,7 @@
         },
         {
             "id": "3",
-            "nome": "Cadeira Gamer Alpha Gamer Polaris Office, Black.Queremos proporcionar soluções adequadas ao teu estilo",
+            "nome": "Cadeira Gamer Alpha Gamer Polaris Office",
             "preco": "1399,99",
             "descricao": "Cadeira Gamer Alpha Gamer",
             "categoria": "espaco gamer",
@@ -32,7 +32,7 @@
         },
         {
             "id": "4",
-            "nome": "Notebook Samsung Intel Core i5-1135G7, 8GB RAM, SSD 256GB, 15.6 Full HD, Windows 11 Home, Cinza - NP550XDA-KH2BR",
+            "nome": "Notebook Samsung Intel Core i5-1135G7, 8GB RAM, SSD 256GB",
             "preco": "3429,99",
             "descricao": "Notebook Samsung",
             "categoria": "notebook",
@@ -65,7 +65,8 @@
             "senha": "$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS",
             "cpf": "11111111111",
             "cep": "900000000",
-            "nivelId": "admin"
+            "nivelId": "admin",
+            "carrinho": "[]"
         },
         {
             "nome": "Pablo Cardias Flores",
@@ -73,7 +74,8 @@
             "senha": "$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS",
             "cpf": "01622222222",
             "cep": "90240001",
-            "id": "a0485d00-35b1-46ec-9284-464eaa60512f"
+            "id": "a0485d00-35b1-46ec-9284-464eaa60512f",
+            "carrinho": "[]"
         },
         {
             "nome": "Pablo Cardias Flores",
@@ -81,7 +83,8 @@
             "senha": "$2b$10$hnxO6T/XVbEJWt.t7r/Q/ulfAGQcm1hF6tFun8MfyMmR3aPqICd/m",
             "cpf": "11122233345",
             "cep": "90240001",
-            "id": "c6e2cc9d-c378-4b49-a60e-19399f707c85"
+            "id": "c6e2cc9d-c378-4b49-a60e-19399f707c85",
+            "carrinho": "[]"
         },
         {
             "nome": "Felipe Teixeira Andrade",
@@ -89,7 +92,8 @@
             "senha": "$2b$10$J/nD9zjYRniUH7qXjv2UfeCIrxpeP8p.O0WmZDjDJtvrXGK69NyzO",
             "cpf": "12312312323",
             "cep": "80230030",
-            "id": "03a43d5b-6050-4d26-b477-628cb0949b07"
+            "id": "03a43d5b-6050-4d26-b477-628cb0949b07",
+            "carrinho": "[]"
         },
         {
             "nome": "ANTONIO ALEXANDRE CORDEIRO",
@@ -97,7 +101,8 @@
             "senha": "$2b$10$pAKhPuRew4nrCYuLIOEB0ONoTb.haPQSCPQARVt.C/NupdzdeXoty",
             "cpf": "12345678996",
             "cep": "58433222",
-            "id": "78ab7129-d1d6-4f7f-8c4d-3d54f8edab80"
+            "id": "78ab7129-d1d6-4f7f-8c4d-3d54f8edab80",
+            "carrinho": "[]"
         },
         {
             "nome": "antonio",
@@ -105,7 +110,8 @@
             "senha": "$2b$10$AxTbjuTTzy5SWNk0NMy41evpBChTCIFr05DXekm4gZted9XM4Z3/S",
             "cpf": "12345678900",
             "cep": "58000000",
-            "id": "ed79a8ba-6e83-427f-a311-a5efa0ad77c7"
+            "id": "ed79a8ba-6e83-427f-a311-a5efa0ad77c7",
+            "carrinho": "[]"
         },
         {
             "nome": "jose",
@@ -113,7 +119,8 @@
             "senha": "$2b$10$IXvGW5Xk1n8oBJFuCljP7eiWBtI5ue8niUmx78PXDCs1y4E543AbS",
             "cpf": "12345678989",
             "cep": "58433222",
-            "id": "56d00846-c281-4943-88fc-df883d93e79b"
+            "id": "56d00846-c281-4943-88fc-df883d93e79b",
+            "carrinho": "[]"
         },
         {
             "nome": "pedro",
@@ -121,7 +128,8 @@
             "senha": "$2b$10$V9N/.uYyda/4di44YVaOzedEj/zW5P5xZv8QQ3oZddOKDU4ARJnx6",
             "cpf": "12345678900",
             "cep": "58433222",
-            "id": "63eceecc-394f-417a-bd51-39eb4575349b"
+            "id": "63eceecc-394f-417a-bd51-39eb4575349b",
+            "carrinho": "[]"
         },
         {
             "nome": "maria",
@@ -129,7 +137,8 @@
             "senha": "$2b$10$I7N08YLcvsiuVobP7zgr8.Dv7Mt3ors7.7M/GkS/kUDq.jY/cGnEG",
             "cpf": "12345678999",
             "cep": "5800000",
-            "id": "9063cb0c-22c7-4eb9-b3f5-1220d5be2e16"
+            "id": "9063cb0c-22c7-4eb9-b3f5-1220d5be2e16",
+            "carrinho": "[]"
         }
     ]
 }

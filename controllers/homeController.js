@@ -4,8 +4,8 @@ const homeController = {
 
     showIndex: (req, res) => {
         const produtos = produtosModel.findAll();
-        const {usuario} = req.session;
-
+        let { usuario } = req.session;
+        /* Possivel ajuste para contator de itens do carrinho */
         return res.render('home/index', { produtos, usuario });
     },
 
@@ -20,24 +20,20 @@ const homeController = {
         return res.render("home/produtos", { produto, usuario });
 
     },
-    carrinho: (req, res) => {
-       const { usuario } = req.session;
-        return res.render('home/carrinho', { produto, usuario });
-    },
 
     categorias: (req, res) => {
         const { usuario } = req.session;
         res.render('home/categorias', { usuario });
     },
-    
+
     login: (req, res) => {
         res.render('home/login')
     },
 
     produtos: (req, res) => {
-        const {usuario} = req.session;
+        const { usuario } = req.session;
 
-        res.render('home/produtos', {usuario});
+        res.render('home/produtos', { usuario });
     },
 
     cadastro: (req, res) => {
@@ -46,9 +42,9 @@ const homeController = {
 
     lista: (req, res) => {
         const { usuario } = req.session;
-    res.render('home/lista', { usuario });
-                                }
-
+        res.render('home/lista', { usuario });
     }
+
+}
 
 module.exports = homeController;
