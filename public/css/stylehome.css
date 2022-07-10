@@ -98,6 +98,14 @@ body{
     
 }
 
+.bi-stars {
+    color: rgb(0, 175, 239);
+    font-size: 2.8rem;
+    margin-top: 1rem;
+    left: 3px;
+    position: absolute;
+}
+
 .form-button {
     width: 100%;
     bottom: 0;

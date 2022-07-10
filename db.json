@@ -8,7 +8,8 @@
             "categoria": "hardware",
             "imagem": "https://images.kabum.com.br/produtos/fotos/102438/processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_1562606710_p.jpg",
             "estoque": 10,
-            "desconto": 0
+            "desconto": 0,
+            "destaque": true
         },
         {
             "id": "2",
@@ -28,7 +29,8 @@
             "categoria": "espaco gamer",
             "imagem": "https://images.kabum.com.br/produtos/fotos/93905/93905_1512471482_index_p.jpg",
             "estoque": 50,
-            "desconto": 0
+            "desconto": 0,
+            "destaque": true
         },
         {
             "id": "4",
@@ -48,7 +50,8 @@
             "categoria": "smartphone",
             "imagem": "https://images.kabum.com.br/produtos/fotos/155473/smartphone-samsung-galaxy-s20-fe-128gb-6gb-ram-octa-core-camera-tripla-carregamento-super-rapido-cloud-navy-sm-g780gzbrzto_1620393794_p.jpg",
             "estoque": 100,
-            "desconto": 0
+            "desconto": 0,
+            "destaque": true
         }
     ],
     "categorias": [
