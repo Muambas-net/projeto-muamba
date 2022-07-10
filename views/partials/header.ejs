@@ -32,11 +32,23 @@
         <div class="cart-user">
             <div class="cart">
 
-                <!-- INCLUIR LOGICA DE QUANTIDADE DE ITENS COMO SPAN QUANDO TIVER ITENS NO CARRINHO -->                                      
+                <!-- INCLUIR LOGICA DE QUANTIDADE DE ITENS COMO SPAN QUANDO TIVER ITENS NO CARRINHO -->
                 <a href="/carrinho"><i class="fa-solid fa-cart-shopping"></i></a>
-                <span>Meu Carrinho de Muambas</span>
+                <% if (!locals.usuario && !usuario) { %>
+                    <span style="visibility:hidden ;" class="contador-carrinho"></span>
+                    <% } else { %>
+                        <span class="contador-carrinho">
+                            <%=locals.length%>
+                        </span>
+                        <% } %>
+                            <% if (locals.carrinho) { %>
+                                <span class="contador-carrinho">
+                                    <%= locals.carrinho.length%>
+                                </span>
+                                <% } %>
+                                    <span>Meu Carrinho de Muambas</span>
             </div>
-           
+
             <% if (locals.usuario && usuario) { %>
                 <div class="user">
                     <a href="/carrinho"><i style="color: #2D2D2D;" class="bi bi-person-circle"></i></a>
@@ -49,12 +61,12 @@
                         </ul>
                     </div>
                 </div>
-            <% } else { %>
+                <% } else { %>
                     <div class="user">
                         <a href="/login" title="login"><i style="color: #2D2D2D;" class="bi bi-person-circle"></i></a>
                         <span style="color: #2D2D2D;">Faça seu<br> login</span>
                     </div>
-             <% } %>
+                    <% } %>
 
     </header>
     <nav>

@@ -44,6 +44,7 @@ header {
 }
 
 .cart {
+  position: relative;
   max-width: 80px;
   display: flex;
   flex-direction: column;
@@ -54,6 +55,21 @@ header {
   color: #1a495a;
   font-size: 3em;
   margin-top: 10px;
+}
+
+.contador-carrinho {
+  position: absolute;
+  top: 1.8rem;
+  right: -0.2rem;
+  background: #1a495a;
+  color: #fff;
+  border-radius: 50%;
+  width: 2.0rem;
+  height: 2.0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
 }
 
 .cart span {

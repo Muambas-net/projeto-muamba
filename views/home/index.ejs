@@ -13,34 +13,35 @@
 
         <section class="destaques">
 
-            <% produtos.forEach(produto=>{ %>
-                <div class="card">
-                    <img src="<%=produto.imagem%>" width="150" height="130" alt=""></img>
-                    <p>
-                        <%=produto.nome%>
-                    </p>
-                    <p>
-                        <%=produto.preco%>
-                    </p>
-                    <span>À vista no pix</span>
-                    <div >
+            <% produtos.forEach(produto=>{ %>   
+                    <div class="card">
+                        <a class="" href="/produtos/<%=produto.id %>">
+                        <img src="<%=produto.imagem%>" width="150" height="130" alt=""></img>
+                        <p>
+                            <% if (produto.nome.length > 20) { %>
+                                <%= produto.nome.substring(0, 20) %>...
+                            <% } %>
+                        </p>
+                        <p>
+                            <%=produto.preco%>
+                        </p>
+                        <span>À vista no pix</span>
                         <div>
-                            <a href="/produtos/<%=produto.id%>">
-                                <button type="button" class="">Detalhes</button>
-                            </a>
-                            <form action="/carrinho/adicionar" method="POST">
-                                <input type="hidden" name="id" value="<%= produto.id %>" />
-                                <input type="hidden" name="nome" value="<%= produto.nome %>" />
-                                <input type="hidden" name="preco" value="<%= produto.preco %>" />
-                                <input type="hidden" name="imagem" value="<%= produto.imagem %>" />
-                                <button type="submit" name="btn2">Compre agora</button>
+                            <div>
+                                <form class="form-button" action="/carrinho/adicionar" method="POST">
+                                    <input type="hidden" name="id" value="<%= produto.id %>" />
+                                    <input type="hidden" name="nome" value="<%= produto.nome %>" />
+                                    <input type="hidden" name="preco" value="<%= produto.preco %>" />
+                                    <input type="hidden" name="imagem" value="<%= produto.imagem %>" />
+                                    <button type="submit" name="btn2">Compre agora</button>
 
-                            </form>
-                            </a>
+                                </form>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-
+                    </a>
                 </div>
+           
                 <% }) %>
         </section>
 
