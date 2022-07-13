@@ -4,18 +4,30 @@ const homeController = {
 
     showIndex: (req, res) => {
         const produtos = produtosModel.findAll();
-        let { usuario } = req.session;
+        let { usuario, carrinho } = req.session;
         /* Possivel ajuste para contator de itens do carrinho */
-        return res.render('home/index', { produtos, usuario });
+        if (usuario) {
+            if (carrinho > 0) {
+                return res.render('home/index', { produtos, usuario, carrinho });
+            }
+            return res.render('home/index', { produtos, usuario, carrinho });
+        }
+        return res.render('home/index', { produtos, usuario, carrinho });
     },
 
     showOneProduct: (req, res) => {
-        let { usuario } = req.session;
+        let { usuario, carrinho } = req.session;
         const { id } = req.params;
 
         const produto = produtosModel.findById(id);
         if (!produto) {
             return res.render("home/not-found", { error: "Produto não encontrado 😬" });
+        }
+        if (usuario) {
+            if (carrinho > 0) {
+                return res.render('home/produtos', { produto, usuario, carrinho });
+            }
+            return res.render('home/produtos', { produto, usuario, carrinho });
         }
         return res.render("home/produtos", { produto, usuario });
 

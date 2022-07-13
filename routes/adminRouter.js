@@ -3,9 +3,11 @@ const router = express.Router();
 const adminController = require("../controllers/adminController");
 const validaLogin = require("../middlewares/validaLogin");
 const validaAdmin = require("../middlewares/validaAdmin");
+const resCart = require("../middlewares/resCart");
 
 router.use(validaLogin);
 router.use(validaAdmin);
+router.use(resCart);
 router.get("/adm/paineladmin", adminController.getPainelAdmin);
 router.get("/adm/adicionar-produto", adminController.addProduct);
 router.post("/adm/adicionar-produto", adminController.storeProduct);
