@@ -10,7 +10,7 @@
 
   <main class="container">
     <div class=".container div-top">
-      <h1>Ola, Fulano. Seja Bem-vindo!</h1>
+      <h1>Ola, <%= locals.usuario.nome %> Seja Bem-vindo!</h1>
       <div class="row">
         <div class="col botoes-adm">
           <h2>O que gostaria de fazer?</h2>
@@ -29,58 +29,51 @@
       </div>
     </div>
     <div class="container div-table">
-      <table class="table table-hover" width="96%" cellspacing="10">
+     
+      <table class="table table-light table-striped table-bordered ">
         <thead>
-          <tr>
-            <th class="col">Número</th>
-            <th class="col">Data</th>
-            <th class="col">Pagamento</th>
-            <th class="col">Status</th>
-            <th class="col center-th">Opções</th>
-          </tr>
+            <tr>
+                <th scope="col">Identificador</th>
+                <th scope="col">imagem</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Ativo</th>
+                <th scope="col">Ações</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>748596</th>
-            <td>10/11/2021</td>
-            <td>Cartão de Crédito</td>
-            <td>Entregue</td>
-            <td class="btn-td">
-              <a href="#" type="button" class="btn btn-primary btn-lg">Abrir</a>
-              <a href="#" type="button" class="btn btn-secondary btn-lg">Editar</a>
-              <form action="#?_method=DELETE" method="POST">
-                <button type="submit" class="btn btn-danger btn-lg">Excluir</button>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <th>742968</th>
-            <td>25/02/2022</td>
-            <td>Boleto</td>
-            <td>Cancelado</td>
-            <td class="btn-td">
-              <a href="#" type="button" class="btn btn-primary btn-lg">Abrir</a>
-              <a href="#" type="button" class="btn btn-secondary btn-lg">Editar</a>
-              <form action="#?_method=DELETE" method="POST">
-                <button type="submit" class="btn btn-danger btn-lg">Excluir</button>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <th>743002</th>
-            <td>04/05/2022</td>
-            <td>Cartão de Crédito</td>
-            <td>Entregue</td>
-            <td class="btn-td">
-              <a href="#" type="button" class="btn btn-primary btn-lg">Abrir</a>
-              <a href="#" type="button" class="btn btn-secondary btn-lg">Editar</a>
-              <form action="#?_method=DELETE" method="POST">
-                <button type="submit" class="btn btn-danger btn-lg">Excluir</button>
-              </form>
-            </td>
-          </tr>
+            <% produtos.forEach(produto=> { %>
+                <tr>
+                    <th scope="row">
+                        <%= produto.id %>
+                    </th>
+                    <td><img class="thumb" src="<%= produto.imagem %>" alt="" width="100px" height="100px">
+                    </td>
+                    <td>
+                        <%= produto.nome %>
+                    </td>
+                    <td>R$ <%= produto.preco %>
+                    </td>
+                    <td>
+                        <%= produto.ativo ? "Habilitado" : "Desabilitado" %>
+                    </td>
+                    <td>
+                        <a href="/adm/produto/detalhes/<%= produto.id %>" type="button"
+                            class="btn btn-primary"><i class="bi bi-door-open"></i></a>
+                        <a href="/adm/<%= produto.id %>/editar-produto" type="button"
+                            class="btn btn-secondary"><i class="bi bi-pencil"></i></a>
+                        
+                            <a href="/adm/deletar-produto/<%= produto.id %>">
+                            <i class="bi bi-trash"></i>
+                            </a>          
+                       
+                    </td>
+                </tr>
+                <% }) %>
+
         </tbody>
-      </table>
+    </table>
+
     </div>
   </main>
   </body>

@@ -1,0 +1,150 @@
+<link rel="stylesheet" href="/css/produtos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Produtos</title>
+<%- include('../partials/header') %>
+    <main>
+        <section id="produtos" class="produto">
+
+            <h1>
+                <%=produtos.nome%>
+            </h1>
+            <div class="div-topo">
+                <div class="galeria-prod">
+                    <div class="galeria-agrupada">
+                        <img src="<%=produtos.imagem%>" alt="<%=produtos.descricao%>">
+                        <img src="<%=produtos.imagem%>" alt="<%=produtos.descricao%>">
+                        <img src="<%=produtos.imagem%>" alt="<%=produtos.descricao%>">
+                    </div>
+                    <img class="img-destaque" src="<%=produtos.imagem%>" alt="<%produtos.nome%>">
+                </div>
+
+                <div class="produto-main">
+                    <h2>
+                        <%=produtos.descricao%>
+                    </h2>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <span>DE R$3.000,00</span>
+                        <h4>Por <%=produtos.preco%>
+                        </h4>
+                    </div>
+                    <h3>
+                        <%=produtos.categoria%>
+                    </h3>
+                    <p>
+                        <%=produtos.descricao%>
+                    </p>
+                    <!-- produtos em si entra aqui -->
+                    <h3>Informacoes para compra</h3>
+                    <!--     <form action="" method="post">
+                        <input type="search" placeholder="Digite seu CEP">
+                    </form> -->
+                    <form action="/carrinho/adicionar" method="POST">
+                        <input type="hidden" name="id" value="<%= produtos.id %>" />
+                        <input type="hidden" name="nome" value="<%= produtos.nome %>" />
+                        <input type="hidden" name="preco" value="<%= produtos.preco %>" />
+                        <input type="hidden" name="imagem" value="<%= produtos.imagem %>" />
+                        <button type="submit" class="btn btn-success">Compre Já</button>
+                    </form>
+                    <form>
+                        <input type="search" placeholder="Digite seu CEP">
+                        <button type="submit" class="btn1" name="btn1">Calcule o frete</button>
+
+                    </form>
+                </div>
+        </section>
+
+        </div>
+
+        <section class="produtos-relacionados">
+            <!-- exemplos -->
+            <div>
+                <h2>Produtos Relacionados</h2>
+            </div>
+            <div class="relacionados-img">
+                <div class="card">
+                    <img src="images/notebook.jpg" alt="Notebook">
+                    <button id="#">Ver Mais</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/GAMER.png" alt="">
+                    <button id="#">Ver Mais</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/CELULAR-SMARTPHONE_1645045581.png" alt="">
+                    <button id="#">Ver Mais</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="avaliacoes">
+            <h2>Avaliações</h2>
+            <!-- exemplos -->
+
+            <div class="div-users">
+                <span>user1</span>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, voluptatibus molestias sit
+                    cupiditate quos animi incidunt quis doloribus laboriosam, dolor quaerat consequatur? Error sunt
+                    ipsum, sint alias quae ut sapiente?</p>
+            </div>
+
+            <div class="div-users">
+                <span>user2</span>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, voluptatibus molestias sit
+                    cupiditate quos animi incidunt quis doloribus laboriosam, dolor quaerat consequatur? Error sunt
+                    ipsum, sint alias quae ut sapiente?</p>
+            </div>
+
+            <div class="div-users">
+                <span>user3</span>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, voluptatibus molestias sit
+                    cupiditate quos animi incidunt quis doloribus laboriosam, dolor quaerat consequatur? Error sunt
+                    ipsum, sint alias quae ut sapiente?</p>
+            </div>
+        </section>
+
+        <section class="detalhes-tecnicos">
+            <h2>Detalhes Tecnicos</h2>
+
+            <div class="listas-caracteristicas">
+                <ul>
+                    <li>Caracteristicas 1</li>
+                    <ul>
+                        <li>tem isso</li>
+                        <li>tem aquilo</li>
+                        <li>tem aquele outro</li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li>Caracteristicas 2</li>
+                    <ul>
+                        <li>tem isso</li>
+                        <li>tem aquilo</li>
+                        <li>tem aquele outro</li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    <%- include('../partials/footer') %>
+        </body>
+
+        </html>
