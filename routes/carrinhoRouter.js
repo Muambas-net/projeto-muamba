@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const CarrinhoController = require('../controllers/CarrinhoController');
-const validaLogin = require('../middlewares/validaLogin');  //importando middleware
+const validaLogin = require('../middlewares/validaLogin');
 
 router.use(validaLogin)
 router.get('/carrinho', CarrinhoController.showCart);

@@ -5,7 +5,7 @@ const validaLogin = require("../middlewares/validaLogin");
 const validaAdmin = require("../middlewares/validaAdmin");
 
 router.use(validaLogin);
-//router.use(validaAdmin);
+router.use(validaAdmin);
 router.get("/adm/paineladmin", adminController.getPainelAdmin);
 router.get("/adm/adicionar-produto", adminController.addProduct);
 router.post("/adm/adicionar-produto", adminController.storeProduct);

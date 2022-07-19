@@ -58,7 +58,7 @@ const UserController = {
       req.session.destroy(function (err) {
       });
 
-      return res.redirect('/login');
+      return res.redirect('/');
     },
 
     logado: (req, res) => {

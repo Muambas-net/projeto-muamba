@@ -1,13 +1,54 @@
 {
     "produtos": [
         {
-            "id": 1,
+            "id": "4e8f9f57-3302-493c-b0df-8398e08d95ac",
             "nome": "Processador AMD Ryzen 5 3600",
             "preco": "1199,99",
             "descricao": "Processador AMD Ryzen.Cache 32MB 3.6GHz(4.2GHz Max Turbo) AM4, Sem Vídeo - 100-100000031BOX",
             "categoria": "hardware",
             "imagem": "https://images.kabum.com.br/produtos/fotos/102438/processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_1562606710_p.jpg",
             "estoque": 10,
+            "desconto": 0
+
+        },
+        {
+            "id": "2",
+            "nome": "Placa-Mãe Asus Prime B450M Gaming/BR.",
+            "preco": "707,90",
+            "descricao": "Placa-mãe Asus Prime B450M. AMD AM4, mATX, DDR4.Placa-mãe ASUS já atualizada para o Windows 11.",
+            "categoria": "hardware",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/99504/placa-mae-asus-para-amd-am4-matx-prime-b450m-gaming-br-ddr4__1545143134_p.jpg",
+            "estoque": 20,
+            "desconto": 0
+        },
+        {
+            "id": "3",
+            "nome": "Cadeira Gamer Alpha Gamer Polaris Office, Black.Queremos proporcionar soluções adequadas ao teu estilo",
+            "preco": "1399,99",
+            "descricao": "Cadeira Gamer Alpha Gamer",
+            "categoria": "espaco gamer",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/93905/93905_1512471482_index_p.jpg",
+            "estoque": 50,
+            "desconto": 0
+        },
+        {
+            "id": "4",
+            "nome": "Notebook Samsung Intel Core i5-1135G7, 8GB RAM, SSD 256GB, 15.6 Full HD, Windows 11 Home, Cinza - NP550XDA-KH2BR",
+            "preco": "3429,99",
+            "descricao": "Notebook Samsung",
+            "categoria": "notebook",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749555_p.jpg",
+            "estoque": 30,
+            "desconto": 0
+        },
+        {
+            "id": "5",
+            "nome": "Smartphone Samsung Galaxy S20 FE 128GB. 6GB RAM.",
+            "preco": "2199,99",
+            "descricao": "Smartphone Samsung, Snapdragon 865, Câmera Tripla,Cloud Navy - SM-G780GZBRZTO",
+            "categoria": "smartphone",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/155473/smartphone-samsung-galaxy-s20-fe-128gb-6gb-ram-octa-core-camera-tripla-carregamento-super-rapido-cloud-navy-sm-g780gzbrzto_1620393794_p.jpg",
+            "estoque": 100,
             "desconto": 0
         }
        
@@ -24,7 +65,7 @@
             "id": 1,
             "nome": "admin",
             "email": "admin@mail.com",
-            "senha": "123456",
+            "senha": "$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS",
             "cpf": "11111111111",
             "cep": "900000000",
             "nivelId": "admin"
