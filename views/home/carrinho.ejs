@@ -38,13 +38,13 @@
             </div>
             <div class="preco">
               <h2><%= produto.preco %></h2>
-              <p>à vista ou em até</p>
-              <p>12x de <%= (produto.preco/12).toFixed(2) %> sem juros</p>
             </div>
           </div>
           <% }) %> <% } %>
         <div class="subtotal">
           <p>Subtotal: <b> R$<%=total.toFixed(2)%></b></p>
+          <p>à vista</p>
+          <p>ou em até <b>12x de <%= (total/12).toFixed(2) %></b> sem juros</p>
         </div>
         <div class="calcule-frete">
           <p>Calcule o frete</p>

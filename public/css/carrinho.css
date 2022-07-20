@@ -102,20 +102,26 @@ h1 {
 .preco h2 {
   font-size: 2.8rem;
 }
-
+/* 
 .preco p {
   font-size: 1.8rem;
   font-weight: 300;
-}
+} */
 
 .subtotal {
   font-size: 2.8rem;
   font-weight: 300;
-  justify-content: end;
+  text-align: end;
   margin-right: 5rem;
-  height: 7rem;
+  margin-block: 2rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: -4rem;
+}
+
+.subtotal p:nth-child(2),
+.subtotal p:nth-child(3) {
+  font-size: 1.8rem;
 }
 
 .calcule-frete {
