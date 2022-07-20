@@ -7,62 +7,44 @@
     <title>Carrinho</title>
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="css/carrinho.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <style></style>
   </head>
   <body>
     <title>Carrinho</title>
     <%- include('../partials/header') %>
     <main>
-      <section class="container">
         <h1>Carrinho de Muambas</h1>
-        <table class="table table-dark table-striped table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Imagem</th>
-              <th scope="col">Nome</th>
-              <th scope="col">Quatidade</th>
-              <th scope="col">Preço</th>
-              <th scope="col">Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% if (!carrinho.length) { %>
-            <h3>Carrinho de muambas vazio!</h3>
+        <section class='container'>
+          <% if (!carrinho.length) { %>
+            <h3 class="vazio">Carrinho de muambas vazio!</h3>
             <% } else {carrinho.forEach(produto => { %>
-            <tr>
-              <th scope="row"><%=produto.id%></th>
-              <td>
-                <img
-                  src="<%=produto.imagem%>"
-                  alt=""
-                  width="100px"
-                  height="100px"
-                />
-              </td>
-              <td><%=produto.nome%></td>
-              <td>1</td>
-              <td><%=produto.preco%></td>
-              <td>
-                <form
-                  action="/carrinho/<%=produto.id%>/remover?_method=DELETE"
-                  method="POST"
-                >
-                  <button type="submit" class="btn btn-danger">Excluir</button>
-                </form>
-              </td>
-            </tr>
-            <% }) %> <% } %>
-          </tbody>
-        </table>
+              <div class="wrapper">
+              <div class="produto-selecionado">
+              <img 
+              src="<%= produto.imagem %>" 
+              alt="<%= produto.nome %>" 
+              width="150px"
+              height="150px">
+            <div class="descricao-produto">
+              <h2><%= produto.nome %></h2>
+              <div class="qtd-del">
+              <label for="quantidade">QTD</label>
+              <input type="number">
+              <form action="/carrinho/<%=produto.id%>/remover?_method=DELETE"
+                method="POST">
+                <button type="submit"><i class="fa-solid fa-trash-can"></i></button>
+              </form>
+            </div>
+            </div>
+            </div>
+            <div class="preco">
+              <h2><%= produto.preco %></h2>
+              <p>à vista ou em até</p>
+              <p>12x de <%= (produto.preco/12).toFixed(2) %> sem juros</p>
+            </div>
+          </div>
+          <% }) %> <% } %>
         <div class="subtotal">
-          <p>Subtotal (2 itens): <b> R$<%=total%></b></p>
+          <p>Subtotal: <b> R$<%=total.toFixed(2)%></b></p>
         </div>
         <div class="calcule-frete">
           <p>Calcule o frete</p>
@@ -120,6 +102,13 @@
           </div>
         </div>
       </section>
+      <section class="finalizacao">
+        <div class="container">
+          <div class="finalizar-compra">
+            <button type="submit">Finalizar Compra</button>
+          </div>
+        </div>
+      </section>
       <section class="produtos-relacionados">
         <div>
           <h2>Produtos Relacionados</h2>
@@ -143,4 +132,5 @@
       </section>
     </main>
   </body>
+  <%- include('../partials/footer') %> 
 </html>
