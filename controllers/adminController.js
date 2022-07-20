@@ -6,7 +6,15 @@ const uploadImagem = storage('imagem', '/produtos')
 
 const adminController = {
     getPainelAdmin: (req, res) => {
-        return res.render('adm/painelAdmin' );
+        const produtos = ProdutoModel.findAll()
+        return res.render('adm/painelAdmin', {produtos: produtos});
+      
+    },
+    getProduto: (req, res) => {
+        const {id} = req.params
+        const produtos = ProdutoModel.findById(id)
+       
+        return res.render('adm/detalhes', {produtos: produtos})
     },
     addProduct: (req, res) => {
         return res.render('adm/adicionarProduto' );
@@ -55,7 +63,9 @@ const adminController = {
         return res.redirect('/adm/paineladmin');
     },
     deleteProduct: (req, res) => {
-        return res.render('adm/deletarProduto');
+        const {id} = req.params;
+        const produtos = ProdutoModel.findById(id);
+        return res.render('adm/deletarProduto', {produtos: produtos });
     },
     destroyProduct: (req, res) => {
         const {id} = req.params;
