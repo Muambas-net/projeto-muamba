@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedido Concluído</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/pedidoConcluido.css" />
+  </head>
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <h1>Pedido Concluído</h1>
+      <section class='container'>
+        <div class="wrapper">
+          <h3>Obrigado por comprar conosco!</h3>
+          <p>Seu pedido foi realizado com sucesso!</p>
+          <p>Agradecemos a preferência.</p>
+        </div>
+      </section>
+      <section class="container">
+        <div class="wrapper">
+        <h3>Resumo da Compra</h3>
+        <h4> Número do pedido:  </h4>
+        <% pedido.forEach(pedido => { %> 
+        <h4> <%= pedido.itens %> </h4>
+        <% }) %>
+        </div>
+      </section>
+    </main>

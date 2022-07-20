@@ -105,7 +105,15 @@
       <section class="finalizacao">
         <div class="container">
           <div class="finalizar-compra">
-            <button type="submit">Finalizar Compra</button>
+            <form action="/carrinho/finalizacao" method="POST">
+            <% carrinho.forEach(produto => { %>
+                <input type="hidden" name="id" value="<%= produto.id %>">
+                <input type="hidden" name="imagem" value="<%= produto.imagem %>">
+                <input type="hidden" name="nome" value="<%= produto.nome %>">
+                <input type="hidden" name="preco" value="<%= produto.preco %>">
+                <% }) %>
+                <button type="submit">Finalizar Compra</button>
+              </form>
           </div>
         </div>
       </section>

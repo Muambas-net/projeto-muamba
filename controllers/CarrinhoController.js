@@ -1,3 +1,5 @@
+const PedidosModel = require('../models/pedidosModel');
+
 const CarrinhoController = {
 
      showCart: (req, res) => {
@@ -42,6 +44,20 @@ const CarrinhoController = {
             return res.redirect('/carrinho');
         }
         return res.redirect('/carrinho');
+    },
+    finalizarCompra: (req, res) => {
+        const { id, nome, preco, imagem, pagamento, entrega } = req.body;
+        const pedido = { id, nome, preco, imagem, pagamento, entrega };
+
+        PedidosModel.save(pedido);
+
+        return res.redirect('/pedidoConcluido');
+
+    },
+    pedidoConcluido: (req, res) => {
+        const { id } = req.params;
+        const pedido = PedidosModel.findById(id);
+        return res.render('home/pedidoConcluido', { pedido });
     }
 }
 
