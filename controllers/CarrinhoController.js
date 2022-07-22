@@ -1,3 +1,4 @@
+const { v4 } = require('uuid');
 const PedidosModel = require('../models/pedidosModel');
 
 const CarrinhoController = {
@@ -13,6 +14,7 @@ const CarrinhoController = {
         carrinho.forEach(produto => {
             total += parseFloat(produto.preco);
         });
+        console.log(carrinho)
         return res.render('home/carrinho', {carrinho, total});
     },
     
@@ -46,12 +48,23 @@ const CarrinhoController = {
         return res.redirect('/carrinho');
     },
     finalizarCompra: (req, res) => {
-        const { id, nome, preco, imagem, pagamento, entrega } = req.body;
-        const pedido = { id, nome, preco, imagem, pagamento, entrega };
+        const { id, nome, preco, imagem, pagamento, entrega, total } = req.body;
+            
+        
+        const usuarioId = req.session.usuario.id;
+        const pedido = {
+            id: v4(),
+            usuarioId: usuarioId,
+            itens: [{ produtoId: id, imagem, nome,
+            preco }],
+            total,
+            pagamento,
+            entrega
+          }
 
         PedidosModel.save(pedido);
 
-        return res.redirect('/pedidoConcluido');
+        return res.redirect('home/pedidoConcluido');
 
     },
     pedidoConcluido: (req, res) => {

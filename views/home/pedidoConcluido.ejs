@@ -23,8 +23,16 @@
         <div class="wrapper">
         <h3>Resumo da Compra</h3>
         <h4> Número do pedido:  </h4>
-        <% pedido.forEach(pedido => { %> 
-        <h4> <%= pedido.itens %> </h4>
+        <% pedidos.forEach(pedido => { %>
+          <p> <%=pedido.id%> </p>
+           <ul>
+               <% pedidos.itens.forEach(item => { %>
+                  <li><%=item.id%></li>
+                  <li><%=item.nome%></li>
+                  <li><%=item.preco%></li>
+              <% }) %>
+            </ul>
+            <p><%=pedido.total%></p>
         <% }) %>
         </div>
       </section>

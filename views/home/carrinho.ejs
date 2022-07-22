@@ -63,54 +63,57 @@
         <h2>Forma de Pagamento</h2>
         <div class="container">
           <h3>Escolha sua forma de pagamento</h3>
-          <form action="">
+          <form action="/carrinho/finalizacao" method="POST">
             <div class="formas-pgto">
               <i class="fa-brands fa-pix"></i>
-              <input type="radio" name="pagamento" id="" />
+              <input type="radio" name="pagamento" value="pix" />
               <label for="pix">PIX</label>
             </div>
             <div class="formas-pgto">
               <i class="fa-solid fa-wallet"></i>
-              <input type="radio" name="pagamento" id="" />
+              <input type="radio" name="pagamento" value="boleto" />
               <label for="boleto">Boleto</label>
             </div>
             <div class="formas-pgto">
               <i class="fa-solid fa-credit-card"></i>
-              <input type="radio" name="pagamento" id="" />
+              <input type="radio" name="pagamento" value="cartao" />
               <label for="cartao">Cartão</label>
             </div>
             <div class="formas-pgto">
               <i class="fa-solid fa-money-bill-transfer"></i>
-              <input type="radio" name="pagamento" id="" />
+              <input type="radio" name="pagamento" value="picpay" />
               <label for="picpay">PicPay</label>
             </div>
-          </form>
+          
         </div>
       </section>
       <section class="entrega">
         <h2>Entrega</h2>
         <div class="container">
+          
           <div class="forma-entrega">
             <i class="fa-solid fa-truck"></i>
-            <input type="radio" name="entrega" id="" />
-            <label for="correios">Normal</label>
+            <input type="radio" name="entrega" value="normal" />
+            <label for="normal">Normal</label>
           </div>
           <div class="forma-entrega">
             <i class="fa-solid fa-truck-fast"></i>
-            <input type="radio" name="entrega" id="" />
-            <label for="correios">Expressa</label>
+            <input type="radio" name="entrega" value="expressa" />
+            <label for="expressa">Expressa</label>
+          
           </div>
         </div>
       </section>
       <section class="finalizacao">
         <div class="container">
           <div class="finalizar-compra">
-            <form action="/carrinho/finalizacao" method="POST">
+            
             <% carrinho.forEach(produto => { %>
                 <input type="hidden" name="id" value="<%= produto.id %>">
                 <input type="hidden" name="imagem" value="<%= produto.imagem %>">
                 <input type="hidden" name="nome" value="<%= produto.nome %>">
                 <input type="hidden" name="preco" value="<%= produto.preco %>">
+                <input type="hidden" name="total" value="<%= total %>">
                 <% }) %>
                 <button type="submit">Finalizar Compra</button>
               </form>
