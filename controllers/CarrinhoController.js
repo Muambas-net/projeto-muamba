@@ -48,15 +48,14 @@ const CarrinhoController = {
         return res.redirect('/carrinho');
     },
     finalizarCompra: (req, res) => {
-        const { id, nome, preco, imagem, pagamento, entrega, total } = req.body;
+        const { pagamento, entrega, total } = req.body;
             
         
         const usuarioId = req.session.usuario.id;
         const pedido = {
             id: v4(),
             usuarioId: usuarioId,
-            itens: [{ produtoId: id, imagem, nome,
-            preco }],
+            itens: req.session.carrinho,
             total,
             pagamento,
             entrega
@@ -64,13 +63,14 @@ const CarrinhoController = {
 
         PedidosModel.save(pedido);
 
-        return res.redirect('home/pedidoConcluido');
+        return res.redirect('/pedidoConcluido/' + pedido.id);
 
     },
     pedidoConcluido: (req, res) => {
         const { id } = req.params;
-        const pedido = PedidosModel.findById(id);
-        return res.render('home/pedidoConcluido', { pedido });
+        const pedidos = PedidosModel.findById(id);
+        console.log(pedidos)
+        return res.render('home/pedidoConcluido', { pedidos });
     }
 }
 

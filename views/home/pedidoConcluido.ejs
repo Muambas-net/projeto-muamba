@@ -22,18 +22,32 @@
       <section class="container">
         <div class="wrapper">
         <h3>Resumo da Compra</h3>
-        <h4> Número do pedido:  </h4>
-        <% pedidos.forEach(pedido => { %>
-          <p> <%=pedido.id%> </p>
-           <ul>
+        <h4> Número do pedido: <%=pedidos.id%> </h4>
+        
                <% pedidos.itens.forEach(item => { %>
-                  <li><%=item.id%></li>
-                  <li><%=item.nome%></li>
-                  <li><%=item.preco%></li>
+                <div class="produto-selecionado">
+                  <img 
+                  src="<%= item.imagem %>" 
+                  alt="<%= item.nome %>" 
+                  width="150px"
+                  height="150px">
+                <div class="descricao-produto">
+                  <h2><%= item.nome %></h2>
+                </div>
+                <div class="preco">
+                  <p><%= item.preco %></p>
+                </div>
+
+              </div>
+
               <% }) %>
-            </ul>
-            <p><%=pedido.total%></p>
-        <% }) %>
+              <div class="subtotal">
+                <p>Subtotal: <b><%=pedidos.total%></b></p>
+                <p>Modo de pagamento: <b><%=pedidos.pagamento%></b></p>
+                <p>Forma de entrega: <b><%=pedidos.entrega%></b></p>
+              </div>
+
+
         </div>
       </section>
     </main>
