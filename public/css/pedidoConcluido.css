@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&display=swap');
+
+:root {
+    font-size: 62.5%; /* sempre 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(0,175,239,1) 90%);
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 4rem;
+  margin-top: 4.5rem;
+  margin-left: 12rem;
+  text-align: justify;
+  text-shadow: black 0.5rem 0.5rem 1rem;
+}
+
+.container {
+  background-color: #FFFFFF;
+  margin-inline: 7rem;
+  margin-bottom: 5rem;
+  padding-bottom: 4rem;
+  font-size: 2rem;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 5rem;
+  padding-top: 3rem;
+}
+
+.wrapper h3 {
+  font-size: 2.8rem;
+}
+
+.produto-selecionado {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 7rem;
+  margin-block: 2rem;
+  border-bottom: 1px solid black;
+}
+
+.descricao-produto {
+  width: 30rem;
+  font-size: 1.8rem;
+}
+
+.descricao-produto h2 {
+  font-size: 2.8rem;
+}
+.preco {
+  padding-right: 5rem;
+  text-align: end;
+}
+
+.preco h2 {
+  font-size: 2.8rem;
+}
+
+.subtotal {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-align: end;
+  margin-right: 14rem;
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: -4rem;
+}

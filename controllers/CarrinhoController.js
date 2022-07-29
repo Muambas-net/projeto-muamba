@@ -1,3 +1,6 @@
+const { v4 } = require('uuid');
+const PedidosModel = require('../models/pedidosModel');
+
 const CarrinhoController = {
 
      showCart: (req, res) => {
@@ -11,6 +14,7 @@ const CarrinhoController = {
         carrinho.forEach(produto => {
             total += parseFloat(produto.preco);
         });
+        console.log(carrinho)
         return res.render('home/carrinho', {carrinho, total});
     },
     
@@ -42,6 +46,31 @@ const CarrinhoController = {
             return res.redirect('/carrinho');
         }
         return res.redirect('/carrinho');
+    },
+    finalizarCompra: (req, res) => {
+        const { pagamento, entrega, total } = req.body;
+            
+        
+        const usuarioId = req.session.usuario.id;
+        const pedido = {
+            id: v4(),
+            usuarioId: usuarioId,
+            itens: req.session.carrinho,
+            total,
+            pagamento,
+            entrega
+          }
+
+        PedidosModel.save(pedido);
+
+        return res.redirect('/pedidoConcluido/' + pedido.id);
+
+    },
+    pedidoConcluido: (req, res) => {
+        const { id } = req.params;
+        const pedidos = PedidosModel.findById(id);
+        console.log(pedidos)
+        return res.render('home/pedidoConcluido', { pedidos });
     }
 }
 
