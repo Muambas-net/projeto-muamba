@@ -1,9 +1,42 @@
 {
     "produtos": [
         {
+<<<<<<< HEAD
             "id": "3",
             "nome": "Cadeira Gamer Alpha Gamer Polaris Office",
             "preco": "1399,99",
+=======
+
+            "id": "3",
+            "nome": "Cadeira Gamer Alpha Gamer Polaris Office",
+            "preco": "1399,99",
+
+            "id": "4e8f9f57-3302-493c-b0df-8398e08d95ac",
+            "nome": "Processador AMD Ryzen 5 3600",
+            "preco": "1199.99",
+            "descricao": "Processador AMD Ryzen.Cache 32MB 3.6GHz",
+            "categoria": "hardware",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/102438/processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_1562606710_p.jpg",
+            "estoque": 10,
+            "desconto": 0,
+            "destaque": true
+        },
+        {
+            "id": "2",
+            "nome": "Placa-Mãe Asus Prime B450M Gaming/BR.",
+            "preco": "707.90",
+            "descricao": "Placa-mãe Asus Prime B450M. AMD AM4",
+            "categoria": "hardware",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/99504/placa-mae-asus-para-amd-am4-matx-prime-b450m-gaming-br-ddr4__1545143134_p.jpg",
+            "estoque": 20,
+            "desconto": 0
+        },
+        {
+            "id": "3",
+            "nome": "Cadeira Gamer Alpha Gamer Polaris Office",
+            "preco": "1399.99",
+
+>>>>>>> b52d82aedd9057ddd670e462c78e1f22d71ae3c7
             "descricao": "Cadeira Gamer Alpha Gamer",
             "categoria": "espaco gamer",
             "imagem": "https://images.kabum.com.br/produtos/fotos/93905/93905_1512471482_index_p.jpg",
@@ -14,7 +47,15 @@
         {
             "id": "4",
             "nome": "Notebook Samsung Intel Core i5-1135G7, 8GB RAM, SSD 256GB",
+<<<<<<< HEAD
             "preco": "3429,99",
+=======
+
+            "preco": "3429,99",
+
+            "preco": "3429.99",
+
+>>>>>>> b52d82aedd9057ddd670e462c78e1f22d71ae3c7
             "descricao": "Notebook Samsung",
             "categoria": "notebook",
             "imagem": "https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749555_p.jpg",
@@ -25,12 +66,20 @@
             "id": "5",
             "nome": "Smartphone Samsung Galaxy S20 FE 128GB. 6GB RAM.",
             "preco": "2199,99",
+<<<<<<< HEAD
+=======
+            "preco": "2199.99",
+>>>>>>> b52d82aedd9057ddd670e462c78e1f22d71ae3c7
             "descricao": "Smartphone Samsung, Snapdragon 865, Câmera Tripla,Cloud Navy - SM-G780GZBRZTO",
             "categoria": "smartphone",
             "imagem": "https://images.kabum.com.br/produtos/fotos/155473/smartphone-samsung-galaxy-s20-fe-128gb-6gb-ram-octa-core-camera-tripla-carregamento-super-rapido-cloud-navy-sm-g780gzbrzto_1620393794_p.jpg",
             "estoque": 100,
             "desconto": 0,
             "destaque": true
+<<<<<<< HEAD
+=======
+
+>>>>>>> b52d82aedd9057ddd670e462c78e1f22d71ae3c7
         },
         {
             "nome": "Xbox",
@@ -42,6 +91,10 @@
             "ativo": true,
             "descricao": "asdfasf",
             "id": "4e1b4642-a2ac-4c42-b5b1-8290deb05131"
+<<<<<<< HEAD
+=======
+
+>>>>>>> b52d82aedd9057ddd670e462c78e1f22d71ae3c7
         }
     ],
     "categorias": [
@@ -132,6 +185,100 @@
             "cep": "5800000",
             "id": "9063cb0c-22c7-4eb9-b3f5-1220d5be2e16",
             "carrinho": "[]"
+<<<<<<< HEAD
+=======
+
+        },
+        {
+            "nome": "Gabriel Viana",
+            "email": "vianagabriel@mail.com",
+            "senha": "$2b$10$3bLLTq4yEeS7fN/hm7IU5OdPLzl.zVFN5cj.MV.KAk7vMZSgMlpa2",
+            "cpf": "4885156365845-8",
+            "cep": "545421626268",
+            "id": "4b891f9a-41b5-49ca-b9f5-77afe082b1a5"
+
+        }
+    ],
+    "pedidos": [
+        {
+            "id": "dbedcc35-68cb-4ebb-8b49-1c9b253f4330",
+            "usuarioId": "03a43d5b-6050-4d26-b477-628cb0949b07",
+            "itens": [
+                {
+                    "id": "4e8f9f57-3302-493c-b0df-8398e08d95ac",
+                    "nome": "Processador AMD Ryzen 5 3600",
+                    "preco": "1199.99",
+                    "imagem": "https://images.kabum.com.br/produtos/fotos/102438/processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_1562606710_p.jpg"
+                },
+                {
+                    "id": "2",
+                    "nome": "Placa-Mãe Asus Prime B450M Gaming/BR.",
+                    "preco": "707.90",
+                    "imagem": "https://images.kabum.com.br/produtos/fotos/99504/placa-mae-asus-para-amd-am4-matx-prime-b450m-gaming-br-ddr4__1545143134_p.jpg"
+                }
+            ],
+            "total": "1907.8899999999999",
+            "pagamento": "cartao",
+            "entrega": "expressa"
+        },
+        {
+            "id": "c4a22a93-cbbf-40fe-b955-ee9e719c1abf",
+            "usuarioId": "03a43d5b-6050-4d26-b477-628cb0949b07",
+            "itens": [
+                {
+                    "id": "3",
+                    "nome": "Cadeira Gamer Alpha Gamer Polaris Office",
+                    "preco": "1399.99",
+                    "imagem": "https://images.kabum.com.br/produtos/fotos/93905/93905_1512471482_index_p.jpg"
+                },
+                {
+                    "id": "4",
+                    "nome": "Notebook Samsung Intel Core i5-1135G7, 8GB RAM, SSD 256GB",
+                    "preco": "3429.99",
+                    "imagem": "https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749555_p.jpg"
+                }
+            ],
+            "total": "4829.98",
+            "pagamento": "cartao",
+            "entrega": "expressa"
+        },
+        {
+            "id": "15a9ef3b-e1f3-4f31-8162-e603476bc96d",
+            "usuarioId": "03a43d5b-6050-4d26-b477-628cb0949b07",
+            "itens": [
+                {
+                    "id": "2",
+                    "nome": "Placa-Mãe Asus Prime B450M Gaming/BR.",
+                    "preco": "707.90",
+                    "imagem": "https://images.kabum.com.br/produtos/fotos/99504/placa-mae-asus-para-amd-am4-matx-prime-b450m-gaming-br-ddr4__1545143134_p.jpg"
+                },
+                {
+                    "id": "4e8f9f57-3302-493c-b0df-8398e08d95ac",
+                    "nome": "Processador AMD Ryzen 5 3600",
+                    "preco": "1199.99",
+                    "imagem": "https://images.kabum.com.br/produtos/fotos/102438/processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_processador-amd-ryzen-5-3600-cache-32mb-3-6ghz-4-2ghz-max-turbo-am4-100-100000031box_1562606710_p.jpg"
+                }
+            ],
+            "total": "1907.89",
+            "pagamento": "picpay",
+            "entrega": "normal"
+        },
+        {
+            "id": "c606c5bb-2377-4843-b0cb-f64ace86f33f",
+            "usuarioId": "03a43d5b-6050-4d26-b477-628cb0949b07",
+            "itens": [
+                {
+                    "id": "5",
+                    "nome": "Smartphone Samsung Galaxy S20 FE 128GB. 6GB RAM.",
+                    "preco": "2199.99",
+                    "imagem": "https://images.kabum.com.br/produtos/fotos/155473/smartphone-samsung-galaxy-s20-fe-128gb-6gb-ram-octa-core-camera-tripla-carregamento-super-rapido-cloud-navy-sm-g780gzbrzto_1620393794_p.jpg"
+                }
+            ],
+            "total": "2199.99",
+            "pagamento": "Boleto",
+            "entrega": "Expressa"
+
+>>>>>>> b52d82aedd9057ddd670e462c78e1f22d71ae3c7
         }
     ]
 }
