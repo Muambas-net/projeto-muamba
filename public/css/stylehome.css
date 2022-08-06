@@ -21,8 +21,6 @@ body{
 .banner img{
     margin-top: 5rem;
 }
-    
-
 .container{
     width: 95vw;
     margin-inline: auto;
@@ -191,6 +189,3 @@ footer {
     box-shadow: 0px 8px 10px grey;
     margin-top: 15rem;
 }
-
-
-    
