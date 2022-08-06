@@ -1,1 +1,137 @@
-{"produtos":[{"id":"3","nome":"Cadeira Gamer Alpha Gamer Polaris Office","preco":"1399,99","descricao":"Cadeira Gamer Alpha Gamer","categoria":"espaco gamer","imagem":"https://images.kabum.com.br/produtos/fotos/93905/93905_1512471482_index_p.jpg","estoque":50,"desconto":0,"destaque":true},{"id":"4","nome":"Notebook Samsung Intel Core i5-1135G7, 8GB RAM, SSD 256GB","preco":"3429,99","descricao":"Notebook Samsung","categoria":"notebook","imagem":"https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749555_p.jpg","estoque":30,"desconto":0},{"id":"5","nome":"Smartphone Samsung Galaxy S20 FE 128GB. 6GB RAM.","preco":"2199,99","descricao":"Smartphone Samsung, Snapdragon 865, Câmera Tripla,Cloud Navy - SM-G780GZBRZTO","categoria":"smartphone","imagem":"https://images.kabum.com.br/produtos/fotos/155473/smartphone-samsung-galaxy-s20-fe-128gb-6gb-ram-octa-core-camera-tripla-carregamento-super-rapido-cloud-navy-sm-g780gzbrzto_1620393794_p.jpg","estoque":100,"desconto":0,"destaque":true},{"nome":"Xbox","preco":"2000","desconto":"1500","estoque":"5","categoria":"notebooks","imagem":"/images/produtos/1658272856540-pc-gamer-concordia-core-i7-10700f-rtx3060-12gb-16gb-ram-ssd-500-branco-32736_1647864173_gg.jpg","ativo":true,"descricao":"asdfasf","id":"4e1b4642-a2ac-4c42-b5b1-8290deb05131"}],"categorias":[{"id":1,"nome":"Computadores"}],"usuarios":[{"id":1,"nome":"admin","email":"admin@mail.com","senha":"$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS","cpf":"11111111111","cep":"900000000","nivelId":"admin","carrinho":"[]"},{"nome":"Pablo Cardias Flores","email":"pablo_six@live.com","senha":"$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS","cpf":"01622222222","cep":"90240001","id":"a0485d00-35b1-46ec-9284-464eaa60512f","carrinho":"[]"},{"nome":"Pablo Cardias Flores","email":"cardias@gmail.com","senha":"$2b$10$hnxO6T/XVbEJWt.t7r/Q/ulfAGQcm1hF6tFun8MfyMmR3aPqICd/m","cpf":"11122233345","cep":"90240001","id":"c6e2cc9d-c378-4b49-a60e-19399f707c85","carrinho":"[]"},{"nome":"Felipe Teixeira Andrade","email":"felipe@mail.com","senha":"$2b$10$J/nD9zjYRniUH7qXjv2UfeCIrxpeP8p.O0WmZDjDJtvrXGK69NyzO","cpf":"12312312323","cep":"80230030","id":"03a43d5b-6050-4d26-b477-628cb0949b07","carrinho":"[]"},{"nome":"ANTONIO ALEXANDRE CORDEIRO","email":"alexandre@gmail.com","senha":"$2b$10$pAKhPuRew4nrCYuLIOEB0ONoTb.haPQSCPQARVt.C/NupdzdeXoty","cpf":"12345678996","cep":"58433222","id":"78ab7129-d1d6-4f7f-8c4d-3d54f8edab80","carrinho":"[]"},{"nome":"antonio","email":"antonio@gmail.com","senha":"$2b$10$AxTbjuTTzy5SWNk0NMy41evpBChTCIFr05DXekm4gZted9XM4Z3/S","cpf":"12345678900","cep":"58000000","id":"ed79a8ba-6e83-427f-a311-a5efa0ad77c7","carrinho":"[]"},{"nome":"jose","email":"jose@GMAIL.COM","senha":"$2b$10$IXvGW5Xk1n8oBJFuCljP7eiWBtI5ue8niUmx78PXDCs1y4E543AbS","cpf":"12345678989","cep":"58433222","id":"56d00846-c281-4943-88fc-df883d93e79b","carrinho":"[]"},{"nome":"pedro","email":"pedro@gmail.com","senha":"$2b$10$V9N/.uYyda/4di44YVaOzedEj/zW5P5xZv8QQ3oZddOKDU4ARJnx6","cpf":"12345678900","cep":"58433222","id":"63eceecc-394f-417a-bd51-39eb4575349b","carrinho":"[]"},{"nome":"maria","email":"maria@gmail.com","senha":"$2b$10$I7N08YLcvsiuVobP7zgr8.Dv7Mt3ors7.7M/GkS/kUDq.jY/cGnEG","cpf":"12345678999","cep":"5800000","id":"9063cb0c-22c7-4eb9-b3f5-1220d5be2e16","carrinho":"[]"}]}
+{
+    "produtos": [
+        {
+            "id": "3",
+            "nome": "Cadeira Gamer Alpha Gamer Polaris Office",
+            "preco": "1399,99",
+            "descricao": "Cadeira Gamer Alpha Gamer",
+            "categoria": "espaco gamer",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/93905/93905_1512471482_index_p.jpg",
+            "estoque": 50,
+            "desconto": 0,
+            "destaque": true
+        },
+        {
+            "id": "4",
+            "nome": "Notebook Samsung Intel Core i5-1135G7, 8GB RAM, SSD 256GB",
+            "preco": "3429,99",
+            "descricao": "Notebook Samsung",
+            "categoria": "notebook",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749555_p.jpg",
+            "estoque": 30,
+            "desconto": 0
+        },
+        {
+            "id": "5",
+            "nome": "Smartphone Samsung Galaxy S20 FE 128GB. 6GB RAM.",
+            "preco": "2199,99",
+            "descricao": "Smartphone Samsung, Snapdragon 865, Câmera Tripla,Cloud Navy - SM-G780GZBRZTO",
+            "categoria": "smartphone",
+            "imagem": "https://images.kabum.com.br/produtos/fotos/155473/smartphone-samsung-galaxy-s20-fe-128gb-6gb-ram-octa-core-camera-tripla-carregamento-super-rapido-cloud-navy-sm-g780gzbrzto_1620393794_p.jpg",
+            "estoque": 100,
+            "desconto": 0,
+            "destaque": true
+        },
+        {
+            "nome": "Xbox",
+            "preco": "2000",
+            "desconto": "1500",
+            "estoque": "5",
+            "categoria": "notebooks",
+            "imagem": "/images/produtos/1658272856540-pc-gamer-concordia-core-i7-10700f-rtx3060-12gb-16gb-ram-ssd-500-branco-32736_1647864173_gg.jpg",
+            "ativo": true,
+            "descricao": "asdfasf",
+            "id": "4e1b4642-a2ac-4c42-b5b1-8290deb05131"
+        }
+    ],
+    "categorias": [
+        {
+            "id": 1,
+            "nome": "Computadores"
+        }
+    ],
+    "usuarios": [
+        {
+            "id": 1,
+            "nome": "admin",
+            "email": "admin@mail.com",
+            "senha": "$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS",
+            "cpf": "11111111111",
+            "cep": "900000000",
+            "nivelId": "admin",
+            "carrinho": "[]"
+        },
+        {
+            "nome": "Pablo Cardias Flores",
+            "email": "pablo_six@live.com",
+            "senha": "$2b$10$vhKutC7TOivbXV2eRi95iOFrVYdb4hAmBEibOqV.mLfxfPHapgzTS",
+            "cpf": "01622222222",
+            "cep": "90240001",
+            "id": "a0485d00-35b1-46ec-9284-464eaa60512f",
+            "carrinho": "[]"
+        },
+        {
+            "nome": "Pablo Cardias Flores",
+            "email": "cardias@gmail.com",
+            "senha": "$2b$10$hnxO6T/XVbEJWt.t7r/Q/ulfAGQcm1hF6tFun8MfyMmR3aPqICd/m",
+            "cpf": "11122233345",
+            "cep": "90240001",
+            "id": "c6e2cc9d-c378-4b49-a60e-19399f707c85",
+            "carrinho": "[]"
+        },
+        {
+            "nome": "Felipe Teixeira Andrade",
+            "email": "felipe@mail.com",
+            "senha": "$2b$10$J/nD9zjYRniUH7qXjv2UfeCIrxpeP8p.O0WmZDjDJtvrXGK69NyzO",
+            "cpf": "12312312323",
+            "cep": "80230030",
+            "id": "03a43d5b-6050-4d26-b477-628cb0949b07",
+            "carrinho": "[]"
+        },
+        {
+            "nome": "ANTONIO ALEXANDRE CORDEIRO",
+            "email": "alexandre@gmail.com",
+            "senha": "$2b$10$pAKhPuRew4nrCYuLIOEB0ONoTb.haPQSCPQARVt.C/NupdzdeXoty",
+            "cpf": "12345678996",
+            "cep": "58433222",
+            "id": "78ab7129-d1d6-4f7f-8c4d-3d54f8edab80",
+            "carrinho": "[]"
+        },
+        {
+            "nome": "antonio",
+            "email": "antonio@gmail.com",
+            "senha": "$2b$10$AxTbjuTTzy5SWNk0NMy41evpBChTCIFr05DXekm4gZted9XM4Z3/S",
+            "cpf": "12345678900",
+            "cep": "58000000",
+            "id": "ed79a8ba-6e83-427f-a311-a5efa0ad77c7",
+            "carrinho": "[]"
+        },
+        {
+            "nome": "jose",
+            "email": "jose@GMAIL.COM",
+            "senha": "$2b$10$IXvGW5Xk1n8oBJFuCljP7eiWBtI5ue8niUmx78PXDCs1y4E543AbS",
+            "cpf": "12345678989",
+            "cep": "58433222",
+            "id": "56d00846-c281-4943-88fc-df883d93e79b",
+            "carrinho": "[]"
+        },
+        {
+            "nome": "pedro",
+            "email": "pedro@gmail.com",
+            "senha": "$2b$10$V9N/.uYyda/4di44YVaOzedEj/zW5P5xZv8QQ3oZddOKDU4ARJnx6",
+            "cpf": "12345678900",
+            "cep": "58433222",
+            "id": "63eceecc-394f-417a-bd51-39eb4575349b",
+            "carrinho": "[]"
+        },
+        {
+            "nome": "maria",
+            "email": "maria@gmail.com",
+            "senha": "$2b$10$I7N08YLcvsiuVobP7zgr8.Dv7Mt3ors7.7M/GkS/kUDq.jY/cGnEG",
+            "cpf": "12345678999",
+            "cep": "5800000",
+            "id": "9063cb0c-22c7-4eb9-b3f5-1220d5be2e16",
+            "carrinho": "[]"
+        }
+    ]
+}
