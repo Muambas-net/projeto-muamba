@@ -1,9 +1,9 @@
-const produtosModel = require('../models/produtosModel');
+const Produto = require('../database/models/Produto');
 
 const homeController = {
 
     showIndex: (req, res) => {
-        const produtos = produtosModel.findAll();
+        const produtos = Produto.findAll();
         let { usuario, carrinho } = req.session;
         /* Possivel ajuste para contator de itens do carrinho */
         if (usuario) {
@@ -19,7 +19,7 @@ const homeController = {
         let { usuario, carrinho } = req.session;
         const { id } = req.params;
 
-        const produto = produtosModel.findById(id);
+        const produto = Produto.findById(id);
         if (!produto) {
             return res.render("home/not-found", { error: "Produto não encontrado 😬" });
         }
