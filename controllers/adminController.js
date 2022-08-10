@@ -1,4 +1,4 @@
-const {Produto} = require('../database/models/Produto');
+const {Produto} = require('../models/Produto');
 const storage = require('../middlewares/storage');
 const fs = require('fs');
 

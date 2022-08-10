@@ -1,11 +1,11 @@
-const Produto = require('../database/models/Produto');
+const {Produto} = require("../models");
 
 const homeController = {
 
-    showIndex: (req, res) => {
-        const produtos = Produto.findAll();
+    showIndex: async (req, res) => {
+        const produtos = await Produto.findAll();
         let { usuario, carrinho } = req.session;
-        /* Possivel ajuste para contator de itens do carrinho */
+
         if (usuario) {
             if (carrinho > 0) {
                 return res.render('home/index', { produtos, usuario, carrinho });
@@ -15,11 +15,11 @@ const homeController = {
         return res.render('home/index', { produtos, usuario, carrinho });
     },
 
-    showOneProduct: (req, res) => {
+    showOneProduct: async (req, res) => {
         let { usuario, carrinho } = req.session;
         const { id } = req.params;
 
-        const produto = Produto.findById(id);
+        const produto = await Produto.findOne(id);
         if (!produto) {
             return res.render("home/not-found", { error: "Produto não encontrado 😬" });
         }
