@@ -9,11 +9,11 @@
             <div class="div-topo">
                 <div class="galeria-prod">
                     <div class="galeria-agrupada">
-                        <img src="<%=produto.imagem%>" alt="<%=produto.descricao%>" >
-                        <img src="<%=produto.imagem%>" alt="<%=produto.descricao%>" >
-                        <img src="<%=produto.imagem%>" alt="<%=produto.descricao%>" >
+                        <img src="/images/produtos/<%=produto.imagem%>" alt="<%=produto.descricao%>" >
+                        <img src="/images/produtos/<%=produto.imagem%>" alt="<%=produto.descricao%>" >
+                        <img src="/images/produtos/<%=produto.imagem%>" alt="<%=produto.descricao%>" >
                     </div>
-                    <img class="img-destaque" src="<%=produto.imagem%>" alt="<%produto.nome%>" >
+                    <img class="img-destaque" src="/images/produtos/<%=produto.imagem%>" alt="<%produto.nome%>" >
                 </div>
 
                 <div class="produto-main">
@@ -22,10 +22,9 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <div>
-                        <span>DE R$3.000,00</span>
                         <h4>Por <%=produto.preco%></h4>
                     </div>
-                    <h3><%=produto.categoria%></h3>
+                    <h3><%=produto.categorias_id%></h3>
                     <p><%=produto.descricao%></p>
                     <!-- produto em si entra aqui -->
                     <h3>Informacoes para compra</h3>
