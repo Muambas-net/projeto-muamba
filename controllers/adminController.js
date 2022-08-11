@@ -1,4 +1,4 @@
-const ProdutoModel = require('../models/produtosModel');
+const {Produto} = require('../models/Produto');
 const storage = require('../middlewares/storage');
 const fs = require('fs');
 
@@ -6,13 +6,13 @@ const uploadImagem = storage('imagem', '/produtos')
 
 const adminController = {
     getPainelAdmin: (req, res) => {
-        const produtos = ProdutoModel.findAll()
+        const produtos = Produto.findAll()
         return res.render('adm/painelAdmin', {produtos: produtos});
       
     },
     getProduto: (req, res) => {
         const {id} = req.params
-        const produtos = ProdutoModel.findById(id)
+        const produtos = Produto.findById(id)
        
         return res.render('adm/detalhes', {produtos: produtos})
     },
@@ -33,14 +33,14 @@ const adminController = {
             descricao
         };
 
-        ProdutoModel.save(produto);
+        Produto.save(produto);
 
         return res.redirect('/adm/paineladmin');
     })
     },
     editProduct: (req, res) => {
         const {id} = req.params;
-        const produto = ProdutoModel.findById(id);
+        const produto = Produto.findById(id);
         return res.render('adm/editarProduto', {produto});
     },
     updateProduct: (req, res) => {
@@ -58,18 +58,18 @@ const adminController = {
             descricao
         }
 
-        ProdutoModel.update(id, produto);
+        Produto.update(id, produto);
 
         return res.redirect('/adm/paineladmin');
     },
     deleteProduct: (req, res) => {
         const {id} = req.params;
-        const produtos = ProdutoModel.findById(id);
+        const produtos = Produto.findById(id);
         return res.render('adm/deletarProduto', {produtos: produtos });
     },
     destroyProduct: (req, res) => {
         const {id} = req.params;
-        ProdutoModel.delete(id);
+        Produto.delete(id);
         try {
             fs.unlinkSync('./public' + produto.imagem)
           } catch(err) {

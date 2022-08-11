@@ -1,4 +1,4 @@
-const Usuario = require('../models/usuariosModel');
+const Usuario  = require('../database/models/Usuario');
 const bcrypt = require('bcrypt');
 
 
@@ -16,10 +16,10 @@ const UserController = {
       res.render('home/cadastro');
     },
 
-    store: (req, res) => {
+  store: (req, res) => {
       const { nome, email, senha, confirmaSenha, cpf, cep } = req.body;
       const hash = bcrypt.hashSync(senha, 10);
-      const verificaSeCadastrado = Usuario.findOne(email)
+      const verificaSeCadastrado = Usuario.findOne(email);
 
       if (verificaSeCadastrado) {
         return res.render('home/cadastro', { error: 'Usuário já cadastrado' });
@@ -37,9 +37,10 @@ const UserController = {
         cep
       }
 
-      Usuario.create(usuario);
+          Usuario.create(usuario);
 
-      return res.redirect('/login');
+        return res.json(usuario)
+      //return res.redirect('/login');
     },
 
     login: (req, res) => {
