@@ -1,5 +1,5 @@
 const { v4 } = require('uuid');
-const PedidosModel = require('../database/models/pedidosModel');
+const {PedidosModel} = require('../models');
 
 const CarrinhoController = {
 

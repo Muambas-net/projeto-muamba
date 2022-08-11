@@ -1,4 +1,4 @@
-const Usuario  = require('../database/models/Usuario');
+const {Usuario} = require("../models")
 const bcrypt = require('bcrypt');
 
 

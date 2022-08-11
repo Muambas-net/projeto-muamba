@@ -19,7 +19,7 @@ const homeController = {
         let { usuario, carrinho } = req.session;
         const { id } = req.params;
 
-        const produto = await Produto.findOne(id);
+        const produto = await Produto.findByPk(id);
         if (!produto) {
             return res.render("home/not-found", { error: "Produto não encontrado 😬" });
         }
