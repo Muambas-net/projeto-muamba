@@ -40,7 +40,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING(200),
         allowNull: false,
       },
-      createdAt: {
+    }, {
+        timestamps: true,
+        tableName: 'Produto',
+    });
+/*       createdAt: {
         type: DataTypes.DATE,
         defaultValue: sequelize.fn('NOW'),
         field: 'created_at',
@@ -51,11 +55,7 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: sequelize.fn('NOW'),
         field: 'updated_at',
         allowNull: false,
-      }
-    }, {
-        timestamps: false,
-        tableName: 'Produto',
-    });
+      } */
 
 /*     Produto.belongsToMany(models.Order, {
       through: "order_products",

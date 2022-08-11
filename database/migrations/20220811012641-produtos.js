@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Produto', {
+    await queryInterface.createTable('produtos', {
       id: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
@@ -14,11 +14,9 @@ module.exports = {
       },
       modelo: {
         type: Sequelize.DataTypes.STRING(200),
-        allowNull: false,
       },
       fabricante: {
         type: Sequelize.DataTypes.STRING(200),
-        allowNull: false
       },
       descricao: {
         type: Sequelize.DataTypes.STRING(200),
@@ -26,37 +24,37 @@ module.exports = {
       },
       preco: {
         allowNull: false,
-        type: Sequelize.DataTypes.STRING(20)
+        type: Sequelize.DataTypes.DECIMAL(5, 2)
       },
       serial: {
-        allowNull: false,
         type: Sequelize.DataTypes.STRING(200),
         isUnique: true,
         field:'serial_number'
       },
       estoque: {
         type: Sequelize.DataTypes.INTEGER(20),
-        allowNull: false,
       },
       categoria: {
-        type: Sequelize.DataTypes.STRING(200),
+        type: Sequelize.DataTypes.INTEGER(200),
         allowNull: false,
+        references: {
+          model: {
+            tableName: 'categorias',
+          },
+          key: 'id'
+        }
       },
       createdAt: {
         type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('NOW'),
-        field: 'created_at',
         allowNull: false
       },
       updatedAt: {
         type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('NOW'),
-        field: 'updated_at',
         allowNull: false,
       }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Produto');
+    await queryInterface.dropTable('produtos');
   }
 };

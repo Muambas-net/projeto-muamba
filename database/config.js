@@ -6,9 +6,5 @@ module.exports = {
     "database": process.env.DB_NAME,
     "host": process.env.DB_HOST,
     "dialect": process.env.DB_DIALECT,
-    "port": process.env.DB_PORT,
-    define: {
-      timestamps: true,
-      underscored: true,
-    }
+    "port": process.env.DB_PORT
   };

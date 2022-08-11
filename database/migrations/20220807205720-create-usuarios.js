@@ -1,25 +1,23 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('usuario', {
+    await queryInterface.createTable('usuarios', {
             id: {
             type: Sequelize.DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
-            generationStrategy: 'uuid',
-            default: 'uuid_generate_v4()',
+            allowNull: false
             },
             nome: {
             type: Sequelize.DataTypes.STRING(100),
             allowNull: false,
             },
             avatar: {
-            type: Sequelize.DataTypes.STRING(30),
+            type: Sequelize.DataTypes.STRING(200),
             allowNull: true,
              },
-            dataNascimento: {
+            data_nascimento: {
             type: Sequelize.DataTypes.STRING(30),
-            field:'data_nascimento',
             allowNull: false, 
             },
             genero: {
@@ -42,22 +40,16 @@ module.exports = {
             },
             createdAt: {
              type: Sequelize.DATE,
-            defaultValue: Sequelize.fn('NOW'),
-            field: 'created_at',
             allowNull: false
             },
             updatedAt: {
             type: Sequelize.DATE,
-            defaultValue: Sequelize.fn('NOW'),
-            field: 'updated_at',
-            allowNull: false,
+            allowNull: false
             }
-    }, {
-            timestamps: true,
-            tableName: 'users',
     });
   },
+
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('usuario');
+    await queryInterface.dropTable('usuarios');
   }
 };
