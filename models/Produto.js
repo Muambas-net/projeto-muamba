@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       imagem: {
         type: DataTypes.STRING(200),
         allowNull: false,
-        defaultValue: "1657146345270-baixados.jpg"
+        defaultValue: "logo.png"
       },
       modelo: {
         type: DataTypes.STRING(200),
