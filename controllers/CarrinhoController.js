@@ -1,5 +1,5 @@
 const { v4 } = require('uuid');
-const {PedidosModel} = require('../models');
+const { Pedido } = require('../models');
 
 const CarrinhoController = {
 
@@ -47,7 +47,7 @@ const CarrinhoController = {
         }
         return res.redirect('/carrinho');
     },
-    finalizarCompra: (req, res) => {
+    finalizarCompra: async (req, res) => {
         const { pagamento, entrega, total } = req.body;
             
         
@@ -61,14 +61,14 @@ const CarrinhoController = {
             entrega
           }
 
-        PedidosModel.save(pedido);
+        await Pedido.save(pedido);
 
         return res.redirect('/pedidoConcluido/' + pedido.id);
 
     },
-    pedidoConcluido: (req, res) => {
+    pedidoConcluido: async (req, res) => {
         const { id } = req.params;
-        const pedidos = PedidosModel.findById(id);
+        const pedidos = await Pedido.findOne({where: {id}});
         console.log(pedidos)
         return res.render('home/pedidoConcluido', { pedidos });
     }
