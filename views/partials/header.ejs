@@ -21,9 +21,9 @@
         </div>
 
         <div class="search">
-            <form action="" class="form_search">
+            <form action="/" method="POST" class="form_search">
                 <input type="search" name="search" id="search" placeholder="Pesquisar">
-                <button name="btn-1" id="btn">
+                <button type="submit" name="btn-1" id="btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
         </div>
@@ -32,7 +32,6 @@
         <div class="cart-user">
             <div class="cart">
 
-                <!-- INCLUIR LOGICA DE QUANTIDADE DE ITENS COMO SPAN QUANDO TIVER ITENS NO CARRINHO -->
                 <a href="/carrinho"><i class="fa-solid fa-cart-shopping"></i></a>
                         <% if(locals.carrinho && locals.carrinho.length > 0) { %>
                             <span class="contador-carrinho">
