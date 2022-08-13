@@ -1,4 +1,3 @@
-const { v4 } = require('uuid');
 const { Pedido } = require('../models');
 
 const CarrinhoController = {
@@ -52,18 +51,18 @@ const CarrinhoController = {
             
         
         const usuarioId = req.session.usuario.id;
+        console.log(usuarioId);
         const pedido = {
-            id: v4(),
-            usuarioId: usuarioId,
+            usuario_id: usuarioId,
             itens: req.session.carrinho,
             total,
             pagamento,
             entrega
           }
 
-        await Pedido.save(pedido);
+        await Pedido.create(pedido);
 
-        return res.redirect('/pedidoConcluido/' + pedido.id);
+        return res.redirect('/pedidoConcluido/' + pedido.usuario_id);
 
     },
     pedidoConcluido: async (req, res) => {
