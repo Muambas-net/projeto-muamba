@@ -34,9 +34,8 @@ header {
 }
 
 .search {
-    margin-left: 75px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 
     font-size: 1.6rem;
 }
