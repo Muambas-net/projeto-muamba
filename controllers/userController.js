@@ -16,10 +16,10 @@ const UserController = {
       res.render('home/cadastro');
     },
 
-  store: (req, res) => {
+  store: async (req, res) => {
       const { nome, email, senha, confirmaSenha, cpf, cep } = req.body;
       const hash = bcrypt.hashSync(senha, 10);
-      const verificaSeCadastrado = Usuario.findOne(email);
+      const verificaSeCadastrado = await Usuario.findOne({where:{email}});
 
       if (verificaSeCadastrado) {
         return res.render('home/cadastro', { error: 'Usuário já cadastrado' });
@@ -37,18 +37,17 @@ const UserController = {
         cep
       }
 
-          Usuario.create(usuario);
+         await Usuario.create(usuario);
 
-        return res.json(usuario)
-      //return res.redirect('/login');
+        return res.redirect('/login');
     },
 
-    login: (req, res) => {
+    login: async (req, res) => {
       const { email, senha } = req.body;
-      const usuario = Usuario.findOne(email);
+      const usuario = await Usuario.findOne({where: {email}});
 
       if (!usuario || !bcrypt.compareSync(senha, usuario.senha)) {
-        return res.render("home/login", { error: "Email ou senha estão incorretos ou não existe." });
+        return res.render("home/login", { error: "Email ou senha estão incorretos ou não existem." });
       }
 
       req.session.usuario = usuario;
@@ -56,8 +55,7 @@ const UserController = {
     },
 
     logout: (req, res) => {
-      req.session.destroy(function (err) {
-      });
+      req.session.destroy();
 
       return res.redirect('/');
     },

@@ -1,10 +1,22 @@
 const {Produto} = require("../models");
-
+const {Op} = require("sequelize");
 const homeController = {
-
+    
     showIndex: async (req, res) => {
-        const produtos = await Produto.findAll();
         let { usuario, carrinho } = req.session;
+        const {search} = req.body;
+        console.log(search);
+        if (search && search.length > 0) {
+            const produtos = await Produto.findAll({
+                where: {
+                    nome: {
+                        [Op.like]: `%${search}%`
+                    }
+                }
+            });
+            return res.render('home/index', { produtos, usuario, carrinho });
+        }
+        const produtos = await Produto.findAll();
 
         if (usuario) {
             if (carrinho > 0) {

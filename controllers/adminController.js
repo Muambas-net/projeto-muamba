@@ -5,23 +5,24 @@ const fs = require('fs');
 const uploadImagem = storage('imagem', '/produtos')
 
 const adminController = {
-    getPainelAdmin: (req, res) => {
-        const produtos = Produto.findAll()
+    getPainelAdmin: async (req, res) => {
+        const produtos = await Produto.findAll();
+
         return res.render('adm/painelAdmin', {produtos: produtos});
-      
     },
-    getProduto: (req, res) => {
+    getProduto: async (req, res) => {
         const {id} = req.params
-        const produtos = Produto.findById(id)
+        const produtos = await Produto.findById(id)
        
         return res.render('adm/detalhes', {produtos: produtos})
     },
     addProduct: (req, res) => {
         return res.render('adm/adicionarProduto' );
     },
-    storeProduct: (req, res) => {
+    storeProduct: async (req, res) => {
         uploadImagem(req, res, (err) => {
-        const { nome, preco, desconto, estoque, categoria, imagem, ativo, descricao } = req.body;
+        const { nome, preco, desconto, estoque, categoria, ativo, descricao } = req.body;
+        
         const produto = {
             nome,
             preco,
@@ -31,12 +32,13 @@ const adminController = {
             imagem: '/images/produtos/' + req.file.filename,
             ativo: (ativo ? true : false),
             descricao
-        };
+        }
 
-        Produto.save(produto);
+        Produto.create(produto);
+    })
 
         return res.redirect('/adm/paineladmin');
-    })
+    
     },
     editProduct: (req, res) => {
         const {id} = req.params;
