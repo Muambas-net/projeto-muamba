@@ -1,4 +1,4 @@
-const { Produto } = require('../models');
+const { Produto, Categoria } = require('../models');
 const storage = require('../middlewares/storage');
 const fs = require('fs');
 
@@ -12,28 +12,28 @@ const adminController = {
     },
     getProduto: async (req, res) => {
         const { id } = req.params
-        const produtos = await Produto.findById(id)
+        const produtos = await Produto.findOne({ where: { id } });
 
         return res.render('adm/detalhes', { produtos: produtos })
     },
-    addProduct: (req, res) => {
-        return res.render('adm/adicionarProduto');
+    addProduct: async (req, res) => {
+
+        const categorias =  await Categoria.findAll();
+
+        return res.render('adm/adicionarProduto' , { categorias });
     },
     storeProduct: async (req, res) => {
-        uploadImagem(req, res, (err) => {
             const { nome, preco, desconto, estoque, categoria, ativo, descricao } = req.body;
 
-            const produto = {
+            await Produto.create({
                 nome,
-                preco,
+                preco: parseFloat(preco),
                 desconto,
                 estoque,
-                categoria,
+                categorias_id: categoria,
                 ativo,
                 descricao,
                 imagem: req.file.filename
-            }
-            Produto.create(produto)
 
         })
 
@@ -41,9 +41,9 @@ const adminController = {
 
     },
 
-    editProduct: (req, res) => {
+    editProduct: async (req, res) => {
         const { id } = req.params;
-        const produto = Produto.findById(id);
+        const produto = await Produto.findOne({where: {id}});
         return res.render('adm/editarProduto', { produto });
     },
 
@@ -67,15 +67,15 @@ const adminController = {
         return res.redirect('/adm/paineladmin');
     },
 
-    deleteProduct: (req, res) => {
+    deleteProduct: async (req, res) => {
         const { id } = req.params;
-        const produtos = Produto.findById(id);
+        const produtos = await Produto.findOne({where: {id}});
         return res.render('adm/deletarProduto', { produtos: produtos });
     },
 
-    destroyProduct: (req, res) => {
+    destroyProduct: async (req, res) => {
         const { id } = req.params;
-        Produto.delete(id);
+        await Produto.destroy({where: {id}});
         try {
             fs.unlinkSync('./public' + produto.imagem)
         } catch (err) {
