@@ -97,9 +97,14 @@ header {
 }
 
 .user span {
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-left: 0.5rem;
+}
+
+.user ul {
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -123,6 +128,7 @@ header {
   border-radius: 15px;
   border: none;
   padding: 0 15px;
+  font-size: 1.4rem;
 }
 
 /* .search ::placeholder {
@@ -147,13 +153,13 @@ header {
 
 nav {
   box-shadow: 0px 8px 10px grey;
-  border: 1px solid whitesmoke;
   background-color: #f6fdff;
-  padding: 10px;
+  padding: 0;
+  margin: 0;
   font-size: 1.7rem;
   font-family: 'Teko', sans-serif;
   font-weight: 400;
-  line-height: 12px;
+
   text-align: center;
 }
 
@@ -162,7 +168,8 @@ nav ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 10px;
+  margin: 0;
 }
 
 nav li {
@@ -171,4 +178,9 @@ nav li {
 
 nav a {
   text-decoration: none;
+  color: #551A8B;
+}
+
+nav a:hover {
+  color: #0A58CA;
 }
