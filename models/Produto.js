@@ -16,8 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: "logo.png"
       },
       modelo: {
-        type: DataTypes.STRING(200),
-        allowNull: false,
+        type: DataTypes.STRING(200)
       },
       fabricante: {
         type: DataTypes.STRING(200)
@@ -28,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       preco: {
         allowNull: false,
-        type: DataTypes.DECIMAL(5, 2)
+        type: DataTypes.DECIMAL(10, 2)
       },
       serial: {
         type: DataTypes.STRING(200),
@@ -39,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER(20),
       },
       categorias_id: {
-        type: DataTypes.STRING(200),
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
     }, {
