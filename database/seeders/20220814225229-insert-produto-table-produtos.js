@@ -5,11 +5,11 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     const produtos = [
       {
-        id: 1,
-        nome: "Controle de xbox",
-        descricao: "Controle para consoles microsoft e pcs",
-        preco: "1199.99",
-        categorias_id: 5,
+        nome: "Motorola Fusion one",
+        imagem: "2486580294_1SZ.webp",
+        descricao: "motorola Fusion one de ultima geração",
+        preco: 1600.00,
+        categorias_id: 4,
         createdAt: new Date(),
         updatedAt: new Date()
 
