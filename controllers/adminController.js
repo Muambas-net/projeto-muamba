@@ -8,6 +8,7 @@ const adminController = {
     getPainelAdmin: async (req, res) => {
         const produtos = await Produto.findAll();
 
+        console.log(produtos);
         return res.render('adm/paineladmin', { produtos });
     },
     getProduto: async (req, res) => {
