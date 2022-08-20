@@ -2,7 +2,6 @@ const { Produto, Categoria } = require('../models');
 const storage = require('../middlewares/storage');
 const fs = require('fs');
 
-const uploadImagem = storage('imagem', '/produtos')
 
 const adminController = {
     getPainelAdmin: async (req, res) => {

@@ -6,6 +6,7 @@ const homeRouter = require('./routes/homeRouter');
 const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
 const carrinhoRouter = require('./routes/carrinhoRouter');
+const apiRouter = require('./routes/apiRouter');
 
 
 const app = express();
@@ -27,7 +28,7 @@ app.use(homeRouter);
 app.use(userRouter);
 app.use(carrinhoRouter);
 app.use(adminRouter);
-
+app.use(apiRouter);
 
 app.listen(3000, () => {
     console.log('Server online at http://localhost:3000')
