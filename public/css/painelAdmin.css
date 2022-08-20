@@ -23,21 +23,21 @@ body {
 
 .div-grafico {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     color: #000000;
 
 }
 
+
 th td {
     height: 4.0rem;
 }
 
 .col {
-    /* border: solid #FFFFFF 2px; */
-    padding: 4.0rem;
+    padding-bottom: 4.0rem;
 }
+
 
 .center-th {
     text-align: center;
