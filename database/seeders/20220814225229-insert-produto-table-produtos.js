@@ -8,7 +8,7 @@ module.exports = {
         nome: "Motorola Fusion one",
         imagem: "2486580294_1SZ.webp",
         descricao: "motorola Fusion one de ultima geração",
-        preco: 1600.00,
+        preco: 3000,
         categorias_id: 4,
         createdAt: new Date(),
         updatedAt: new Date()

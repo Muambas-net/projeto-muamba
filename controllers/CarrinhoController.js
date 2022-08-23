@@ -67,10 +67,10 @@ const CarrinhoController = {
     },
     pedidoConcluido: async (req, res) => {
         const { id } = req.params;
-        const pedidos = await Pedido.findOne({where: {id}});
-        console.log(pedidos)
-        return res.render('home/pedidoConcluido', { pedidos });
-    }
+        const pedido = await Pedido.findOne({where: {id}});
+        return res.render('home/pedidoConcluido', { pedido: pedido });
+    },
+    
 }
 
 module.exports = CarrinhoController;
