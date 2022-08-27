@@ -1,5 +1,6 @@
 const {Usuario} = require("../models")
 const bcrypt = require('bcrypt');
+const { Pedido } = require('../models');
 
 
 const UserController = {
@@ -12,7 +13,7 @@ const UserController = {
       res.render('home/login');
     }, */
 
-    showCadastrar: (req, res) => {
+  showCadastrar: (req, res) => {
       res.render('home/cadastro');
     },
 
@@ -59,16 +60,10 @@ const UserController = {
 
       return res.redirect('/');
     },
-
-    logado: (req, res) => {
+    panelUser: async (req, res) => { 
       const { usuario } = req.session;
-      return res.render('/usuario',  { usuario});
-
-  },
-    
-    panelUser: (req, res) => { 
-      const { usuario } = req.session;
-      return res.render('usuario/painelUsuario', { usuario});
+      const pedidos = await Pedido.findAll({where: {usuario_id: usuario.id}});
+      return res.render('usuario/painelUsuario', { usuario, pedidos });
   },
   
   esqueciMinhaSenha: (req, res) => {

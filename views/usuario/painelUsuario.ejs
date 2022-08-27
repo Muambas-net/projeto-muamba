@@ -63,30 +63,20 @@
         <thead>
           <tr>
             <th class="col">Número</th>
-            <th class="col">Data</th>
             <th class="col">Pagamento</th>
+            <th class="col">Entrega</th>
             <th class="col">Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th>748596</th>
-            <td>10/11/2021</td>
-            <td>Cartão de Crédito</td>
-            <td>Entregue</td>
-          </tr>
-          <tr>
-            <th>742968</th>
-            <td>25/02/2022</td>
-            <td>Boleto</td>
-            <td>Cancelado</td>
-          </tr>
-          <tr>
-            <th>743002</th>
-            <td>04/05/2022</td>
-            <td>Cartão de Crédito</td>
-            <td>Entregue</td>
-          </tr>
+            <% pedidos.forEach(pedido => { %> 
+            <th><%= pedido.id %></th>
+            <td><%= pedido.pagamento %></td>
+            <td><%= pedido.entrega %></td>
+            <td><%= pedido.status %></td>
+            <% }) %> 
+            </tr>
         </tbody>
       </table>
     </div>

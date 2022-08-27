@@ -29,6 +29,9 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.DECIMAL(10, 2)
       },
+      ativo: {
+        type: DataTypes.STRING(10)
+      },
       serial: {
         type: DataTypes.STRING(200),
         isUnique: true,
@@ -42,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
     }, {
-        timestamps: true,
+        timestamps: false,
         tableName: 'produtos',
     });
 

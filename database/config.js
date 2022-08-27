@@ -3,5 +3,6 @@ module.exports ={
     "password": null,
     "database": "dbmuambas",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "timestamps": false
 }

@@ -33,7 +33,7 @@ const adminController = {
                 categorias_id: categoria,
                 ativo,
                 descricao,
-                imagem: req.file.filename
+                imagem: '/images/produtos/' + req.file.filename
 
         })
 
