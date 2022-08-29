@@ -70,7 +70,7 @@ const CarrinhoController = {
         });
 
         await PedidoProdutos.bulkCreate(pedidoProdutos)
-
+        req.session.carrinho = [];
         return res.redirect('/pedidoConcluido/' + novoPedido.id);
 
     },
