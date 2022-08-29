@@ -1,11 +1,23 @@
-const produtosModel = require('../models/produtosModel');
-
+const {Produto} = require("../models");
+const {Op} = require("sequelize");
 const homeController = {
-
-    showIndex: (req, res) => {
-        const produtos = produtosModel.findAll();
+    
+    showIndex: async (req, res) => {
         let { usuario, carrinho } = req.session;
-        /* Possivel ajuste para contator de itens do carrinho */
+        const {search} = req.body;
+        console.log(search);
+        if (search && search.length > 0) {
+            const produtos = await Produto.findAll({
+                where: {
+                    nome: {
+                        [Op.like]: `%${search}%`
+                    }
+                }
+            });
+            return res.render('home/index', { produtos, usuario, carrinho });
+        }
+        const produtos = await Produto.findAll();
+
         if (usuario) {
             if (carrinho > 0) {
                 return res.render('home/index', { produtos, usuario, carrinho });
@@ -15,11 +27,11 @@ const homeController = {
         return res.render('home/index', { produtos, usuario, carrinho });
     },
 
-    showOneProduct: (req, res) => {
+    showOneProduct: async (req, res) => {
         let { usuario, carrinho } = req.session;
         const { id } = req.params;
 
-        const produto = produtosModel.findById(id);
+        const produto = await Produto.findByPk(id);
         if (!produto) {
             return res.render("home/not-found", { error: "Produto não encontrado 😬" });
         }

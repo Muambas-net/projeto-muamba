@@ -22,29 +22,29 @@
       <section class="container">
         <div class="wrapper">
         <h3>Resumo da Compra</h3>
-        <h4> Número do pedido: <%=pedidos.id%> </h4>
+        <h4> Número do pedido: <%=pedido.id%> </h4>
         
-               <% pedidos.itens.forEach(item => { %>
+               <% pedido.produtos.forEach(produto => { %>
                 <div class="produto-selecionado">
                   <img 
-                  src="<%= item.imagem %>" 
-                  alt="<%= item.nome %>" 
+                  src="<%= produto.imagem %>" 
+                  alt="<%= produto.nome %>" 
                   width="150px"
                   height="150px">
                 <div class="descricao-produto">
-                  <h2><%= item.nome %></h2>
+                  <h2><%= produto.nome %></h2>
                 </div>
                 <div class="preco">
-                  <p><%= item.preco %></p>
+                  <p><%= produto.preco %></p>
                 </div>
 
               </div>
 
               <% }) %>
               <div class="subtotal">
-                <p>Subtotal: <b><%=pedidos.total%></b></p>
-                <p>Modo de pagamento: <b><%=pedidos.pagamento%></b></p>
-                <p>Forma de entrega: <b><%=pedidos.entrega%></b></p>
+                <p>Subtotal: <b><%=pedido.total%></b></p>
+                <p>Modo de pagamento: <b><%=pedido.pagamento%></b></p>
+                <p>Forma de entrega: <b><%=pedido.entrega%></b></p>
               </div>
 
 

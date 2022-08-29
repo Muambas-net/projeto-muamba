@@ -1,5 +1,4 @@
-const { v4 } = require('uuid');
-const PedidosModel = require('../models/pedidosModel');
+const { Pedido, PedidoProdutos } = require('../models');
 
 const CarrinhoController = {
 
@@ -47,31 +46,41 @@ const CarrinhoController = {
         }
         return res.redirect('/carrinho');
     },
-    finalizarCompra: (req, res) => {
+    finalizarCompra: async (req, res) => {
         const { pagamento, entrega, total } = req.body;
-            
+        let { carrinho } = req.session;
+                    
         
         const usuarioId = req.session.usuario.id;
+        console.log(usuarioId);
         const pedido = {
-            id: v4(),
-            usuarioId: usuarioId,
-            itens: req.session.carrinho,
+            usuario_id: usuarioId,
             total,
             pagamento,
             entrega
           }
 
-        PedidosModel.save(pedido);
+        const novoPedido = await Pedido.create(pedido);
+                
+        const pedidoProdutos = carrinho.map(produto => {
+            return {
+                pedido_id: novoPedido.id,
+                produto_id: produto.id
+            }
+        });
 
-        return res.redirect('/pedidoConcluido/' + pedido.id);
+        await PedidoProdutos.bulkCreate(pedidoProdutos)
+        req.session.carrinho = [];
+        return res.redirect('/pedidoConcluido/' + novoPedido.id);
 
     },
-    pedidoConcluido: (req, res) => {
+    pedidoConcluido: async (req, res) => {
         const { id } = req.params;
-        const pedidos = PedidosModel.findById(id);
-        console.log(pedidos)
-        return res.render('home/pedidoConcluido', { pedidos });
-    }
+        const pedido = await Pedido.findOne({where: {id}, include: 'produtos'});
+        console.log(pedido)
+        return res.render('home/pedidoConcluido', { pedido: pedido });
+    },
+    
 }
 
 module.exports = CarrinhoController;
