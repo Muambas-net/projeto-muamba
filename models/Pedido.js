@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
       timestamps: false,
       tableName: 'pedidos',
+      onDelete: 'CASCADE'
   });
 
   Pedido.associate = (models) => {

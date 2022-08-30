@@ -17,7 +17,8 @@ module.exports = {
           model: 'produtos',
           key: 'id'
         },
-        allowNull: false
+        allowNull: false,
+        onDelete: 'CASCADE'
       }
     });
   },

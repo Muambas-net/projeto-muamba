@@ -42,7 +42,8 @@ module.exports = {
             tableName: 'categorias',
           },
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE',
       },
       createdAt: {
         type: Sequelize.DATE,
@@ -52,7 +53,8 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       }
-    });
+    },
+    );
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('produtos');

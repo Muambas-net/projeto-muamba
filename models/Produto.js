@@ -46,13 +46,13 @@ module.exports = (sequelize, DataTypes) => {
       },
     }, {
         timestamps: false,
-        tableName: 'produtos',
-        onDelete: 'CASCADE'
+        tableName: 'produtos',     
     });
 
     Produto.associate = (models) => {
       Produto.belongsTo(models.Categoria, {
         foreignKey: 'categorias_id',
+        
         as: 'categoria'
       });
     }

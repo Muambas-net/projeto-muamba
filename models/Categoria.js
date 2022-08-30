@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         timestamps: false,
         tableName: 'categorias',
+        onDelete: 'CASCADE'
     });
     return Categoria;
 }
