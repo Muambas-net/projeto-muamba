@@ -40,7 +40,8 @@ module.exports = (sequelize, DataTypes) => {
       through: 'pedido_produtos',
       foreignKey: 'pedido_id',
       otherKey: 'produto_id',
-      as: 'produtos'
+      as: 'produtos',
+      onDelete: 'CASCADE'
     });
   }
 
