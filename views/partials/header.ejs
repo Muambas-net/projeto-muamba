@@ -49,7 +49,7 @@
                     <span style="color: #2D2D2D;">Olá, <%= locals.usuario.nome %></span>
                     <div class="user-options">
                         <ul>
-                            <li><a style="color: #2D2D2D;" href="/usuario">Minha Conta</a></li>
+                            <li><a style="color: #2D2D2D;" href=<%= locals.usuario.is_admin == 1 ? "/adm/paineladmin" : "/usuario"  %> >Minha Conta</a></li>
                             <li>|</li>
                             <li><a style="color: #2D2D2D;" href="/logout">Sair</a></li>
                         </ul>
