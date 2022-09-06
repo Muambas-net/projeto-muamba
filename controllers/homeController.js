@@ -16,7 +16,7 @@ const homeController = {
             });
             return res.render('home/index', { produtos, usuario, carrinho });
         }
-        const produtos = await Produto.findAll();
+        const produtos = await Produto.findAll({limit: 4});
 
         if (usuario) {
             if (carrinho > 0) {
@@ -64,9 +64,29 @@ const homeController = {
         res.render('home/cadastro')
     },
 
-    lista: (req, res) => {
-        const { usuario } = req.session;
-        res.render('home/lista', { usuario });
+    lista: async(req, res) => {
+        let { usuario, carrinho } = req.session;
+        const {search} = req.body;
+        console.log(search);
+        if (search && search.length > 0) {
+            const produtos = await Produto.findAll({
+                where: {
+                    nome: {
+                        [Op.like]: `%${search}%`
+                    }
+                }
+            });
+            return res.render('home/lista', { produtos, usuario, carrinho });
+        }
+        const produtos = await Produto.findAll();
+
+        if (usuario) {
+            if (carrinho > 0) {
+                return res.render('home/lista', { produtos, usuario, carrinho });
+            }
+            return res.render('home/lista', { produtos, usuario, carrinho });
+        }
+        return res.render('home/lista', { produtos, usuario, carrinho });
     }
 
 }

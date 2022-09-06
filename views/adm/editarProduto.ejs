@@ -7,26 +7,26 @@
     <div class="container">
       <h1>Editar produto</h1>
       <div class="cadastro">
-      <form method="POST" action="/adm/paineladmin/:id/editar?_method=PUT" enctype="multipart/form-data">
-        <input type="text" name="nome" id="" placeholder="Nome do Produto">
-        <input type="number" name="preco" min="1" step="any" placeholder="Preço">
-        <input type="number" name="estoque" min="1" step="any" placeholder="Estoque">
-        <select name="categoria" id="categoria" placeholder="Categorias">
+      <form method="POST" action="/adm/editar-produto/<%= produto.id %>?_method=PUT" enctype="multipart/form-data">
+        <input type="text" name="nome" id=""  value="<%= produto.nome %>" placeholder="Nome do Produto">
+        <input type="number" name="preco" min="1" step="any" value="<%= produto.preco %>" placeholder="Preço">
+        <input type="number" name="estoque" min="1" step="any" value="<%= produto.estoque %>" placeholder="Estoque">
+        <select name="categoria" id="categoria" value="<%= categorias.id %>" placeholder="Categorias">
           <option value="" disabled>Selecione uma categoria</option>
-          <option value="computadores">Computadores</option>
-          <option value="notebooks">Notebooks</option>
-          <option value="celulares">Celulares</option>
-          <option value="televisores">Televisores</option>
-          <option value="acessorios">Acessórios</option>
+          <% categorias.forEach(categoria => { %>
+            <option selected=<%= produto.categorias_id %> value="<%= categoria.id %>"><%= categoria.name %></option>
+          <% }) %>
         </select>
         <label for="imagem">Adicionar foto</label>
         <input type="file" name="imagem" id="imagem">
         <div class="ativo">
-        <input type="checkbox" name="ativo" id="ativo" placeholder="Produto ativo">
-        <label for="">Ativo</label>
+        <input type="checkbox" name="ativo" id="ativo" value="<%= produto.ativo %>" checked=<% produto.ativo == "on" ? checked = "checked" : checked = "" %> placeholder="Produto ativo">
+        <label  for="ativo">Ativo</label>
+        <input type="checkbox" name="destaques" id="destaques" checked=<% produto.destaques == "on" ? checked = "checked" : checked = "" %> placeholder="Produto destaque">
+        <label for="">Destaque</label>
       </div>
-        <textarea name="descrição" cols="30" rows="10" placeholder="Descrição do Produto"></textarea>
-        <div class="buttons">
+        <textarea name="descricao" cols="30" rows="10" > <%= produto.descricao %> </textarea>
+        <div  class="buttons">
           <button type="submit">Cadastrar</button>
           
         </div>

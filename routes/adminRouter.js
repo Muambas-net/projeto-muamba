@@ -16,7 +16,7 @@ router.get("/adm/adicionar-produto", adminController.addProduct);
 router.get("/adm/produto/detalhes/:id", adminController.getProduto)
 router.post("/adm/adicionar-produto", upload, adminController.storeProduct);
 router.get("/adm/:id/editar-produto", adminController.editProduct);
-router.put("/adm/editar-produto/:id", adminController.updateProduct);
+router.put("/adm/editar-produto/:id", upload, adminController.updateProduct);
 router.get("/adm/deletar-produto/:id", adminController.deleteProduct);
 router.delete("/adm/deletar-produto/:id", adminController.destroyProduct);
 

@@ -32,6 +32,9 @@ module.exports = (sequelize, DataTypes) => {
       ativo: {
         type: DataTypes.STRING(10)
       },
+      destaques: {
+        type: DataTypes.STRING(10)
+      },
       serial: {
         type: DataTypes.STRING(200),
         isUnique: true,
