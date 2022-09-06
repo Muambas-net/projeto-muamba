@@ -11,6 +11,7 @@ router.post('/cadastrar', userController.store);
 router.get('/esqueciMinhaSenha', userController.esqueciMinhaSenha);
 router.get('/logout', userController.logout);
 router.get('/usuario', userController.panelUser);
+router.post('/usuario', userController.panelUser);
 
 
 

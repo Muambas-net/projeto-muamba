@@ -8,11 +8,6 @@ const UserController = {
   showLogin: (req, res) => {
     return res.render('home/login');
   },
-  
-  /*   mostraLogin: (req, res) => {
-      res.render('home/login');
-    }, */
-
   showCadastrar: (req, res) => {
       res.render('home/cadastro');
     },
@@ -62,8 +57,26 @@ const UserController = {
     },
     panelUser: async (req, res) => { 
       const { usuario } = req.session;
-      const pedidos = await Pedido.findAll({where: {usuario_id: usuario.id}, include: 'produtos'});
-      return res.render('usuario/painelUsuario', { usuario, pedidos: pedidos });
+      const { search } = req.query;
+      console.log(search)
+      let order;
+      
+      if(search && search.length > 0) {
+        order = await Pedido.findAll({
+          where: {
+            id: search
+          },
+          include: 'produtos'
+        })
+      }
+
+      const pedidos = await Pedido.findAll({
+        where: {
+          usuario_id: usuario.id
+        }, 
+        include: 'produtos'
+      });
+      return res.render('usuario/painelUsuario', { usuario, order, pedidos: pedidos });
   },
   
   esqueciMinhaSenha: (req, res) => {

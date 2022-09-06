@@ -8,9 +8,9 @@
   <h1>Acompanhe seu pedido</h1>
   <section class="codigo">
     <h2>Código do pedido</h2>
-    <form action="/painelUsuario" method='POST' class="form_search">
-      <input type="search" name="searchOrder" id="search" placeholder="Pesquisar">
-      <button name="btn-1" id="btn">
+    <form action="/usuario" method='POST' class="form_search">
+      <input type="search" name="search" id="search" placeholder="Pesquisar">
+      <button name="btn-1" id="btn" type="submit">
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
     </section>
@@ -19,9 +19,9 @@
         <h4>Produtos do pedido n. <%= pedidos.id %></h4>
         <div class='container'>
     <div class="wrapper">
-      <% pedidos.produtos.forEach(produto => { %>
+      <% order.produtos.forEach(produto => { %>
         <div class="produto-selecionado">
-          <img src="<%= produto.imagem %>" alt="Notebook Asus">
+          <img src="<%= produto.imagem %>" alt="<%= produto.nome %>">
           <div class="descricao-produto">
             <h2><%= produto.nome %></h2>
           </div>
