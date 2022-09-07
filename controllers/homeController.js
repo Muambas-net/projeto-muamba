@@ -16,7 +16,15 @@ const homeController = {
             });
             return res.render('home/index', { produtos, usuario, carrinho });
         }
-        const produtos = await Produto.findAll({limit: 4});
+        const produtos = await Produto.findAll({
+        where: {
+            ativo:{
+                [Op.eq]: "on"
+            }
+        },    
+        limit: 4,
+        offset: 3, 
+        });
 
         if (usuario) {
             if (carrinho > 0) {

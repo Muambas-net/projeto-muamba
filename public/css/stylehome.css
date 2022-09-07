@@ -114,6 +114,15 @@ body{
 .card button:hover{
     background-color: rgb(3, 132, 179);
 }
+
+.card-lista {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
 .todosProdutos{
     font-size: 2.5rem;
     text-decoration: none;

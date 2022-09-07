@@ -52,27 +52,31 @@ const adminController = {
     updateProduct: async (req, res) => {
         const { id } = req.params;
         console.log(req.body);
-        const { nome, imagem, preco, estoque, categoria, ativo, destaques, descricao } = req.body;
-        const produto = {
-            nome,
-            imagem,
-            preco,
-            estoque,
-            categoria,
-            ativo,
-            destaques,
-            descricao
+        const { nome,imagem, preco, estoque, categoria, ativo, destaques, descricao } = req.body;
+        console.log(req.body.ativo)
+        if(req.file){
+            await Produto.update({   
+                nome,
+                imagem: req.file.filename,
+                preco: parseFloat(preco),
+                estoque,
+                categoria,
+                ativo: ativo ? "on" : "off",
+                destaques: destaques == 'on' ? destaques : "off",
+                descricao
+            }, { where: { id } });
+    
+        } else {
+            await Produto.update({   
+                nome,
+                preco: parseFloat(preco),
+                estoque,
+                categoria,
+                ativo: ativo ? "on" : "off",
+                destaques: destaques == 'on' ? destaques : "off",
+                descricao}, { where: { id } });
+    
         }
-
-        await Produto.update({   nome,
-            imagem,
-            preco,
-            estoque,
-            categoria,
-            ativo,
-            destaques,
-            descricao}, { where: { id } });
-
         return res.redirect('/adm/paineladmin');
     },
 

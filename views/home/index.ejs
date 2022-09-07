@@ -20,7 +20,7 @@
                                 <%= `${produto.nome.substring(0, 20)}...` %>
                         </p>  
                         <p>
-                            <%=produto.preco%>
+                            R$ <%=produto.preco.toFixed(2)%>
                         </p>
                         <span>À vista no pix</span>
                         <div>
@@ -319,7 +319,7 @@
                             </p>
                             <% } %>
 
-                                <p>R$ <%= produto.preco%>
+                                <p>R$ <%= produto.preco.toFixed(2)%>
                                 </p>
 
                                 <span>À vista no pix</span>

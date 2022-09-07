@@ -18,11 +18,16 @@
           <% }) %>
         </select>
         <label for="imagem">Adicionar foto</label>
-        <input type="file" name="imagem" id="imagem">
+        <input type="file" name="imagem" id="imagem" value="<%= produto.imagem %>">
+        <img src="/images/produtos/<%= produto.imagem %>" alt="">
         <div class="ativo">
-        <input type="checkbox" name="ativo" id="ativo" value="<%= produto.ativo %>" checked=<% produto.ativo == "on" ? checked = "checked" : checked = "" %> placeholder="Produto ativo">
+        <input type="checkbox" name="ativo" id="ativo" value="<%= produto.ativo %>" <% if (produto.ativo == "on") { %>
+          checked
+        <% } %> placeholder="Produto ativo">
         <label  for="ativo">Ativo</label>
-        <input type="checkbox" name="destaques" id="destaques" checked=<% produto.destaques == "on" ? checked = "checked" : checked = "" %> placeholder="Produto destaque">
+        <input type="checkbox" name="destaques" id="destaques"  <% if (produto.destaques == "on") { %>
+          checked
+        <% } %> placeholder="Produto destaque">
         <label for="">Destaque</label>
       </div>
         <textarea name="descricao" cols="30" rows="10" > <%= produto.descricao %> </textarea>
