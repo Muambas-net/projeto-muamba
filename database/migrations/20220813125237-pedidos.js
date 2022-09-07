@@ -13,9 +13,10 @@ module.exports = {
         type: Sequelize.DataTypes.INTEGER,
         references: { 
           model: 'usuarios', 
-          key: 'id' 
+          key: 'id'
         },
         allowNull: false,
+        onDelete: 'CASCADE'
       },
       total: {
         type: Sequelize.DataTypes.DECIMAL(5, 2),

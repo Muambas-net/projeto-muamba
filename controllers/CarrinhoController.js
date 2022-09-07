@@ -77,7 +77,6 @@ const CarrinhoController = {
     pedidoConcluido: async (req, res) => {
         const { id } = req.params;
         const pedido = await Pedido.findOne({where: {id}, include: 'produtos'});
-        console.log(pedido)
         return res.render('home/pedidoConcluido', { pedido: pedido });
     },
     

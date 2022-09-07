@@ -27,11 +27,13 @@ main h1 {
     font-size: 40px;
     color: white;
     text-shadow: black 0.5rem 0.5rem 1rem;
-    text-align: center;
+    text-align: space-between;
 }
 
 
 .categorias{
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
     display: flex;
     flex-flow: row wrap;

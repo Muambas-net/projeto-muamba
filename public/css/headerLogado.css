@@ -40,8 +40,22 @@ header {
 .search {
   display: flex;
   align-items: center;
+  align-content: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+
 
   font-size: 1.6rem;
+}
+
+.form_search {
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .cart {
@@ -141,15 +155,11 @@ header {
   border: none;
   position: relative;
   left: -40px;
-  top: 3px;
 }
 
 .search i {
   font-size: 25px;
-  position: relative;
   color: #1a495a;
-  left: 0;
-  top: 3.9px;
 }
 
 nav {

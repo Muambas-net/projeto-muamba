@@ -7,8 +7,8 @@
     <div class="container">
       <h1>Tem certeza que deseja deletar o produto selecionado?</h1>
       <div class="buttons">
-        <form class="submit-button button1" action="/adm/deletar-produto/<%= produtos.id %>?_method=DELETE" method="POST">
-        <button type="submit">Sim</button>
+        <form action="/adm/deletar-produto/<%= produtos.id %>?_method=DELETE" method="POST">
+        <button class="submit-button button1" type="submit">Sim</button>
         </form>
         <a href="/adm/paineladmin" class="submit-button button2" type="submit">Não</a>
         

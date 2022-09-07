@@ -32,6 +32,9 @@ module.exports = (sequelize, DataTypes) => {
       ativo: {
         type: DataTypes.STRING(10)
       },
+      destaques: {
+        type: DataTypes.STRING(10)
+      },
       serial: {
         type: DataTypes.STRING(200),
         isUnique: true,
@@ -46,12 +49,13 @@ module.exports = (sequelize, DataTypes) => {
       },
     }, {
         timestamps: false,
-        tableName: 'produtos',
+        tableName: 'produtos',     
     });
 
     Produto.associate = (models) => {
       Produto.belongsTo(models.Categoria, {
         foreignKey: 'categorias_id',
+        
         as: 'categoria'
       });
     }

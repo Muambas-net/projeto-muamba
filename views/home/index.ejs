@@ -12,7 +12,6 @@
     <main class="container">
 
         <section class="destaques">
-
             <% produtos.forEach(produto=>{ %>
                 <div class="card">
                     <a class="" href="/produtos/<%=produto.id %>">
@@ -21,7 +20,7 @@
                                 <%= `${produto.nome.substring(0, 20)}...` %>
                         </p>  
                         <p>
-                            <%=produto.preco%>
+                            R$ <%=produto.preco.toFixed(2)%>
                         </p>
                         <span>À vista no pix</span>
                         <div>
@@ -38,7 +37,6 @@
                             </div>
                          </div>
                 </div>
-
                 <% }) %>
         </section>
 
@@ -307,13 +305,13 @@
 
         <section class="destaques">
             <% produtos.forEach(produto=>{ %>
-                <% if (produto.destaque==true) { %>
+                <% if (produto.destaques=="on") { %>
 
                     <div class="card">
 
                         <i class="bi bi-stars"></i>
-                        <a class="" href="/produtos/<%=produto.id %>">
-                        <img src="<%= produto.imagem%>" width="150" height="130" alt="">
+                        <a class="" href="/produtos/<%=produto.id %>"">
+                        <img src="/images/produtos/<%=produto.imagem%>" width="150" height="130" alt="">
 
                         <% if (produto.nome.length> 20) { %>
                             <p>
@@ -321,7 +319,7 @@
                             </p>
                             <% } %>
 
-                                <p>R$ <%= produto.preco%>
+                                <p>R$ <%= produto.preco.toFixed(2)%>
                                 </p>
 
                                 <span>À vista no pix</span>

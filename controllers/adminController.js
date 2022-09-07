@@ -7,7 +7,7 @@ const adminController = {
     getPainelAdmin: async (req, res) => {
         const produtos = await Produto.findAll();
 
-        console.log(produtos);
+  /*       console.log(produtos); */
         return res.render('adm/paineladmin', { produtos });
     },
     getProduto: async (req, res) => {
@@ -23,7 +23,7 @@ const adminController = {
         return res.render('adm/adicionarProduto' , { categorias });
     },
     storeProduct: async (req, res) => {
-            const { nome, preco, desconto, estoque, categoria, ativo, descricao } = req.body;
+            const { nome, preco, desconto, estoque, categoria, ativo, destaques, descricao } = req.body;
 
             await Produto.create({
                 nome,
@@ -32,8 +32,9 @@ const adminController = {
                 estoque,
                 categorias_id: categoria,
                 ativo,
+                destaques,
                 descricao,
-                imagem: '/images/produtos/' + req.file.filename
+                imagem: req.file.filename
 
         })
 
@@ -43,27 +44,39 @@ const adminController = {
 
     editProduct: async (req, res) => {
         const { id } = req.params;
+        const categorias =  await Categoria.findAll();
         const produto = await Produto.findOne({where: {id}});
-        return res.render('adm/editarProduto', { produto });
+        return res.render('adm/editarProduto', { produto, categorias });
     },
 
-    updateProduct: (req, res) => {
+    updateProduct: async (req, res) => {
         const { id } = req.params;
-        const { nome, imagem, preco, desconto, estoque, categoria, ativo, descricao } = req.body;
-        const produto = {
-            id,
-            nome,
-            imagem,
-            preco,
-            desconto,
-            estoque,
-            categoria,
-            ativo: (ativo ? true : false),
-            descricao
+        console.log(req.body);
+        const { nome,imagem, preco, estoque, categoria, ativo, destaques, descricao } = req.body;
+        console.log(req.body.ativo)
+        if(req.file){
+            await Produto.update({   
+                nome,
+                imagem: req.file.filename,
+                preco: parseFloat(preco),
+                estoque,
+                categoria,
+                ativo: ativo ? "on" : "off",
+                destaques: destaques == 'on' ? destaques : "off",
+                descricao
+            }, { where: { id } });
+    
+        } else {
+            await Produto.update({   
+                nome,
+                preco: parseFloat(preco),
+                estoque,
+                categoria,
+                ativo: ativo ? "on" : "off",
+                destaques: destaques == 'on' ? destaques : "off",
+                descricao}, { where: { id } });
+    
         }
-
-        Produto.update(id, produto);
-
         return res.redirect('/adm/paineladmin');
     },
 

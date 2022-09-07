@@ -62,8 +62,8 @@ const UserController = {
     },
     panelUser: async (req, res) => { 
       const { usuario } = req.session;
-      const pedidos = await Pedido.findAll({where: {usuario_id: usuario.id}});
-      return res.render('usuario/painelUsuario', { usuario, pedidos });
+      const pedidos = await Pedido.findAll({where: {usuario_id: usuario.id}, include: 'produtos'});
+      return res.render('usuario/painelUsuario', { usuario, pedidos: pedidos });
   },
   
   esqueciMinhaSenha: (req, res) => {

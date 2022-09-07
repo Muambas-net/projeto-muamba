@@ -65,18 +65,16 @@
             <th class="col">Número</th>
             <th class="col">Pagamento</th>
             <th class="col">Entrega</th>
-            <th class="col">Status</th>
           </tr>
         </thead>
         <tbody>
+          <% pedidos.forEach(pedido => { %> 
           <tr>
-            <% pedidos.forEach(pedido => { %> 
             <th><%= pedido.id %></th>
             <td><%= pedido.pagamento %></td>
             <td><%= pedido.entrega %></td>
-            <td><%= pedido.status %></td>
-            <% }) %> 
-            </tr>
+          </tr>
+          <% }) %> 
         </tbody>
       </table>
     </div>

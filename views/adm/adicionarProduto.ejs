@@ -10,7 +10,6 @@
       <form action="/adm/adicionar-produto" method="POST" enctype="multipart/form-data">
         <input type="text" name="nome" id="" placeholder="Nome do Produto">
           <input type="number" name="preco" min="1" step="5.2" placeholder="Preço">
-          <input type="number" name="desconto" min="1" step="any" placeholder="Preço com desconto">
           <input type="number" name="estoque" min="1" step="any" placeholder="Estoque">
           <select name="categoria" id="categoria" placeholder="Categorias">
             <option value="" disabled>Selecione uma categoria</option>
@@ -23,6 +22,8 @@
         <div class="ativo">
         <input type="checkbox" name="ativo" id="ativo" placeholder="Produto ativo">
         <label for="">Ativo</label>
+        <input type="checkbox" name="destaques" id="destaques" placeholder="Produto destaque">
+        <label for="">Destaque</label>
       </div>
         <textarea name="descricao" cols="30" rows="10" placeholder="Descrição do Produto"></textarea>
         <div class="buttons">
