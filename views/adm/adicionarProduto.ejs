@@ -1,45 +1,62 @@
 <link rel="stylesheet" href="/css/addEditProduto.css">
 <title>Cadastrar novo produto</title>
-<%- include('../partials/header') %> 
+<%- include('../partials/header') %>
 
-<body>
-  <section>
-    <div class="container">
-      <h1>Cadastrar novo produto</h1>
-      <div class="cadastro">
-      <form action="/adm/adicionar-produto" method="POST" enctype="multipart/form-data">
-        <input type="text" name="nome" id="" placeholder="Nome do Produto">
-          <input type="number" name="preco" min="1" step="any" placeholder="Preço">
-          <input type="number" name="estoque" min="1" step="any" placeholder="Estoque">
-          <select name="categoria" id="categoria" placeholder="Categorias">
-            <option value="" disabled>Selecione uma categoria</option>
-            <% categorias.forEach(categoria => { %>
-              <option value="<%= categoria.id %>"><%= categoria.name %></option>
-            <% }) %>
-          </select>
-        <label for="imagem">Adicionar foto</label>
-        <input type="file" name="imagem" id="imagem">
-        <div class="ativo">
-        <input type="checkbox" name="ativo" id="ativo" placeholder="Produto ativo">
-        <label for="">Ativo</label>
-        <input type="checkbox" name="destaques" id="destaques" placeholder="Produto destaque">
-        <label for="">Destaque</label>
-      </div>
-        <textarea name="descricao" cols="30" rows="10" placeholder="Descrição do Produto"></textarea>
-        <div class="buttons">
-          <button type="submit">Cadastrar</button>
-          
+  <body>
+    <section>
+      <div class="container">
+        <h1>Cadastrar novo produto</h1>
+        <div class="cadastro">
+          <form action="/adm/adicionar-produto" method="POST" enctype="multipart/form-data">
+            <input type="text" name="nome" id="" placeholder="Nome do Produto">
+            <input type="number" name="preco" min="1" step="any" placeholder="Preço">
+            <input type="number" name="estoque" min="1" step="any" placeholder="Estoque">
+            <select name="categoria" id="categoria" placeholder="Categorias">
+              <option value="" disabled>Selecione uma categoria</option>
+              <% categorias.forEach(categoria=> { %>
+                <option value="<%= categoria.id %>">
+                  <%= categoria.name %>
+                </option>
+                <% }) %>
+            </select>
+            <label for="imagem">Adicionar foto</label>
+            <input type="file" name="imagem" id="imagem">
+            <img id="preview" src="">
+            <div class="ativo">
+              <input type="checkbox" name="ativo" id="ativo" placeholder="Produto ativo">
+              <label for="">Ativo</label>
+              <input type="checkbox" name="destaques" id="destaques" placeholder="Produto destaque">
+              <label for="">Destaque</label>
+            </div>
+            <textarea name="descricao" cols="30" rows="10" placeholder="Descrição do Produto"></textarea>
+            <div class="buttons">
+              <button type="submit">Cadastrar</button>
+
+            </div>
+
         </div>
-        
+        </form>
+
+
+
       </div>
-      </form>
-        
-    
-    
+    </section>
+    <!-- início do preloader -->
+    <div id="preloader">
+      <div class="inner">
+        <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+        <div>
+          <div><img width="100px" src="/images/logo-gif_4_semFundo.gif" alt="" srcset=""></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
-  </section>
+    <!-- fim do preloader -->
 
-</body>
+    <script src="/javascript/preloader.js"></script>
+    <script src="/javascript/previewImagem.js"></script>
 
-</html>
+  </body>
 
+  </html>
