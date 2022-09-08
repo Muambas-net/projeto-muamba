@@ -58,13 +58,12 @@ const UserController = {
     panelUser: async (req, res) => { 
       const { usuario } = req.session;
       const { search } = req.query;
-      console.log(search)
       let order;
       
       if(search && search.length > 0) {
         order = await Pedido.findAll({
           where: {
-            id: search
+            id: parseInt(search)
           },
           include: 'produtos'
         })
