@@ -6,24 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pedido Concluído</title>
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/pedidoConcluido.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
   </head>
   <body>
     <%- include('../partials/header') %>
     <main>
-      <h1>Pedido Concluído</h1>
-      <section class='container'>
-        <div class="wrapper">
-          <h3>Obrigado por comprar conosco!</h3>
-          <p>Seu pedido foi realizado com sucesso!</p>
-          <p>Agradecemos a preferência.</p>
-        </div>
-      </section>
+      <h1>Resumo do Pedido <%=pedido.id%></h1>
       <section class="container">
         <div class="wrapper">
-        <h3>Resumo da Compra</h3>
-        <h4> Número do pedido: <%=pedido.id%> </h4>
         
                <% pedido.produtos.forEach(produto => { %>
                 <div class="produto-selecionado">
@@ -52,4 +43,5 @@
         </div>
       </section>
     </main>
-    <%- include('../partials/footer') %>
+  </body>
+<%- include('../partials/footer') %> 

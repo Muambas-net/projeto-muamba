@@ -27,8 +27,6 @@
             <div class="descricao-produto">
               <h2><%= produto.nome %></h2>
               <div class="qtd-del">
-              <label for="quantidade">QTD</label>
-              <input type="number">
               <form action="/carrinho/<%=produto.id%>/remover?_method=DELETE"
                 method="POST">
                 <button type="submit"><i class="fa-solid fa-trash-can"></i></button>
@@ -37,12 +35,12 @@
             </div>
             </div>
             <div class="preco">
-              <h2><%= produto.preco %></h2>
+              <h2>R$ <%= produto.preco %></h2>
             </div>
           </div>
           <% }) %> <% } %>
         <div class="subtotal">
-          <p>Subtotal: <b> R$<%=total.toFixed(2)%></b></p>
+          <p>Subtotal: <b> R$ <%=total.toFixed(2)%></b></p>
           <p>à vista</p>
           <p>ou em até <b>12x de <%= (total/12).toFixed(2) %></b> sem juros</p>
         </div>
@@ -113,7 +111,7 @@
           </div>
         </div>
       </section>
-      <section class="produtos-relacionados">
+      <!-- <section class="produtos-relacionados">
         <div>
           <h2>Produtos Relacionados</h2>
         </div>
@@ -133,7 +131,7 @@
             <button id="#">Ver Mais</button>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
   </body>
   <%- include('../partials/footer') %> 

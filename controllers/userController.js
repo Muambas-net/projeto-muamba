@@ -1,6 +1,7 @@
 const {Usuario} = require("../models")
 const bcrypt = require('bcrypt');
 const { Pedido } = require('../models');
+const { response } = require("express");
 
 
 const UserController = {
@@ -64,6 +65,12 @@ const UserController = {
       const { usuario } = req.session;
       const pedidos = await Pedido.findAll({where: {usuario_id: usuario.id}, include: 'produtos'});
       return res.render('usuario/painelUsuario', { usuario, pedidos: pedidos });
+  },
+  orderDetail: async (req, res) => {
+    const { usuario } = req.session;
+    const { id } = req.params;
+    const pedido = await Pedido.findOne({where: { id, usuario_id: usuario.id}, include: 'produtos'});
+    return res.render('usuario/detalhesPedido', { usuario, pedido: pedido });
   },
   
   esqueciMinhaSenha: (req, res) => {
