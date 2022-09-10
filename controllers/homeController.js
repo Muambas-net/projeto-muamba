@@ -53,9 +53,18 @@ const homeController = {
 
     },
 
-    categorias: (req, res) => {
+    categorias: async (req, res) => {
         const { usuario } = req.session;
-        res.render('home/categorias', { usuario });
+        const {carrinho} = req.session;
+        const id = req.params.id;
+        const categorias = await Produto.findAll({
+            where: {
+                categorias_id:{
+                    [Op.eq]: id
+                }
+            }
+    });
+        res.render('home/categorias', { usuario, carrinho, categorias });
     },
 
     login: (req, res) => {

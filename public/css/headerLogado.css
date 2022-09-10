@@ -165,7 +165,7 @@ header {
 nav {
   box-shadow: 0px 8px 10px grey;
   background-color: #f6fdff;
-  padding: 0;
+  padding: 0 1.0rem;
   margin: 0;
   font-size: 1.7rem;
   font-family: 'Teko', sans-serif;
