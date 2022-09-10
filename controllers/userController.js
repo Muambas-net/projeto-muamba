@@ -62,9 +62,9 @@ const UserController = {
       return res.redirect('/');
     },
     panelUser: async (req, res) => { 
-      const { usuario } = req.session;
+      const { usuario, carrinho } = req.session;
       const pedidos = await Pedido.findAll({where: {usuario_id: usuario.id}, include: 'produtos'});
-      return res.render('usuario/painelUsuario', { usuario, pedidos: pedidos });
+      return res.render('usuario/painelUsuario', { usuario, pedidos: pedidos, carrinho });
   },
   orderDetail: async (req, res) => {
     const { usuario } = req.session;
